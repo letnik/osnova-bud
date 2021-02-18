@@ -2,10 +2,173 @@
 @import 'parts/display'
 @import 'parts/layout'
 @import 'parts/hardcore'
+@import 'parts/spec'
+@import 'parts/top_nav'
+@import 'parts/header'
 // @import 'fonts'
 
 
-@import 'parts/top_nav'
-@import 'parts/header'
+#top
+  #wrap_all
+    .first_section_custome
+      .av-special-heading-tag
+        font-family: Montserrat
+        font-style: normal
+        font-weight: bold
+        font-size: 50px
+        text-transform: uppercase
+        color: #F0F2F4
+      .avia_textblock 
+        display: flex
+        p
+          font-weight: 600
+          font-size: 30px
+          text-transform: uppercase
+          color: #F0F2F4
+          margin-right: 12px;
+          &:nth-child(2)
+            color: $accent
 
 
+#top
+  #wrap_all
+    .custom-left-wrap
+    > .flex_cell_inner
+        margin-left: auto;
+    .second_section_home_cust
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      // max-width: calc( 100% - 16% )
+      // margin-left: auto;
+      > div
+        &:nth-child(1)
+          // padding-left: 346.5px !important;
+          // max-width: 760px;
+          // margin: 0 0 0 auto;
+          section
+            .avia_textblock
+              h2  
+                font-size: 35px
+                font-weight: bold;
+                margin-bottom: 28px;
+          .custome_informe_ti
+            display: inline-block;
+            text-align: start;
+            // width: 20.5%;
+            // margin: 0 2% 0 0;
+            padding: 35px 10px 60px 0;
+            width: 24%;
+            .avia-animated-number-title span 
+              font-weight: 600;
+              font-size: 30px
+            .avia-animated-number-content p 
+              font-size: 20px
+
+        &:nth-child(2)
+          padding: 30px 0 30px 64px;
+          .avia-image-overlay-wrap
+            position: relative;
+            &::before
+              content: ''
+              display: block;
+              background: $accent;
+              position: absolute;
+              height: 58%;
+              width: calc( 100% + 15px )
+              left: -15px
+              bottom: -15px
+              z-index: 0;
+      .custome_btn_default
+        a
+          border: 2px solid #0B1B34
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 25px;
+          padding: 18px 45px;
+          margin: 0;
+          
+          
+          
+
+#top
+  #wrap_all
+    .custome_grid_row_accordin_wrap
+      section
+        .avia_textblock  
+          h3
+            font-size: 35px
+      .tabcontainer
+        .tab_titles
+          .tab
+            font-size: 18px
+            color: $text-black
+            --marginA: calc(100vw - 1310px)
+            --marginB: calc(var(--marginA) / 2);
+            margin-left: var(--marginB);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+@media screen and ( min-width:  1310px)
+  #top
+    #wrap_all
+      .custom-left-wrap
+        > .flex_cell_inner
+            --marginA: calc(100vw - 1310px)
+            --marginB: calc(var(--marginA) / 2);
+            margin-left: var(--marginB);
