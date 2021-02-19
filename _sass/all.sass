@@ -8,6 +8,8 @@
 // @import 'fonts'
 
 
+
+
 #top
   #wrap_all
     .first_section_custome
@@ -98,14 +100,142 @@
         .avia_textblock  
           h3
             font-size: 35px
+            color: $text-black
+            margin-left: calc( var(--marginB) + 50px )
       .tabcontainer
         .tab_titles
+          width: 35%;
+          max-width: none
           .tab
-            font-size: 18px
-            color: $text-black
-            --marginA: calc(100vw - 1310px)
-            --marginB: calc(var(--marginA) / 2);
-            margin-left: var(--marginB);
+            padding-left: calc(var(--marginB) + 57px )
+            left: -7px
+            // overflow: hidden
+            &.active_tab
+              width: 100%;
+              background: #191919;
+              color: $text-white
+              position: relative;
+              // &:after 
+              //   content: ''; 
+              //   position: absolute;
+              //   right: -30px; 
+              //   top: 0;
+              //   bottom: 0;
+              //   border: 25px solid transparent; 
+              //   border-left: 20px solid red;
+
+
+        .av_tab_section
+          .tab_content 
+            padding-left: 0;
+          .tab_inner_content
+            margin: 35px var(--marginB) 30px 43px
+            padding: 84px 84px 84px 51px
+            background: rgba(25, 25, 25, 0.9)
+            position: static;
+            h3,p
+              color: $text-white
+            p img
+              position: absolute;
+              left: 0
+              top: 0
+              width: calc( 100% + var(--marginB) )
+              z-index: -1;
+              overflow: visible
+              &::nth-child(2), &::nth-child(3), &::nth-child(4), &::nth-child(2), &::nth-child(5)
+                display: none !important
+                
+
+#top
+  #wrap_all
+    .custome_map_grid
+      .flex_cell.av_one_full  
+        padding: 30px 0 0;
+        .avia_textblock  h3 
+          padding-left: calc(var(--marginB) + 50px )
+          font-weight: bold;
+          font-size: 35px
+          line-height: 48px
+          color: $text-black
+      .inputbox.geodir-hide
+        display: none 
+      #gd_map_canvas_directory_cat
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15)
+        .treeview.main_list
+          padding: 32px !important;
+          width: 460px;
+          li
+            display: flex;
+            padding: 25px 0;
+            margin: 0;
+            label
+              font-size: 18px;
+              line-height: 25px
+              color: $text-black
+              img
+                display: none;
+            &::before
+              content: '✓'
+              font-size: 10px;
+              font-weight: bold;
+              margin-right: 15px;
+              background: $accent;
+              border-radius: 50px
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 30px;
+              height: 30px;
+            &.unchecked
+              &::before
+                content: ''
+                background: transparent;
+                border: solid 1px $text-black
+
+
+#top
+  #wrap_all
+    .custom_form_section
+      .container
+        .template-page.content
+          padding: 120px 0 140px 0 !important;
+          form
+            p 
+              font-weight: bold;
+              font-size: 35px;
+              line-height: 48px;
+              color: $text-white
+              text-align: center;
+              margin-bottom: 0;
+              padding-bottom: 42px;
+            fieldset
+              p 
+                input
+                  font-size: 16px;
+                  line-height: 19px
+                  color: $text-grey
+                  background: transparent;
+                  &.button
+                    background: $accent;
+                    color: $text-white
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
 
 
 
