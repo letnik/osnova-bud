@@ -157,8 +157,8 @@
           font-size: 35px
           line-height: 48px
           color: $text-black
-      .inputbox.geodir-hide
-        display: none 
+      #gd_map_canvas_directory_search_string
+        display: none;
       #gd_map_canvas_directory_cat
         background: rgba(255, 255, 255, 0.95);
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15)
@@ -219,6 +219,72 @@
                   &.button
                     background: $accent;
                     color: $text-white
+
+
+
+
+
+#top
+  #wrap_all
+    .custome_datails_1section
+      min-height: 550px
+      > div 
+        display: flex;
+        align-items: center;
+        padding-left: 0
+        .avia_textblock  
+          padding: 60px 250px 60px calc( 30px + var(--marginB) ) 
+          background: rgba(25, 25, 25, 0.7)
+          min-width: 60vw
+          h1
+            font-weight: bold;
+            line-height: 68px
+            color: $text-white
+
+
+#top
+  .custom_details_section2
+    .container
+      margin-top: -170px;
+
+      .av_two_fifth
+        .avia-icon-list-container  
+          margin: 0;
+          padding: 65px 55px;
+          background: #F0F2F4;
+          > ul
+              li
+                display: flex;
+                align-items: center
+                padding: 22px 0;
+                .iconlist_icon
+                  margin-right: 18px;
+                .article-icon-entry 
+                  .iconlist_content_wrap
+                    display: flex;
+                    align-items: center;
+                    .av_iconlist_title
+                      font-size: 20px;
+                      line-height: 27px;  
+                      color: $text-black
+                      margin-right: 24px;
+                      min-width: 85px;
+                      width: auto;
+                    .geodir_post_meta
+                      font-weight: 600;
+                      font-size: 32px;
+                      line-height: 44px;
+                      color: $text-black
+
+
+
+// template-page 
+  
+          
+
+
+
+
 
 
 
@@ -299,6 +365,6 @@
     #wrap_all
       .custom-left-wrap
         > .flex_cell_inner
-            --marginA: calc(100vw - 1310px)
-            --marginB: calc(var(--marginA) / 2);
+            // --marginA: calc(100vw - 1310px)
+            // --marginB: calc(var(--marginA) / 2);
             margin-left: var(--marginB);
