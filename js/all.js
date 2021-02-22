@@ -6,3 +6,14 @@ jQuery(document).ready(function() {
         return;
 });
 
+
+jQuery(document).ready(function(){
+    jQuery('.slick_galery .geodir-gallery').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        rows: 2,
+      });
+  });
+
+
+          

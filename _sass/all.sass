@@ -147,51 +147,50 @@
                 
 
 #top
-  #wrap_all
-    .custome_map_grid
-      .flex_cell.av_one_full  
-        padding: 30px 0 0;
-        .avia_textblock  h3 
-          padding-left: calc(var(--marginB) + 50px )
-          font-weight: bold;
-          font-size: 35px
-          line-height: 48px
-          color: $text-black
-      #gd_map_canvas_directory_search_string
-        display: none;
-      #gd_map_canvas_directory_cat
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15)
-        .treeview.main_list
-          padding: 32px !important;
-          width: 460px;
-          li
+  .custome_map_grid
+    .flex_cell.av_one_full  
+      padding: 30px 0 0;
+      .avia_textblock  h3 
+        padding-left: calc(var(--marginB) + 50px )
+        font-weight: bold;
+        font-size: 35px
+        line-height: 48px
+        color: $text-black
+    #gd_map_canvas_directory_search_string
+      display: none;
+    #gd_map_canvas_directory_cat
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15)
+      .treeview.main_list
+        padding: 32px !important;
+        width: 460px;
+        li
+          display: flex;
+          padding: 25px 0;
+          margin: 0;
+          label
+            font-size: 18px;
+            line-height: 25px
+            color: $text-black
+            img
+              display: none;
+          &::before
+            content: '✓'
+            font-size: 10px;
+            font-weight: bold;
+            margin-right: 15px;
+            background: $accent;
+            border-radius: 50px
             display: flex;
-            padding: 25px 0;
-            margin: 0;
-            label
-              font-size: 18px;
-              line-height: 25px
-              color: $text-black
-              img
-                display: none;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+          &.unchecked
             &::before
-              content: '✓'
-              font-size: 10px;
-              font-weight: bold;
-              margin-right: 15px;
-              background: $accent;
-              border-radius: 50px
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 30px;
-              height: 30px;
-            &.unchecked
-              &::before
-                content: ''
-                background: transparent;
-                border: solid 1px $text-black
+              content: ''
+              background: transparent;
+              border: solid 1px $text-black
 
 
 #top
@@ -246,12 +245,40 @@
   .custom_details_section2
     .container
       margin-top: -170px;
-
+      .entry-content-wrapper
+        display: flex;
+        align-items: stretch
+      .av_three_fifth
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column
+        justify-content: center;
+        .avia-image-container
+          margin: 0;
+          width: 100%;
+        .custom_btn
+          position: absolute;
+          bottom: -35px
+          a
+            background: transparent;
+            right: 0;
+            border: 2px solid #022227
+            padding: 18px 50px
+            .avia_iconbox_title
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 25px;
+              color: #022227;
+              
       .av_two_fifth
         .avia-icon-list-container  
           margin: 0;
           padding: 65px 55px;
           background: #F0F2F4;
+          .av-iconlist-small
+            .iconlist_icon
+              color: $accent !important
+              font-size: 30px !important
           > ul
               li
                 display: flex;
@@ -275,10 +302,134 @@
                       font-size: 32px;
                       line-height: 44px;
                       color: $text-black
+          &::before
+            content: ''
+            display: block;
+            height: 100%;
+            width: 10px;
+            background: $accent;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 3;
+
+#top
+  .custom_third_section
+    .av_textblock_section 
+      h2
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 48px;
+        color: $text-black
+    .avia-icon-list-container  
+      ul
+        display: flex;
+        flex-wrap: wrap
+        justify-content: space-between
+        li
+          width: 48%;
+          .iconlist_content_wrap
+            .av_iconlist_title
+              font-weight: bold;
+              font-size: 20px;
+              line-height: 27px;
+              color: $text-black
+            .geodir_post_meta p 
+              font-size: 18px;
+              line-height: 21px
+              color: $text-black
+          .iconlist_icon
+            color: $text-white
+            font-size: 30px !important
+            background: $accent !important
+
+#top
+  .custom_slider_section
+    .av_textblock_section 
+      h3
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 48px;
+        color: $text-black
+    .geodir-image-wrapper
+      padding: 35px;
+      ul.geodir-gallery
+        position: relative;
+        .slick-list
+          .slick-slide
+            > div
+              padding: 10px;
+              line-height: 0;
+              li
+                height: 350px;
+                // line-height: 0 !important
+                margin: 0 !important
+        .slick-arrow
+          position: absolute;
+          top: -72px;
+          &.slick-prev
+            right: 60px;
+
+          &.slick-next
+            right: -22px;
+        &::before
+          content: ''
+          display: block;
+          background: $accent;
+          width: 391px;
+          height: 380px;
+          left: -22px;
+          bottom: -22px;
+          position: absolute; 
+          z-index: -9
+          visibility: visible !important
+        &::after
+          content: ''
+          display: block;
+          background: $accent;
+          width: 391px;
+          height: 380px;
+          right: -22px
+          top: -22px
+          position: absolute; 
+          z-index: -9
+          visibility: visible
+            
 
 
-
-// template-page 
+#top
+  .zobacz_section
+    .avia_textblock
+      h3
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 48px
+        color: $text-black
+    .avia-icon-list-container  
+      ul
+        display: flex;
+        flex-wrap: wrap
+        justify-content: space-between
+        li
+          width: 47%;
+          padding: 30px 25px;
+          margin: 15px 0;
+          background: #FBFCFB;
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15)
+          display: flex;
+          align-items: center;
+          .iconlist_icon 
+            background: transparent !important;
+            font-size: 35px;
+            color: $text-black !important
+          .iconlist_content_wrap, .article-icon-entry
+            min-height: auto
+            padding: 0;
+            .iconlist_title
+              font-size: 18px;
+              line-height: 25px;
+              color: $text-black
+              margin-top: 0;
   
           
 

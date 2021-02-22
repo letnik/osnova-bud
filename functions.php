@@ -14,9 +14,15 @@ add_filter('show_admin_bar', '__return_false');
 function sl_add_scripts()
 {
     //Custom JS
+
+    wp_enqueue_script('slick', get_stylesheet_directory_uri() . '/js/slick.js', array('jquery'), null, true );
+
     wp_enqueue_script('all', get_stylesheet_directory_uri() . '/js/all.js', array('jquery'), null, true );
 
+    wp_enqueue_style('slick', get_stylesheet_directory_uri() . '/css/slick.css', [], null);
+
     wp_enqueue_style('all', get_stylesheet_directory_uri() . '/css/all.css', [], null);
+
 
     //Run custom JS
     wp_enqueue_script('all');
