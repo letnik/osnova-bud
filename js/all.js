@@ -15,5 +15,12 @@ jQuery(document).ready(function(){
       });
   });
 
+  jQuery(document).ready(function(){
+    jQuery('.custom_slider_section .image_slider_wrap').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        rows: 2,
+      });
+  });
 
           
