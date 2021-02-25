@@ -450,7 +450,8 @@
     section
       .avia_textblock
         background: rgba(25, 25, 25, 0.7); 
-        max-width: 1300px
+        // max-width: 1300px
+        max-width: 70%
         width: auto;
         padding: 60px 0; 
         h1
@@ -619,14 +620,14 @@
       display: flex;
       flex-direction: column
       .single_toggle
-        max-width: 40%;
+        max-width: 468px;
         overflow: visible
+        position: static
       .toggler
         font-size: 18px;
         line-height: 25px;
         color: $text-black
         padding: 28px 31px;
-        position: static
         display: flex;
         justify-content: space-between;
         &.activeTitle
@@ -647,20 +648,127 @@
           line-height: 22px;
           color: $text-black
           width: 100% 
-        div
-          position: absolute;
-          left: 110%;
-          top: 2px
-          width: 634px
-          height: 600px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          overflow: hidden;
-          img
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+          &:last-child
+            position: absolute;
+            right: 22px; 
+            top: 0
+            width: 640px
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0;
+
+            img
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              position: relative;
+            &::after
+              content: ''
+              background: $accent
+              height: 107%;
+              width: 80%;
+              top: -22px;
+              right: -22px;
+              position: absolute;
+              z-index: -2;
+
+#top
+  .custome_grid_realiz_section
+    .custome_accord_tit 
+      padding-top: 108px;
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 48px;
+      color: $text-black
+      margin-left: calc(var(--marginB) + 50px)
+    .tabcontainer 
+      .tab_content
+        .gd_place
+          .arhive_item_wrap
+            display: flex;
+            justify-content: space-between;
+            .media_box
+              width: 45%;
+              .geodir-viewport
+                margin-bottom: 0;
+              ul.geodir-slides
+                > li
+                  // width: 100% !important;
+                  height: 265px ;
+                  // img
+                  //   width: 100%;
+              .geodir-direction-nav
+                // display: none;
+                width: 0;
+                height: 0;
+            .content_box
+              width: 53%;
+              .title_box
+                .geodir-field-post_title
+                  font-weight: bold;
+                  font-size: 20px;
+                  line-height: 27px;
+                  color: $text-black
+              .adress_box
+                .geodir-field-address 
+                  display: flex;
+                  span 
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $text-grey
+                    margin-right: 10px;
+              .discription_box
+                .geodir-field-post_content
+                  p 
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $text-black
+              .characteristics_box
+                display: flex;
+                justify-content: space-between;
+                .geodir-field-price, .geodir-field-timing
+                  font-weight: 600;
+                  font-size: 18px;
+                  line-height: 25px;
+                  color: $text-black
+                  &::before
+                    content: '$'
+                    color: $accent
+                    font-size: 30px;
+                    margin-right: 11px;
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+// div
+//   position: absolute;
+//   left: 110%;
+//   top: 2px
+//   width: 634px
+//   height: 600px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   overflow: hidden;
+//   img
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
 
             
 
