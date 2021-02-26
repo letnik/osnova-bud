@@ -15,12 +15,37 @@ jQuery(document).ready(function(){
       });
   });
 
-  jQuery(document).ready(function(){
-    jQuery('.custom_slider_section .image_slider_wrap').slick({
-        slidesToShow: 3,
+jQuery(document).ready(function(){
+jQuery('.custom_slider_section .image_slider_wrap').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    rows: 2,
+    });
+});
+
+jQuery(document).ready(function(){
+    jQuery('.custom_slider_review_section .custom_slider_wrap').slick({
+        slidesToShow: 1,
         slidesToScroll: 1,
-        rows: 2,
-      });
-  });
+        arrows: 0,
+        });
+    });
+
+    // dots: true,
+    // customPaging: function (slider, i) {
+    //     return slider.slickCurrentSlide + '/' + (i + 1);
+    // }
+
+// $('..custom_slider_review_section .custom_slider_wrap').slick({
+//     dots: true,
+//     customPaging: function (slider, i) {
+//         return slider.slickCurrentSlide + '/' + (i + 1);
+//     }
+// });
+
+// customPaging: function (slider, i) {
+//     return slider.slickCurrentSlide + '/' + (i + 1);
+// }
+    
 
           
