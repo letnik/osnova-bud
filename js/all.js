@@ -18,8 +18,9 @@ jQuery(document).ready(function(){
 jQuery(document).ready(function(){
 jQuery('.custom_slider_section .image_slider_wrap').slick({
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     rows: 2,
+
     });
 });
 
@@ -28,10 +29,32 @@ jQuery(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: 0,
-        });
+        
+    });
+    // $(".custom_slider_review_section .custom_slider_wrap").on('afterChange', function(event, slick, currentSlide){
+    //     $("#counter").text(currentSlide + 1);
+    // });
+
+
+//Номер слайда
+    var slider 		 = jQuery('.custom_slider_review_section .custom_slider_wrap');
+        total        = slider.slick("getSlick").slideCount;
+        currentSlide = jQuery('.custom_slider_review_section .custom_slider_wrap').slick('slickCurrentSlide');
+        slide        = currentSlide + 1;
+    if ( total > 1 ) {
+        jQuery(".sl-count__current").text('' + slide);
+        jQuery('.sl-count__total').text( '' + total);
+    }
+    jQuery(".custom_slider_review_section .custom_slider_wrap").on('afterChange', function(event, slick, currentSlide, nextSlide){
+        var currentSl = currentSlide + 1;
+        jQuery(".sl-count__current").text('' + currentSl);
     });
 
-    // dots: true,
+
+});
+
+
+
     // customPaging: function (slider, i) {
     //     return slider.slickCurrentSlide + '/' + (i + 1);
     // }
