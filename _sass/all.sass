@@ -8,35 +8,57 @@
 // @import 'fonts'
 
 
+#top
+  .av_one_full
+    .av_textblock_section
+      .avia_textblock   
+        -webkit-clip-path: polygon(0 0%,100% 0,90% 100%,0 100%)
+        clip-path: polygon(0 0%,100% 0,90% 100%,0 100%)
+        width: auto
+        max-width: 70%
+        min-width: 65%
+        position: relative;
+        // &::after
+        //   // background: rgba(25,25,25,.7)
+        //   background: #000;
+        //   width: 20px;
+        //   height: 50px;
+        //   content: ''
+        //   display: block
+        //   position: absolute;
+        //   right: 0
+        //   bottom: 0;
+
 
 
 #top
-  #wrap_all
-    .first_section_custome
-      .av_one_full
-        padding: 55px 55px 55px calc( var(--marginB) + 50px )
-        background: rgba(25, 25, 25, 0.7)
-        width: auto
-        max-width: 70%
-        min-width: 55%
-      .av-special-heading-tag
-        font-family: Montserrat
-        font-style: normal
-        font-weight: bold
-        font-size: 50px
+  .first_section_custome
+    .av_one_full
+      padding: 55px 55px 55px calc( var(--marginB) + 50px )
+      background: rgba(25, 25, 25, 0.7)
+      width: auto
+      max-width: 70%
+      min-width: 65%
+      -webkit-clip-path: polygon(0 0%,100% 0,90% 100%,0 100%)
+      clip-path: polygon(0 0%,100% 0,90% 100%,0 100%)
+    .av-special-heading-tag
+      font-family: Montserrat
+      font-style: normal
+      font-weight: bold
+      font-size: 50px
+      text-transform: uppercase
+      color: #F0F2F4
+    .avia_textblock 
+      display: flex
+      p
+        font-weight: 600
+        font-size: 30px
         text-transform: uppercase
         color: #F0F2F4
-      .avia_textblock 
-        display: flex
-        p
-          font-weight: 600
-          font-size: 30px
-          text-transform: uppercase
-          color: #F0F2F4
-          margin: 0 12px 0 0
-          line-height: 1
-          &:nth-child(2)
-            color: $accent
+        margin: 0 12px 0 0
+        line-height: 1
+        &:nth-child(2)
+          color: $accent
 
 #top
   .first_section_oferta-cild_custome
@@ -59,50 +81,56 @@
     .custom-left-wrap
     > .flex_cell_inner
         margin-left: auto
-    .second_section_home_cust
-      display: flex
-      justify-content: flex-end
-      align-items: center
-      // max-width: calc( 100% - 16% )
-      // margin-left: auto
-      > div
-        &:nth-child(1)
-          // padding-left: 346.5px !important
-          // max-width: 760px
-          // margin: 0 0 0 auto
-          section
-            .avia_textblock
-              h2  
-                font-size: 35px
-                font-weight: bold
-                margin-bottom: 28px
-          .custome_informe_ti
-            display: inline-block
-            text-align: start
-            // width: 20.5%
-            // margin: 0 2% 0 0
-            padding: 35px 10px 60px 0
-            width: 24%
-            .avia-animated-number-title span 
-              font-weight: 600
-              font-size: 30px
-            .avia-animated-number-content p 
-              font-size: 20px
 
-        &:nth-child(2)
-          padding: 30px 0 30px 64px
-          .avia-image-overlay-wrap
-            position: relative
-            &::before
-              content: ''
-              display: block
-              background: $accent
-              position: absolute
-              height: 58%
-              width: calc( 100% + 15px )
-              left: -15px
-              bottom: -15px
-              z-index: 0
+
+#top     
+  .second_section_home_cust
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    .av_three_fifth
+      .avia_textblock
+        h2  
+          font-size: 35px
+          font-weight: bold
+          margin-bottom: 28px
+          color: $text-black
+        p 
+          font-size: 18px;
+          line-height: 25px;
+          color: $text-black
+      .custome_informe_ti
+        display: inline-block
+        text-align: start
+        // width: 20.5%
+        // margin: 0 2% 0 0
+        padding: 35px 10px 55px 0
+        width: 24%
+        .avia-animated-number-title span 
+          font-weight: 600
+          font-size: 30px
+        .avia-animated-number-content p 
+          font-size: 20px
+
+    .av_two_fifth
+      // padding: 30px 0 30px 64px
+      .avia-image-overlay-wrap
+        position: relative
+        &::before
+          content: ''
+          display: block
+          background: $accent
+          position: absolute
+          height: 58%
+          width: calc( 100% + 15px )
+          left: -15px
+          bottom: -15px
+          z-index: 0
+        img
+          min-height: 450px
+          width: 100%;
+          height: auto;
+          object-fit: cover
   .custome_btn_default
     a
       border: 2px solid #0B1B34
@@ -120,17 +148,28 @@
     .custome_grid_row_accordin_wrap
       section
         .avia_textblock  
+          margin-bottom: 50px;
           h3
             font-size: 35px
             color: $text-black
             margin-left: calc( var(--marginB) + 50px )
+            margin-bottom: 0px;
       .tabcontainer
         .tab_titles
           width: 35%
           max-width: none
+          background: #F0F2F4
           .tab
             padding-left: calc(var(--marginB) + 57px )
             left: -7px
+            padding-top: 22px;
+            padding-bottom: 22px;
+            font-size: 18px;
+            line-height: 25px;
+            color: $text-black
+            display: flex
+            align-items: center
+            border: none
             // overflow: hidden
             &.active_tab
               width: 100%
@@ -145,6 +184,9 @@
               //   bottom: 0
               //   border: 25px solid transparent 
               //   border-left: 20px solid red
+            .tab_icon
+              font-size: 40px;
+              margin-right: 26px;
 
 
         .av_tab_section
@@ -162,10 +204,14 @@
               left: 0
               top: 0
               width: calc( 100% + var(--marginB) )
+              height: -webkit-fill-available
               z-index: -1
               overflow: visible
               &::nth-child(2), &::nth-child(3), &::nth-child(4), &::nth-child(2), &::nth-child(5)
                 display: none !important
+
+
+      
 
 #top
   .custome_map-iconlist_grid
@@ -202,6 +248,8 @@
         font-size: 35px
         line-height: 48px
         color: $text-black
+        margin-bottom: 60px;
+        margin-top: 60px;
     .inputbox.geodir-hide
       display: none
     .map_category
@@ -254,6 +302,8 @@
             margin-bottom: 0
             padding-bottom: 42px
           fieldset
+            display: flex;
+            align-items: center;
             p 
               input
                 font-size: 16px
@@ -277,15 +327,51 @@
         color: $text-black
       .av_two_fifth
         margin-top: auto
-    .custom_slider_wrap
-      
+      .custom_slider_wrap
+        position: static;
+        .slick-arrow
+          position: absolute;
+          top: 210px;
+          right: 0;
+          border: none
+          background: transparent;
+          &::before
+            content: '\e80c'
+            font-family: Fontello
+            font-size: 30px;
+            color: $text-black
+          &.slick-prev
+            right: 120px !important
+            &::before
+              content: '\e80b'
+          &:hover
+            transform: scale(1.2)
+            &::before
+              color: $accent
+              font-weight: bold;
+    
+
+        
       .custom_slider_rev_img img
         width: 760px 
         height: 276px
-// .custom_slider_rev_img
+
+    .sl-count
+      font-size: 90px;
+      line-height: 123px;
+      text-align: right;
+      .sl-count__current
+        color: $text-black
+      .sl-count__total
+        color: #8D8D8D
 
 
 
+
+
+
+
+   
 
 
 #top

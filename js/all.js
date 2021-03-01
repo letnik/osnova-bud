@@ -28,8 +28,9 @@ jQuery(document).ready(function(){
     jQuery('.custom_slider_review_section .custom_slider_wrap').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: 0,
-        
+        arrows: true,
+        nextArrow: '<button class="slick-prev slick-arrow"></button>',
+        prevArrow: '<button class="slick-next slick-arrow"></button>'
     });
     // $(".custom_slider_review_section .custom_slider_wrap").on('afterChange', function(event, slick, currentSlide){
     //     $("#counter").text(currentSlide + 1);
