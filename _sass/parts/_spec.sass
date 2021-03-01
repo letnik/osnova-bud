@@ -72,3 +72,13 @@ body
   display: none !important
 
 
+.custome_triangle, .geodir-wgt-map
+  > h2, h3, h4, h5,
+    &::before
+      content: '\e807'
+      font-family: Fontello;
+      font-size: 61px;
+      color: $accent
+      margin-right: -30px;
+
+

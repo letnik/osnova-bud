@@ -398,27 +398,38 @@
         font-size: 35px
         line-height: 48px
         color: $text-black
-    .avia-icon-list-container  
-      ul
+    .avia-icon-list-container 
+      ul.avia-icon-list
         display: flex
         flex-wrap: wrap
         justify-content: space-between
         li
           width: 48%
-          .iconlist_content_wrap
-            .av_iconlist_title
-              font-weight: bold
-              font-size: 20px
-              line-height: 27px
-              color: $text-black
-            .geodir_post_meta p 
-              font-size: 18px
-              line-height: 21px
-              color: $text-black
-          .iconlist_icon
+          padding: 37px 0
+          .iconlist_icon 
+            display: none 
+          .av_iconlist_title
+            background: $accent
+            padding: 3px 27px 6px 15px
+            margin-right: 9px
+            font-weight: 600
+            font-size: 32px
+            line-height: 44px
             color: $text-white
-            font-size: 30px !important
-            background: $accent !important
+            -webkit-clip-path: polygon(0 0%,100% 0,69% 100%,0 100%)
+            clip-path: polygon(0 0%,100% 0,69% 100%,0 100%)
+          .iconlist_content  p 
+            font-size: 16px
+            line-height: 22px
+            color: $text-black
+            &:nth-child(1)
+              font-size: 20px;
+              line-height: 27px;
+              
+          .iconlist_content_wrap
+            display: flex
+            justify-content: center
+            align-items: start
 
 #top
   .custom_slider_section
