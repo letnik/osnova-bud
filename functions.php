@@ -64,3 +64,25 @@ function show_mail() {
     return $output;
 }
 
+
+add_action('ava_after_main_menu', 'show_custom_menu');
+
+function show_custom_menu() {
+    echo '<div class="sup-menu">
+    <div class="sup-menu-wrap">
+  
+      
+      <div class="contact">
+        <ul class="contact-list">
+          <li class="contact-item"><a href="" class="contact-link"><i class="icon-"></i><span>+38 (068) 218-16-17</span></a></li>
+          <li class="contact-item"><a href="" class="contact-link"><i class="icon-"></i><span>mail-mail@gmail.com</span></a></li>
+        </ul>
+      </div>
+  
+      <div class="faq">
+        <a href="" class="faq-link">faq</a>
+      </div>
+  
+    </div>
+  </div>';
+}

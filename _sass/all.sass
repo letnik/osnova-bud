@@ -32,33 +32,58 @@
 
 
 #top
-  .first_section_custome
-    .av_one_full
-      padding: 55px 55px 55px calc( var(--marginB) + 50px )
-      background: rgba(25, 25, 25, 0.7)
-      width: auto
-      max-width: 70%
-      min-width: 65%
-      -webkit-clip-path: polygon(0 0%,100% 0,90% 100%,0 100%)
-      clip-path: polygon(0 0%,100% 0,90% 100%,0 100%)
-    .av-special-heading-tag
-      font-family: Montserrat
-      font-style: normal
-      font-weight: bold
-      font-size: 50px
-      text-transform: uppercase
-      color: #F0F2F4
-    .avia_textblock 
-      display: flex
-      p
-        font-weight: 600
-        font-size: 30px
+  .title_grid_row
+    .title_wrap
+      .av_one_full
+        padding: 55px 55px 55px calc( var(--marginB) + 50px )
+        width: auto
+        max-width: 70%
+        min-width: 65%
+        position: relative;
+        &::before
+          width: 100%;
+          height: 100%;
+          z-index: -2;
+          background: rgba(25, 25, 25, 0.7)
+          -webkit-clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+          position: absolute;
+          left: 0 
+          bottom: 0
+          visibility: visible;
+          overflow: visible
+        &::after
+          content: ''
+          background: red;
+          display: block;
+          width: 11%;
+          height: 73%;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          background: rgba(25, 25, 25, 0.7)
+          -webkit-clip-path: polygon(100% 0, 38% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 38% 100%, 100% 100%);
+          visibility: visible;
+          z-index: 3;
+      .av-special-heading-tag
+        font-family: Montserrat
+        font-style: normal
+        font-weight: bold
+        font-size: 50px
         text-transform: uppercase
         color: #F0F2F4
-        margin: 0 12px 0 0
-        line-height: 1
-        &:nth-child(2)
-          color: $accent
+      .avia_textblock 
+        display: flex
+        p
+          font-weight: 600
+          font-size: 30px
+          text-transform: uppercase
+          color: #F0F2F4
+          margin: 0 12px 0 0
+          line-height: 1
+          &:nth-child(2)
+            color: $accent
 
 #top
   .first_section_oferta-cild_custome
@@ -176,14 +201,17 @@
               background: #191919
               color: $text-white
               position: relative
-              // &:after 
-              //   content: '' 
-              //   position: absolute
-              //   right: -30px 
-              //   top: 0
-              //   bottom: 0
-              //   border: 25px solid transparent 
-              //   border-left: 20px solid red
+              &:after 
+                content: '' 
+                position: absolute
+                right: -1%
+                top: 0
+                bottom: 0
+                background: #191919
+                clip-path: polygon(0 0, 0 100%, 100% 50%);
+                width: 40px;
+                height: 100%;
+                z-index: -2;
             .tab_icon
               font-size: 40px;
               margin-right: 26px;
@@ -226,6 +254,13 @@
       li.avia_start_animation
         display: flex;
         align-items: center;
+        .iconlist_icon
+          background: transparent;
+          color: $accent  
+          font-size: 35px;
+          height: auto;
+          width: auto;
+          line-height: 0;
         .article-icon-entry 
           min-height: auto
       .iconlist_content_wrap
@@ -573,6 +608,7 @@
 
 #top
   .zobacz_section
+    background: #FDFDFD;
     .avia_textblock
       h3
         font-weight: bold
@@ -607,24 +643,24 @@
               margin-top: 0
   
           
-#top
-  .custom_onasp_1section
-    section
-      .avia_textblock
-        background: rgba(25, 25, 25, 0.7) 
-        // max-width: 1300px
-        max-width: 70%
-        width: auto
-        padding: 60px 0 
-        h1
-          font-size: 35px
-          color: $text-white
-          margin-left: calc( var(--marginB) + 50px )
+// #top
+//   .custom_onasp_1section
+//     section
+//       .avia_textblock
+//         background: rgba(25, 25, 25, 0.7) 
+//         // max-width: 1300px
+//         max-width: 70%
+//         width: auto
+//         padding: 60px 0 
+//         h1
+//           font-size: 35px
+//           color: $text-white
+//           margin-left: calc( var(--marginB) + 50px )
 
 
 #top
   .custom_onasp_informsection
-    padding-top: 140px
+    padding-top: 100px
     .entry-content-wrapper
       display: flex
       align-items: stretch
@@ -675,6 +711,8 @@
           
 #top
   .custom_slider_section
+    padding-top: 30px;
+    padding-bottom: 30px;
     .image_slider_wrap
       position: relative
       .slick-list
@@ -718,14 +756,32 @@
         visibility: visible          
     .slick-arrow
       position: absolute
-      top: -72px
-      right: 0
+      top: -82px
+      right: -18px
+      border: none
+      background: transparent;
+      &::before
+        content: '\e80c'
+        font-family: Fontello
+        font-size: 30px;
+        color: $text-black
       &.slick-prev
-        right: 60px
+        right: 46px
+        &::before
+          content: '\e80b'
+      &:hover
+        transform: scale(1.2)
+        &::before
+          color: $accent
+          font-weight: bold;
+      
+
+
+        
 
 #top
   .custom_wy_us_section
-    padding: 100px  0
+    padding: 50px  0
     .avia_textblock  
       h3
         font-weight: bold
@@ -770,6 +826,8 @@
 
 #top
   .custome_accordin_section
+    background: #F0F2F4;
+    padding-bottom: 70px;
     .avia_textblock
       h3
         font-weight: bold

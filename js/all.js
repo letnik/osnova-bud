@@ -20,6 +20,9 @@ jQuery('.custom_slider_section .image_slider_wrap').slick({
     slidesToShow: 3,
     slidesToScroll: 3,
     rows: 2,
+    arrows: true,
+    nextArrow: '<button class="slick-prev slick-arrow"></button>',
+    prevArrow: '<button class="slick-next slick-arrow"></button>'
 
     });
 });
