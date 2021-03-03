@@ -23,6 +23,20 @@
         display: flex
         justify-content: space-between
         align-items: center
+        padding-left: 25px;
+        border-top: 10px solid #ccc;
+        border-bottom: 1px solid $text-grey;
+        &::after
+          border-top: 10px solid #ccc;
+          border-bottom: 1px solid $text-grey;
+          content: '';
+          display: block;
+          position: absolute;
+          height: 57px;
+          width: calc(var(--marginB) + 51px);
+          right: calc(var(--lefterB) - 50px);
+          top: 0;
+          overflow-x: hidden
         .faq
           a
             color: $text-black
@@ -39,6 +53,19 @@
             margin: 0
           &-item  
             padding: 18px 36px
+            position: relative;
+            &:nth-child(2)
+              &::before
+                content: ''
+                display: block;
+                background: $text-grey
+                height: 65%;
+                width: 1px;
+                position: absolute;
+                top: 18.5%
+                left: 0
+
+              
             a 
               display: flex
               color: $text-black

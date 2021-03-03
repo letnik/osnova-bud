@@ -828,6 +828,7 @@
   .custome_accordin_section
     background: #F0F2F4;
     padding-bottom: 70px;
+    overflow: hidden;
     .avia_textblock
       h3
         font-weight: bold
@@ -894,6 +895,104 @@
               position: absolute
               z-index: -2
 
+
+// #top
+//   .custome_grid_realiz_section
+//     .custome_accord_tit 
+//       padding-top: 108px
+//       font-weight: bold
+//       font-size: 35px
+//       line-height: 48px
+//       color: $text-black
+//       // margin-left: calc(var(--marginB) + 50px)
+//       padding-left: 25px
+//     .tabcontainer 
+//       .tab_titles
+//         padding: 25px
+//         display: flex
+//         flex-wrap: wrap
+//         justify-content: space-between
+//         .tab
+//           border: none
+//           font-size: 18px
+//           line-height: 25px
+//           color: $text-black
+//           background: #F0F2F4 
+//           box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25)
+//           padding: 18px 38px
+//           // margin-right: 15px
+//           margin-bottom: 10px
+//           width: 49%
+//           text-align: center
+//           &.active_tab
+//             font-weight: 600
+//             color: $text-white
+//             background: $accent
+//       .tab_content
+//         padding-right: 0
+//         &.active_tab_content
+//           background: inherit
+//           border: none
+//         .gd_place
+//           .arhive_item_wrap
+//             display: flex
+//             justify-content: space-between
+//             .media_box
+//               width: 45%
+//               .geodir-viewport
+//                 margin-bottom: 0
+//               ul.geodir-slides
+//                 > li
+//                   // width: 100% !important
+//                   height: 265px 
+//                   // img
+//                   //   width: 100%
+//               .geodir-direction-nav
+//                 // display: none
+//                 width: 0
+//                 height: 0
+//             .content_box
+//               width: 53%
+//               // display: flex;
+//               // flex-direction: column;
+//               // justify-content: space-between
+//               .title_box
+//                 .geodir-field-post_title
+//                   font-weight: bold
+//                   font-size: 20px
+//                   line-height: 27px
+//                   color: $text-black
+//               .adress_box
+//                 .geodir-field-address 
+//                   display: flex
+//                   span 
+//                     font-size: 16px
+//                     line-height: 22px
+//                     color: $text-grey
+//                     margin-right: 10px
+//               .discription_box
+//                 .geodir-field-post_content
+//                   // p 
+//                   font-weight: normal
+//                   font-size: 16px
+//                   line-height: 22px
+//                   color: $text-black
+//               .characteristics_box
+//                 display: flex
+//                 justify-content: space-between
+
+//                 .geodir-field-price, .geodir-field-timing
+//                   font-weight: 600
+//                   font-size: 18px
+//                   line-height: 25px
+//                   color: $text-black
+//                   &::before
+//                     content: '$'
+//                     color: $accent
+//                     font-size: 30px
+//                     margin-right: 11px
+
+
 #top
   .custome_grid_realiz_section
     .custome_accord_tit 
@@ -904,91 +1003,93 @@
       color: $text-black
       // margin-left: calc(var(--marginB) + 50px)
       padding-left: 25px
-    .tabcontainer 
-      .tab_titles
-        padding: 25px
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-between
-        .tab
-          border: none
-          font-size: 18px
-          line-height: 25px
-          color: $text-black
-          background: #F0F2F4 
-          box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25)
-          padding: 18px 38px
-          // margin-right: 15px
-          margin-bottom: 10px
-          width: 49%
-          text-align: center
-          &.active_tab
-            font-weight: 600
-            color: $text-white
-            background: $accent
-      .tab_content
-        padding-right: 0
-        &.active_tab_content
-          background: inherit
-          border: none
-        .gd_place
-          .arhive_item_wrap
-            display: flex
-            justify-content: space-between
-            .media_box
-              width: 45%
-              .geodir-viewport
-                margin-bottom: 0
-              ul.geodir-slides
-                > li
-                  // width: 100% !important
-                  height: 265px 
-                  // img
-                  //   width: 100%
-              .geodir-direction-nav
-                // display: none
-                width: 0
-                height: 0
-            .content_box
-              width: 53%
-              // display: flex;
-              // flex-direction: column;
-              // justify-content: space-between
-              .title_box
-                .geodir-field-post_title
-                  font-weight: bold
-                  font-size: 20px
-                  line-height: 27px
-                  color: $text-black
-              .adress_box
-                .geodir-field-address 
-                  display: flex
-                  span 
+    .list.custom-tabs-form
+      .tabcontainer 
+        .tab_titles
+          padding: 25px
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+          .tab
+            border: none
+            font-size: 18px
+            line-height: 25px
+            color: $text-black
+            background: #F0F2F4 
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25)
+            padding: 18px 38px
+            // margin-right: 15px
+            margin-bottom: 10px
+            width: 49%
+            text-align: center
+            &.active_tab
+              font-weight: 600
+              color: $text-white
+              background: $accent
+        .tab_content
+          padding-right: 0
+          &.active_tab_content
+            background: inherit
+            border: none
+          .gd_place
+            .arhive_item_wrap
+              display: flex
+              justify-content: space-between
+              .media_box
+                width: 45%
+                .geodir-viewport
+                  margin-bottom: 0
+                ul.geodir-slides
+                  > li
+                    // width: 100% !important
+                    height: 265px 
+                    // img
+                    //   width: 100%
+                .geodir-direction-nav
+                  // display: none
+                  width: 0
+                  height: 0
+              .content_box
+                width: 53%
+                padding-right: 22px;
+                display: flex;
+                flex-direction: column;
+                .title_box
+                  .geodir-field-post_title
+                    font-weight: bold
+                    font-size: 20px
+                    line-height: 27px
+                    color: $text-black
+                .adress_box
+                  .geodir-field-address 
+                    display: flex
+                    span 
+                      font-size: 16px
+                      line-height: 22px
+                      color: $text-grey
+                      margin-right: 10px
+                .discription_box
+                  
+                  .geodir-field-post_content
+                    // p 
+                    font-weight: normal
                     font-size: 16px
                     line-height: 22px
-                    color: $text-grey
-                    margin-right: 10px
-              .discription_box
-                .geodir-field-post_content
-                  // p 
-                  font-weight: normal
-                  font-size: 16px
-                  line-height: 22px
-                  color: $text-black
-              .characteristics_box
-                display: flex
-                justify-content: space-between
-
-                .geodir-field-price, .geodir-field-timing
-                  font-weight: 600
-                  font-size: 18px
-                  line-height: 25px
-                  color: $text-black
-                  &::before
-                    content: '$'
-                    color: $accent
-                    font-size: 30px
-                    margin-right: 11px
+                    color: $text-black
+                .characteristics_box
+                  display: flex
+                  justify-content: space-between
+                  margin-top: auto;
+                  .geodir-field-price, .geodir-field-timing
+                    font-weight: 600
+                    font-size: 18px
+                    line-height: 25px
+                    color: $text-black
+                    &::before
+                      content: '$'
+                      color: $accent
+                      font-size: 30px
+                      margin-right: 11px
 
 
         
