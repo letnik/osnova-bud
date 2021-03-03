@@ -71,11 +71,11 @@ function show_custom_menu() {
     echo '<div class="sup-menu">
     <div class="sup-menu-wrap">
   
-      
+
       <div class="contact">
         <ul class="contact-list">
-          <li class="contact-item"><a href="" class="contact-link"><i class="icon-"></i><span>+38 (068) 218-16-17</span></a></li>
-          <li class="contact-item"><a href="" class="contact-link"><i class="icon-"></i><span>mail-mail@gmail.com</span></a></li>
+          <li class="contact-item"><a href="tel:+380682181617" class="contact-link"><i class="icon-phone"></i><span>+38 (068) 218-16-17</span></a></li>
+          <li class="contact-item"><a href="mailto:mail-mail@gmail.com" class="contact-link"><i class="icon-envelope"></i><span>mail-mail@gmail.com</span></a></li>
         </ul>
       </div>
   

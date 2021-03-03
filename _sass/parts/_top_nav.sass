@@ -1,0 +1,67 @@
+#top
+  #header
+    .main_menu
+      .avia-menu
+        margin-left: 30px
+        > ul.av-main-nav
+          > li
+            padding: 40px 38px
+            > a
+              padding: 0
+              .avia-menu-text
+                font-size: 17px
+                line-height: 23px
+                font-weight: normal;
+                color: $text-black
+              &:hover
+                .avia-menu-text
+                  // font-weight: bold
+                  transition: all .2s
+
+    .sup-menu
+      .sup-menu-wrap  
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .faq
+          a
+            color: $text-black
+            font-size: 15px
+            line-height: 20px
+            text-decoration: none
+            padding-left: 36px
+            &:hover
+              color: $accent  
+              transition: all .2s
+        .contact
+          &-list
+            display: flex
+            margin: 0
+          &-item  
+            padding: 18px 36px
+            a 
+              display: flex
+              color: $text-black
+              font-size: 15px
+              line-height: 20px
+              text-decoration: none
+              &:hover
+                color: $accent  
+                transition: all .2s
+                > i
+                  &::before
+                    color: $accent
+              i
+                margin-right: 12px
+                &::before
+
+                  font-size: 20px
+                  color: $text-grey
+                  font-family: fontello
+              .icon-envelope
+                &::before
+                  content: '\E810'
+              .icon-phone
+                &::before
+                  content: '\E805'
+

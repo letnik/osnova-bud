@@ -119,12 +119,22 @@ body
         left: calc( var(--lefterB) - 50px )
         bottom: 0
         background: #ccc;
+      &::after
+        content: ''
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 33%;
+        right: -32%
+        top: 0
+        background: #ccc;
+        clip-path: polygon(0 0,100% 0,3% 100%,0 100%);
 
 
     > .main_menu 
       grid-area: 2 / 3 / 3 / 13
       position: relative
-      ul:first-child > li a
+      ul.av-main-nav:first-child > li a
         height: auto !important
         line-height: 18px !important
 
@@ -134,13 +144,10 @@ body
 
 .sup-menu
   &-wrap
-    display: flex
-    justify-content: space-between
 
   .contact
     &-list
-      display: flex
-      margin: 0
+      
     &-item
       font-size: 15px
       line-height: 22px
