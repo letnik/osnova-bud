@@ -1,0 +1,78 @@
+#footer.container_wrap
+  background: $accent2
+  border: none
+  .container
+    .av_one_third
+      margin: 0
+      &:nth-child(1)
+        width: 10%
+      &:nth-child(2)
+        width: 70%
+      &:nth-child(3)
+        width: 20%
+      #nav_menu-2
+        display: flex
+        .menu-footer-menu-container
+          width: 100%
+        #menu-footer-menu
+          display: flex
+          justify-content: center
+          align-items: center
+          li.menu-item
+            padding: 0 45px
+            a
+              font-size: 17px;
+              line-height: 23px;
+              color: $text-grey
+              &:hover
+                color: $accent
+      .contacts
+        padding: 0 5px
+        margin: 30px 0
+        ul.contact-list
+          width: 100%
+          margin: 0
+          li.contact-item
+            padding: 12px 0
+            a
+              text-decoration: none
+              span
+                font-size: 15px;
+                line-height: 20px;
+                color: $text-white
+              > i
+                &::before
+                  font-size: 20px
+                  color: $text-grey
+                  font-family: fontello
+                  margin-right: 12px
+              .icon-envelope
+                &::before
+                  content: '\E810'
+              .icon-phone
+                &::before
+                  content: '\E805'
+            &:hover
+              i
+                &::before
+                  color: $accent
+              span
+                color: $accent
+                  
+
+#socket.socket_color
+  background: $accent2
+  border: none
+  .container
+    display: flex
+    justify-content: center
+  .sub_menu_socket
+    display: none
+  .copyright
+    float: none
+    text-align: center
+    font-size: 15px
+    line-height: 20px
+    color: $text-grey
+
+
