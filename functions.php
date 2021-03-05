@@ -101,3 +101,33 @@ function show_footer_sub_menu() {
 
       ';
 }
+
+
+
+
+// поправити !!!! все готове)))
+
+// // add_shortcode logo
+// add_shortcode('avs_avia_logo', 'callback_avia_logo');
+// function callback_avia_logo() {
+//     $logo = avia_get_option('logo');
+//     $logo = !empty( $logo ) ? $logo : AVIA_BASE_URL.'images/layout/logo.png';
+//     return  avia_logo($logo, '', 'strong', true);
+// }
+
+
+
+function second_logo() {
+  $my_url = get_home_url(); 
+  $logo = '<div class="logo footer-logo second-logo"><a href="link-url" target="_blank">' ;
+  $logo .= '<img src="' . $my_url . '/wp-content/themes/enfold/images/layout/logo.png"/>';
+  $logo .= '</a></div>';
+  return $logo;
+  }
+add_shortcode('dp_footer_fogo', 'second_logo');
+
+
+// <!-- футер лого!!!!! -->
+
+
+// [dp_footer_fogo]
