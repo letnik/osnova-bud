@@ -117,7 +117,7 @@ function show_footer_sub_menu() {
 
 function second_logo() {
   $my_url = get_home_url(); 
-  $logo = '<div class="logo footer-logo second-logo"><a href="link-url" target="_blank">' ;
+  $logo = '<div class="logo footer-logo second-logo"><a href="' . $my_url . '">' ;
   $logo .= '<img src="' . $my_url . '/wp-content/themes/enfold/images/layout/logo.png"/>';
   $logo .= '</a></div>';
   return $logo;
