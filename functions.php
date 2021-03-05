@@ -103,8 +103,6 @@ function show_footer_sub_menu() {
 }
 
 
-
-
 // поправити !!!! все готове)))
 
 // // add_shortcode logo
@@ -131,3 +129,35 @@ add_shortcode('dp_footer_fogo', 'second_logo');
 
 
 // [dp_footer_fogo]
+
+
+
+add_shortcode( 'my_oferta', 'show_oferta' );
+
+function show_oferta(){
+
+  echo '<div id="oferta" class="oferta-wrap">
+          <ul class="oferta-list">';
+
+    $args = array(
+      'post_type' => 'page',
+      'post_parent' => 179,
+    );
+    
+    $query = new WP_Query( $args );
+    
+    if ( $query->have_posts() ) {
+      while ( $query->have_posts() ) {
+        $query->the_post();
+        echo '<li class="oferta-item"><a href="' . get_permalink() . '" class="oferta-link"><i class="icon ' . get_the_ID() . '"></i><span class="oferta-title">' . get_the_title() . '</span></a></li>
+            ';
+      }
+    } else {
+      // Постов не найдено
+    }
+
+    wp_reset_postdata();
+
+    echo '</ul>
+        </div>';
+
