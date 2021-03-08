@@ -12,6 +12,9 @@ jQuery(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         rows: 2,
+        arrows: true,
+        nextArrow: '<button class="slick-prev slick-arrow"></button>',
+        prevArrow: '<button class="slick-next slick-arrow"></button>'
       });
   });
 

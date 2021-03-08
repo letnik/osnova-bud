@@ -32,8 +32,6 @@
 
 
 
-  
-
 #top
   .title_grid_row
     .title_wrap
@@ -49,7 +47,7 @@
           z-index: -2;
           background: rgba(25, 25, 25, 0.7)
           -webkit-clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 94% 100%, 0% 100%);
           position: absolute;
           left: 0 
           bottom: 0
@@ -66,7 +64,7 @@
           bottom: 0;
           background: rgba(25, 25, 25, 0.7)
           -webkit-clip-path: polygon(100% 0, 38% 100%, 100% 100%);
-          clip-path: polygon(100% 0, 38% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 63% 100%, 100% 100%);
           visibility: visible;
           z-index: 3;
       .av-special-heading-tag
@@ -74,7 +72,7 @@
         font-style: normal
         font-weight: bold
         font-size: 50px
-        text-transform: uppercase
+        // text-transform: uppercase
         color: #F0F2F4
       .avia_textblock 
         display: flex
@@ -121,6 +119,7 @@
         h2  
           font-size: 35px
           font-weight: bold
+          line-height: 48px;
           margin-bottom: 28px
           color: $text-black
         p 
@@ -155,7 +154,7 @@
           bottom: -15px
           z-index: 0
         img
-          min-height: 450px
+          min-height: 505px
           width: 100%;
           height: auto;
           object-fit: cover
@@ -185,6 +184,8 @@
       .tabcontainer
         .tab_titles
           width: 35%
+          height: 100%
+          min-height: 816px
           max-width: none
           background: #F0F2F4
           .tab
@@ -235,7 +236,7 @@
               left: 0
               top: 0
               width: calc( 100% + var(--marginB) )
-              height: -webkit-fill-available
+              height: 100%
               z-index: -1
               overflow: visible
               &::nth-child(2), &::nth-child(3), &::nth-child(4), &::nth-child(2), &::nth-child(5)
@@ -280,14 +281,14 @@
   .custome_map_grid
     .flex_cell.av_one_full  
       padding: 30px 0 0
-      .avia_textblock  h3 
-        padding-left: calc(var(--marginB) + 50px )
-        font-weight: bold
-        font-size: 35px
-        line-height: 48px
-        color: $text-black
-        margin-bottom: 60px;
-        margin-top: 60px;
+    .custome_triangle h2 
+      padding-left: calc(var(--marginB) + 50px )
+      font-weight: bold
+      font-size: 35px
+      line-height: 48px
+      color: $text-black
+      margin-bottom: 60px;
+      margin-top: 60px;
     .inputbox.geodir-hide
       display: none
     .map_category
@@ -364,9 +365,14 @@
         line-height: 48px
         color: $text-black
       .av_two_fifth
-        margin-top: auto
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-bottom: 30px
       .custom_slider_wrap
         position: static;
+        margin-top: 35px
         .slick-arrow
           position: absolute;
           top: 210px;
@@ -541,7 +547,7 @@
             line-height: 44px
             color: $text-white
             -webkit-clip-path: polygon(0 0%,100% 0,69% 100%,0 100%)
-            clip-path: polygon(0 0%,100% 0,69% 100%,0 100%)
+            clip-path: polygon(0 0%,100% 0,80% 100%,0 100%)
           .iconlist_content  p 
             font-size: 16px
             line-height: 22px
@@ -702,7 +708,7 @@
               line-height: 44px
               color: $text-white
               -webkit-clip-path: polygon(0 0%,100% 0,69% 100%,0 100%)
-              clip-path: polygon(0 0%,100% 0,69% 100%,0 100%)
+              clip-path: polygon(0 0%,100% 0,80% 100%,0 100%)
             .iconlist_content  p 
               font-size: 16px
               line-height: 22px
@@ -718,6 +724,8 @@
     padding-bottom: 30px;
     .image_slider_wrap
       position: relative
+      // background: red
+      // z-index: 999
       .slick-list
         .slick-slide
           > div
@@ -785,6 +793,7 @@
 #top
   .custom_wy_us_section
     padding: 50px  0
+    background: #F0F2F4;
     .avia_textblock  
       h3
         font-weight: bold
@@ -829,7 +838,6 @@
 
 #top
   .custome_accordin_section
-    background: #F0F2F4;
     padding-bottom: 70px;
     overflow: hidden;
     .avia_textblock
@@ -859,6 +867,7 @@
           color: $text-white
           &::after
             content: '-'
+            font-size: 30px
             color: $text-white
         .toggle_icon
           display: none
@@ -1079,6 +1088,8 @@
                     font-size: 16px
                     line-height: 22px
                     color: $text-black
+                    a
+                      display: none
                 .characteristics_box
                   display: flex
                   justify-content: space-between
@@ -1088,11 +1099,26 @@
                     font-size: 18px
                     line-height: 25px
                     color: $text-black
+                    display: flex
+                    align-items: center
                     &::before
-                      content: '$'
+                      font-family: fontello
                       color: $accent
                       font-size: 30px
                       margin-right: 11px
+                  .geodir-field-price
+                    &::before
+                      content: '\e80f'
+                  .geodir-field-timing 
+                    &::before
+                      content: '\e80e'
+                    
+
+
+#top
+  .custom-tabs-form
+    .custome_triangle
+      margin-top: 50px
 
 
         

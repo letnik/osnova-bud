@@ -136,6 +136,8 @@ add_shortcode('dp_footer_fogo', 'second_logo');
 
 // function show_oferta(){
 
+//   wp_reset_postdata();
+
 //   echo '<div id="oferta" class="oferta-wrap">
 //           <ul class="oferta-list">';
 
