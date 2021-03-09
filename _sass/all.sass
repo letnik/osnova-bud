@@ -34,9 +34,11 @@
 
 #top
   .title_grid_row
+    .flex_cell
+      // min-height: 70vw
     .title_wrap
       .av_one_full
-        padding: 55px 55px 55px calc( var(--marginB) + 50px )
+        padding: 30px 50px;
         width: auto
         max-width: 70%
         min-width: 65%
@@ -179,7 +181,7 @@
           h3
             font-size: 35px
             color: $text-black
-            margin-left: calc( var(--marginB) + 50px )
+            margin-left: 50px
             margin-bottom: 0px;
       .tabcontainer
         .tab_titles
@@ -189,7 +191,7 @@
           max-width: none
           background: #F0F2F4
           .tab
-            padding-left: calc(var(--marginB) + 57px )
+            padding-left: 57px
             left: -7px
             padding-top: 22px;
             padding-bottom: 22px;
@@ -225,8 +227,8 @@
           .tab_content 
             padding-left: 0
           .tab_inner_content
-            margin: 35px var(--marginB) 30px 43px
-            padding: 84px 84px 84px 51px
+            margin: 35px
+            padding: 50px
             background: rgba(25, 25, 25, 0.9)
             position: static
             h3,p
@@ -235,10 +237,11 @@
               position: absolute
               left: 0
               top: 0
-              width: calc( 100% + var(--marginB) )
+              width: 100%
               height: 100%
               z-index: -1
               overflow: visible
+              object-fit: cover
               &::nth-child(2), &::nth-child(3), &::nth-child(4), &::nth-child(2), &::nth-child(5)
                 display: none !important
 
@@ -247,13 +250,22 @@
 
 #top
   .custome_map-iconlist_grid
+    display: flex
+    flex-direction: column
     .av_two_fifth
-      padding-left: calc(var(--marginB) + 50px ) !important
+      width: 100% !important
+      padding-left: 50px !important
+      padding-right: 50px !important
       .avia_textblock h2 
         font-weight: bold;
         font-size: 35px;
         line-height: 48px;
         color: $text-black
+    .av_three_fifth
+      width: 100% !important
+      padding: 0 !important
+      // padding-left: 50px !important
+      // padding-right: 50px !important
     .avia-icon-list-container
       li.avia_start_animation
         display: flex;
@@ -262,9 +274,10 @@
           background: transparent;
           color: $accent  
           font-size: 35px;
-          height: auto;
-          width: auto;
-          line-height: 0;
+          width: 35px
+          text-align: center
+          margin-left: 0
+          // margin-right: 30px
         .article-icon-entry 
           min-height: auto
       .iconlist_content_wrap
@@ -282,7 +295,7 @@
     .flex_cell.av_one_full  
       padding: 30px 0 0
     .custome_triangle h2 
-      padding-left: calc(var(--marginB) + 50px )
+      padding-left: 50px
       font-weight: bold
       font-size: 35px
       line-height: 48px
@@ -294,12 +307,14 @@
     .map_category
       background: rgba(255, 255, 255, 0.95)
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15)
+      padding: 0
       .treeview.main_list
-        padding: 32px !important
-        width: 460px
+        padding: 18px !important
+        width: 400px
         li
           display: flex
-          padding: 25px 0
+          align-items: center
+          padding: 10px 0
           margin: 0
           label
             font-size: 18px
@@ -317,8 +332,8 @@
             display: flex
             align-items: center
             justify-content: center
-            width: 30px
-            height: 30px
+            width: 20px
+            height: 20px
           &.unchecked
             &::before
               content: ''
@@ -672,8 +687,10 @@
     padding-top: 100px
     .entry-content-wrapper
       display: flex
-      align-items: stretch
+      align-items: center
+      flex-direction: column
     .av_two_fifth
+      width: 100%
       .avia_textblock  
         h2, h3
           font-weight: bold
@@ -687,6 +704,8 @@
           line-height: 22px
           color: $text-black
     .av_three_fifth
+      width: 100%
+      margin-left: 0
       display: flex
       align-items: center
       .avia-icon-list-container 
@@ -715,7 +734,6 @@
               color: $text-black
             .iconlist_content_wrap
               display: flex
-              justify-content: center
               align-items: start
           
 #top
@@ -732,9 +750,9 @@
             padding: 10px
             line-height: 0
             .avia-image-overlay-wrap
-              min-width: 340px
+              // min-width: 340px
               width: auto
-              height: 350px
+              height: 250px
               overflow: hidden
               display: flex
               justify-content: center
@@ -1018,7 +1036,7 @@
     .list.custom-tabs-form
       .tabcontainer 
         .tab_titles
-          padding: 25px
+          padding: 25px 25px 25px 0
           display: flex
           flex-wrap: wrap
           justify-content: space-between
@@ -1040,6 +1058,7 @@
               background: $accent
         .tab_content
           padding-right: 0
+          padding-left: 0
           &.active_tab_content
             background: inherit
             border: none
@@ -1088,6 +1107,7 @@
                     font-size: 16px
                     line-height: 22px
                     color: $text-black
+                    word-break: break-word;
                     a
                       display: none
                 .characteristics_box
@@ -1119,6 +1139,177 @@
   .custom-tabs-form
     .custome_triangle
       margin-top: 50px
+
+
+
+@media screen and ( min-width: 899px )
+
+  #top
+    .custome_map-iconlist_grid
+      display: block
+      .av_two_fifth
+        width: 50% !important
+        padding-right: 30px
+      .av_three_fifth
+        width: 50% !important
+        padding: 30px 0 !important
+
+
+
+
+@media screen and ( min-width: 1199px )
+
+  #top
+    .custom_onasp_informsection
+      .entry-content-wrapper
+        display: flex
+        align-items: stretch
+        flex-direction: row
+        .av_two_fifth
+          width: 36.4%
+        .av_three_fifth
+          display: flex
+          align-items: center
+          margin-left: 6%;
+          width: 57.599999999999994%
+
+  #top
+    .custom_slider_section
+      .image_slider_wrap
+        .slick-list
+          .slick-slide
+            >div
+              .avia-image-overlay-wrap
+                height: 300px
+
+  #top
+    .custome_map-iconlist_grid
+      .av_two_fifth
+        padding-right: 0 !important
+        width: 40% !important
+      .av_three_fifth
+        width: 60% !important
+
+
+
+
+
+
+
+
+
+@media screen and ( min-width: 1311px )
+
+  #top
+    .title_grid_row
+      .title_wrap
+        .av_one_full
+          padding: 55px 55px 55px calc( var(--marginB) + 50px )
+
+  #top
+    .custome_map-iconlist_grid
+      .av_two_fifth
+        padding-left: calc(var(--marginB) + 50px ) !important
+        padding-right: 0 !important
+
+            
+
+  #top
+    #wrap_all
+      .custome_grid_row_accordin_wrap
+        section
+          .avia_textblock  
+            margin-bottom: 50px;
+            h3
+              font-size: 35px
+              color: $text-black
+              margin-left: calc( var(--marginB) + 50px )
+              margin-bottom: 0px;
+        .tabcontainer
+          .tab_titles
+            width: 35%
+            height: 100%
+            min-height: 816px
+            max-width: none
+            background: #F0F2F4
+            .tab
+              padding-left: calc(var(--marginB) + 57px )
+
+          .av_tab_section
+            .tab_content 
+              padding-left: 0
+            .tab_inner_content
+              margin: 35px var(--marginB) 30px 43px
+              padding: 84px 84px 84px 51px
+              p img
+                width: calc( 100% + var(--marginB) )
+
+
+  #top
+    .custome_map_grid
+      .flex_cell.av_one_full  
+        padding: 30px 0 0
+      .custome_triangle h2 
+        padding-left: calc(var(--marginB) + 50px )
+
+
+
+
+  #top
+    .custome_map_grid
+      .flex_cell.av_one_full  
+      .inputbox.geodir-hide
+        display: none
+      .map_category
+        .treeview.main_list
+          padding: 32px !important
+          width: 460px
+          li
+            padding: 25px 0
+            label
+              img
+                display: none
+            &::before
+              width: 30px
+              height: 30px
+            &.unchecked
+              &::before
+                content: ''
+                background: transparent
+                border: solid 1px $text-black
+      
+  #top
+    .custom_slider_section
+      .image_slider_wrap
+        .slick-list
+          .slick-slide
+            >div
+              .avia-image-overlay-wrap
+                height: 350px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @media screen and ( min-width: 768px )
+
+
+
+// @media screen and ( min-width: 567px )
+
+
+
 
 
         

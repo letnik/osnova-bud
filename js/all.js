@@ -25,7 +25,27 @@ jQuery('.custom_slider_section .image_slider_wrap').slick({
     rows: 2,
     arrows: true,
     nextArrow: '<button class="slick-prev slick-arrow"></button>',
-    prevArrow: '<button class="slick-next slick-arrow"></button>'
+    prevArrow: '<button class="slick-next slick-arrow"></button>',
+//     responsive: [
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         arrows: false,
+//         centerMode: true,
+//         centerPadding: '40px',
+//         slidesToShow: 3
+//       }
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         arrows: false,
+//         centerMode: true,
+//         centerPadding: '40px',
+//         slidesToShow: 1
+//       }
+//     }
+//   ]
 
     });
 });
