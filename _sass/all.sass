@@ -133,8 +133,8 @@
         text-align: start
         // width: 20.5%
         // margin: 0 2% 0 0
-        padding: 35px 10px 55px 0
-        width: 24%
+        padding: 10px 20px 10px 0
+        width: 49%
         .avia-animated-number-title span 
           font-weight: 600
           font-size: 30px
@@ -166,8 +166,8 @@
       font-weight: 600
       font-size: 18px
       line-height: 25px
-      padding: 18px 45px
-      margin: 0
+      padding: 18px
+      margin: 20px 0 0 0
           
           
           
@@ -185,7 +185,7 @@
             margin-bottom: 0px;
       .tabcontainer
         .tab_titles
-          width: 35%
+          width: 40%
           height: 100%
           min-height: 816px
           max-width: none
@@ -254,6 +254,7 @@
     flex-direction: column
     .av_two_fifth
       width: 100% !important
+      height: auto !important
       padding-left: 50px !important
       padding-right: 50px !important
       .avia_textblock h2 
@@ -464,7 +465,9 @@
         flex-direction: column
         justify-content: center
         margin-left: 0
-        padding-left: 74px
+        width: 50%
+        
+        padding: 0 10px
         .avia-image-container
           margin: 0
           width: 100%
@@ -483,9 +486,10 @@
               color: #022227
               
       .av_two_fifth
+        width: 50%
         .avia-icon-list-container, .custome_oferta_lists
           margin: 0
-          padding: 65px 55px
+          padding: 40px
           background: #F0F2F4
           .av-iconlist-small
             .iconlist_icon
@@ -503,10 +507,11 @@
                   .iconlist_content_wrap
                     display: flex
                     align-items: center
+                    justify-content: space-between
                     .entry-content-header
                       min-width: 40%
                       width: auto
-                      margin-right: 24px
+                      margin-right: 10px
                     .av_iconlist_title
                       font-size: 20px
                       line-height: 27px  
@@ -870,7 +875,7 @@
       display: flex
       flex-direction: column
       .single_toggle
-        max-width: 468px
+        max-width: 40%
         overflow: visible
         position: static
       .toggler
@@ -902,9 +907,9 @@
           &:last-child
             position: absolute
             right: 22px 
-            top: 0
-            width: 640px
-            height: 600px
+            top: 3%
+            width: 55%
+            height: 93%
             display: flex
             align-items: center
             justify-content: center
@@ -924,103 +929,6 @@
               right: -22px
               position: absolute
               z-index: -2
-
-
-// #top
-//   .custome_grid_realiz_section
-//     .custome_accord_tit 
-//       padding-top: 108px
-//       font-weight: bold
-//       font-size: 35px
-//       line-height: 48px
-//       color: $text-black
-//       // margin-left: calc(var(--marginB) + 50px)
-//       padding-left: 25px
-//     .tabcontainer 
-//       .tab_titles
-//         padding: 25px
-//         display: flex
-//         flex-wrap: wrap
-//         justify-content: space-between
-//         .tab
-//           border: none
-//           font-size: 18px
-//           line-height: 25px
-//           color: $text-black
-//           background: #F0F2F4 
-//           box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25)
-//           padding: 18px 38px
-//           // margin-right: 15px
-//           margin-bottom: 10px
-//           width: 49%
-//           text-align: center
-//           &.active_tab
-//             font-weight: 600
-//             color: $text-white
-//             background: $accent
-//       .tab_content
-//         padding-right: 0
-//         &.active_tab_content
-//           background: inherit
-//           border: none
-//         .gd_place
-//           .arhive_item_wrap
-//             display: flex
-//             justify-content: space-between
-//             .media_box
-//               width: 45%
-//               .geodir-viewport
-//                 margin-bottom: 0
-//               ul.geodir-slides
-//                 > li
-//                   // width: 100% !important
-//                   height: 265px 
-//                   // img
-//                   //   width: 100%
-//               .geodir-direction-nav
-//                 // display: none
-//                 width: 0
-//                 height: 0
-//             .content_box
-//               width: 53%
-//               // display: flex;
-//               // flex-direction: column;
-//               // justify-content: space-between
-//               .title_box
-//                 .geodir-field-post_title
-//                   font-weight: bold
-//                   font-size: 20px
-//                   line-height: 27px
-//                   color: $text-black
-//               .adress_box
-//                 .geodir-field-address 
-//                   display: flex
-//                   span 
-//                     font-size: 16px
-//                     line-height: 22px
-//                     color: $text-grey
-//                     margin-right: 10px
-//               .discription_box
-//                 .geodir-field-post_content
-//                   // p 
-//                   font-weight: normal
-//                   font-size: 16px
-//                   line-height: 22px
-//                   color: $text-black
-//               .characteristics_box
-//                 display: flex
-//                 justify-content: space-between
-
-//                 .geodir-field-price, .geodir-field-timing
-//                   font-weight: 600
-//                   font-size: 18px
-//                   line-height: 25px
-//                   color: $text-black
-//                   &::before
-//                     content: '$'
-//                     color: $accent
-//                     font-size: 30px
-//                     margin-right: 11px
 
 
 #top
@@ -1141,8 +1049,16 @@
       margin-top: 50px
 
 
+// @media screen and ( min-width: 567px )
 
-@media screen and ( min-width: 899px )
+
+
+// @media screen and ( min-width: 768px )
+
+
+
+
+@media screen and ( min-width: 990px )
 
   #top
     .custome_map-iconlist_grid
@@ -1152,12 +1068,46 @@
         padding-right: 30px
       .av_three_fifth
         width: 50% !important
-        padding: 30px 0 !important
+        padding: 0 !important
+
+
+@media screen and ( min-width: 1072px )
+
+
+  #top
+    .custome_btn_default
+      a
+        padding: 18px 45px
+        
+
+
+  
+  #top
+    .custom_details_section2
+      .container
+        .av_two_fifth
+          width: 36.4%
+        .av_three_fifth
+          width: 57.599999999999994%
+          padding: 0 10px 0 74px
+
 
 
 
 
 @media screen and ( min-width: 1199px )
+
+
+
+
+  #top
+    .custom_details_section2
+      .container
+        
+        .av_two_fifth
+          .avia-icon-list-container, .custome_oferta_lists
+            margin: 0
+            padding: 65px 55px
 
   #top
     .custom_onasp_informsection
@@ -1190,15 +1140,22 @@
       .av_three_fifth
         width: 60% !important
 
+@media screen and ( min-width: 1210px )
 
-
-
-
-
-
+  #top
+    .second_section_home_cust
+      .av_three_fifth
+        .custome_informe_ti
+          padding: 35px 10px 55px 0
+          width: 24%
+    .custome_btn_default
+      a
+        margin: 0
+      
 
 
 @media screen and ( min-width: 1311px )
+
 
   #top
     .title_grid_row
@@ -1227,11 +1184,6 @@
               margin-bottom: 0px;
         .tabcontainer
           .tab_titles
-            width: 35%
-            height: 100%
-            min-height: 816px
-            max-width: none
-            background: #F0F2F4
             .tab
               padding-left: calc(var(--marginB) + 57px )
 
@@ -1289,6 +1241,7 @@
 
 
 
+ 
 
 
 
@@ -1298,15 +1251,6 @@
 
 
 
-
-
-
-
-// @media screen and ( min-width: 768px )
-
-
-
-// @media screen and ( min-width: 567px )
 
 
 
