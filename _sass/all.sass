@@ -18,17 +18,17 @@
 //         width: auto
 //         max-width: 70%
 //         min-width: 65%
-//         position: relative;
+//         position: relative
         // &::after
         //   // background: rgba(25,25,25,.7)
-        //   background: #000;
-        //   width: 20px;
-        //   height: 50px;
+        //   background: #000
+        //   width: 20px
+        //   height: 50px
         //   content: ''
         //   display: block
-        //   position: absolute;
+        //   position: absolute
         //   right: 0
-        //   bottom: 0;
+        //   bottom: 0
 
 
 
@@ -38,37 +38,37 @@
       // min-height: 70vw
     .title_wrap
       .av_one_full
-        padding: 30px 50px;
+        padding: 30px 50px
         width: auto
         max-width: 70%
         min-width: 65%
-        position: relative;
+        position: relative
         &::before
-          width: 100%;
-          height: 100%;
-          z-index: -2;
+          width: 100%
+          height: 100%
+          z-index: -2
           background: rgba(25, 25, 25, 0.7)
-          -webkit-clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0%, 94% 100%, 0% 100%);
-          position: absolute;
+          -webkit-clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%)
+          clip-path: polygon(0 0, 100% 0%, 94% 100%, 0% 100%)
+          position: absolute
           left: 0 
           bottom: 0
-          visibility: visible;
+          visibility: visible
           overflow: visible
         &::after
           content: ''
-          background: red;
-          display: block;
-          width: 11%;
-          height: 73%;
-          position: absolute;
-          right: 0;
-          bottom: 0;
+          background: red
+          display: block
+          width: 11%
+          height: 73%
+          position: absolute
+          right: 0
+          bottom: 0
           background: rgba(25, 25, 25, 0.7)
-          -webkit-clip-path: polygon(100% 0, 38% 100%, 100% 100%);
-          clip-path: polygon(100% 0, 63% 100%, 100% 100%);
-          visibility: visible;
-          z-index: 3;
+          -webkit-clip-path: polygon(100% 0, 38% 100%, 100% 100%)
+          clip-path: polygon(100% 0, 63% 100%, 100% 100%)
+          visibility: visible
+          z-index: 3
       .av-special-heading-tag
         font-family: Montserrat
         font-style: normal
@@ -78,6 +78,7 @@
         color: #F0F2F4
       .avia_textblock 
         display: flex
+        display: inline-block
         p
           font-weight: 600
           font-size: 30px
@@ -96,11 +97,11 @@
       width: auto
       max-width: 70%
     .avia_textblock h1 
-      font-weight: bold;
-      font-size: 50px;
-      line-height: 68px;
+      font-weight: bold
+      font-size: 50px
+      line-height: 68px
       color: $text-white
-      margin-bottom: 0;
+      margin-bottom: 0
 
 
 
@@ -114,19 +115,22 @@
 #top     
   .second_section_home_cust
     display: flex
-    justify-content: flex-end
+    // justify-content: flex-end
     align-items: center
+    flex-wrap: wrap
+    // flex-direction: column
     .av_three_fifth
+      width: 100% !important
       .avia_textblock
         h2  
           font-size: 35px
           font-weight: bold
-          line-height: 48px;
+          line-height: 48px
           margin-bottom: 28px
           color: $text-black
         p 
-          font-size: 18px;
-          line-height: 25px;
+          font-size: 18px
+          line-height: 25px
           color: $text-black
       .custome_informe_ti
         display: inline-block
@@ -139,12 +143,16 @@
           font-weight: 600
           font-size: 30px
         .avia-animated-number-content p 
-          font-size: 20px
+          font-size: 22px
 
     .av_two_fifth
-      // padding: 30px 0 30px 64px
+      width: 100% !important
+      overflow: visible !important
+      .avia-image-container-inner
+        overflow: hidden
       .avia-image-overlay-wrap
         position: relative
+        padding: 0 0 20px 20px
         &::before
           content: ''
           display: block
@@ -157,17 +165,18 @@
           z-index: 0
         img
           min-height: 505px
-          width: 100%;
-          height: auto;
+          width: 100%
+          height: auto
           object-fit: cover
   .custome_btn_default
+    margin-top: 10px
     a
       border: 2px solid #0B1B34
       font-weight: 600
       font-size: 18px
       line-height: 25px
       padding: 18px
-      margin: 20px 0 0 0
+      margin: 0
           
           
           
@@ -177,12 +186,12 @@
     .custome_grid_row_accordin_wrap
       section
         .avia_textblock  
-          margin-bottom: 50px;
+          margin-bottom: 50px
           h3
             font-size: 35px
             color: $text-black
             margin-left: 50px
-            margin-bottom: 0px;
+            margin-bottom: 0px
       .tabcontainer
         .tab_titles
           width: 40%
@@ -193,10 +202,10 @@
           .tab
             padding-left: 57px
             left: -7px
-            padding-top: 22px;
-            padding-bottom: 22px;
-            font-size: 18px;
-            line-height: 25px;
+            padding-top: 22px
+            padding-bottom: 22px
+            font-size: 18px
+            line-height: 25px
             color: $text-black
             display: flex
             align-items: center
@@ -214,13 +223,13 @@
                 top: 0
                 bottom: 0
                 background: #191919
-                clip-path: polygon(0 0, 0 100%, 100% 50%);
-                width: 40px;
-                height: 100%;
-                z-index: -2;
+                clip-path: polygon(0 0, 0 100%, 100% 50%)
+                width: 40px
+                height: 100%
+                z-index: -2
             .tab_icon
-              font-size: 40px;
-              margin-right: 26px;
+              font-size: 40px
+              margin-right: 26px
 
 
         .av_tab_section
@@ -258,9 +267,9 @@
       padding-left: 50px !important
       padding-right: 50px !important
       .avia_textblock h2 
-        font-weight: bold;
-        font-size: 35px;
-        line-height: 48px;
+        font-weight: bold
+        font-size: 35px
+        line-height: 48px
         color: $text-black
     .av_three_fifth
       width: 100% !important
@@ -269,12 +278,12 @@
       // padding-right: 50px !important
     .avia-icon-list-container
       li.avia_start_animation
-        display: flex;
-        align-items: center;
+        display: flex
+        align-items: center
         .iconlist_icon
-          background: transparent;
+          background: transparent
           color: $accent  
-          font-size: 35px;
+          font-size: 35px
           width: 35px
           text-align: center
           margin-left: 0
@@ -284,8 +293,8 @@
       .iconlist_content_wrap
         .iconlist_content
           p, a
-            font-size: 18px;
-            line-height: 25px;
+            font-size: 18px
+            line-height: 25px
             color: $text-black
     
       
@@ -301,8 +310,8 @@
       font-size: 35px
       line-height: 48px
       color: $text-black
-      margin-bottom: 60px;
-      margin-top: 60px;
+      margin-bottom: 60px
+      margin-top: 60px
     .inputbox.geodir-hide
       display: none
     .map_category
@@ -357,8 +366,8 @@
             margin-bottom: 0
             padding-bottom: 42px
           fieldset
-            display: flex;
-            align-items: center;
+            display: flex
+            align-items: center
             p 
               input
                 font-size: 16px
@@ -374,31 +383,35 @@
     .entry-content-wrapper
       display: flex
       flex-wrap: wrap
-      align-items: stretch
+      align-items: normal
       .avia_textblock h4
         font-weight: bold
         font-size: 35px
         line-height: 48px
         color: $text-black
+      .av_three_fifth
+        width: 100%
       .av_two_fifth
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-end;
-        margin-bottom: 30px
+        width: 100% 
+        display: flex
+        flex-direction: row-reverse
+        align-items: center
+        justify-content: space-between
+        // margin-bottom: 30px
+        margin: 0
       .custom_slider_wrap
-        position: static;
+        position: static
         margin-top: 35px
         .slick-arrow
-          position: absolute;
-          top: 210px;
-          right: 0;
+          position: absolute
+          top: 180px
+          right: 0
           border: none
-          background: transparent;
+          background: transparent
           &::before
             content: '\e80c'
             font-family: Fontello
-            font-size: 30px;
+            font-size: 30px
             color: $text-black
           &.slick-prev
             right: 120px !important
@@ -408,7 +421,7 @@
             transform: scale(1.2)
             &::before
               color: $accent
-              font-weight: bold;
+              font-weight: bold
     
 
         
@@ -417,9 +430,9 @@
         height: 276px
 
     .sl-count
-      font-size: 90px;
-      line-height: 123px;
-      text-align: right;
+      font-size: 70px
+      line-height: 90px
+      text-align: start
       .sl-count__current
         color: $text-black
       .sl-count__total
@@ -573,8 +586,8 @@
             line-height: 22px
             color: $text-black
             &:nth-child(1)
-              font-size: 20px;
-              line-height: 27px;
+              font-size: 20px
+              line-height: 27px
               
           .iconlist_content_wrap
             display: flex
@@ -637,7 +650,7 @@
 
 #top
   .zobacz_section
-    background: #FDFDFD;
+    background: #FDFDFD
     .avia_textblock
       h3
         font-weight: bold
@@ -743,8 +756,8 @@
           
 #top
   .custom_slider_section
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 30px
+    padding-bottom: 30px
     .image_slider_wrap
       position: relative
       // background: red
@@ -793,11 +806,11 @@
       top: -82px
       right: -18px
       border: none
-      background: transparent;
+      background: transparent
       &::before
         content: '\e80c'
         font-family: Fontello
-        font-size: 30px;
+        font-size: 30px
         color: $text-black
       &.slick-prev
         right: 46px
@@ -807,7 +820,7 @@
         transform: scale(1.2)
         &::before
           color: $accent
-          font-weight: bold;
+          font-weight: bold
       
 
 
@@ -816,7 +829,7 @@
 #top
   .custom_wy_us_section
     padding: 50px  0
-    background: #F0F2F4;
+    background: #F0F2F4
     .avia_textblock  
       h3
         font-weight: bold
@@ -861,8 +874,8 @@
 
 #top
   .custome_accordin_section
-    padding-bottom: 70px;
-    overflow: hidden;
+    padding-bottom: 70px
+    overflow: hidden
     .avia_textblock
       h3
         font-weight: bold
@@ -990,9 +1003,9 @@
                   height: 0
               .content_box
                 width: 53%
-                padding-right: 22px;
-                display: flex;
-                flex-direction: column;
+                padding-right: 22px
+                display: flex
+                flex-direction: column
                 .title_box
                   .geodir-field-post_title
                     font-weight: bold
@@ -1015,13 +1028,13 @@
                     font-size: 16px
                     line-height: 22px
                     color: $text-black
-                    word-break: break-word;
+                    word-break: break-word
                     a
                       display: none
                 .characteristics_box
                   display: flex
                   justify-content: space-between
-                  margin-top: auto;
+                  margin-top: auto
                   .geodir-field-price, .geodir-field-timing
                     font-weight: 600
                     font-size: 18px
@@ -1053,12 +1066,57 @@
 
 
 
-// @media screen and ( min-width: 768px )
+@media screen and ( min-width: 768px )
+
+  
+  #top
+    .title_grid_row
+      .flex_cell
+        // min-height: 70vw
+      .title_wrap
+        .avia_textblock 
+          display: flex
 
 
 
 
 @media screen and ( min-width: 990px )
+
+  #top
+    .custom_slider_review_section
+      .entry-content-wrapper
+        display: flex
+        flex-wrap: wrap
+        align-items: stretch
+        .av_three_fifth
+          width: 57.599999999999994%
+
+          .custome_btn_default a
+            margin: 20px 0 0 0
+        .av_two_fifth
+          width: 40%
+          display: flex
+          flex-direction: column
+          align-items: flex-end
+          justify-content: flex-end
+          margin-bottom: 30px
+        .custom_slider_wrap
+          margin-top: 35px
+          .slick-arrow
+            position: absolute
+            top: 210px
+            right: 0
+            &.slick-prev
+              right: 120px !important
+        .sl-count
+          font-size: 90px
+          line-height: 123px
+          text-align: right
+          .sl-count__current
+            color: $text-black
+          .sl-count__total
+            color: #8D8D8D
+
 
   #top
     .custome_map-iconlist_grid
@@ -1069,6 +1127,14 @@
       .av_three_fifth
         width: 50% !important
         padding: 0 !important
+
+  #top     
+    .second_section_home_cust
+      .av_two_fifth
+        width: 40% !important
+        
+      .av_three_fifth
+        width: 57.599999999999994% !important
 
 
 @media screen and ( min-width: 1072px )
@@ -1120,7 +1186,7 @@
         .av_three_fifth
           display: flex
           align-items: center
-          margin-left: 6%;
+          margin-left: 6%
           width: 57.599999999999994%
 
   #top
@@ -1140,7 +1206,13 @@
       .av_three_fifth
         width: 60% !important
 
-@media screen and ( min-width: 1210px )
+// @media screen and ( min-width: 1210px )
+
+
+      
+
+
+@media screen and ( min-width: 1311px )
 
   #top
     .second_section_home_cust
@@ -1148,13 +1220,6 @@
         .custome_informe_ti
           padding: 35px 10px 55px 0
           width: 24%
-    .custome_btn_default
-      a
-        margin: 0
-      
-
-
-@media screen and ( min-width: 1311px )
 
 
   #top
@@ -1176,12 +1241,12 @@
       .custome_grid_row_accordin_wrap
         section
           .avia_textblock  
-            margin-bottom: 50px;
+            margin-bottom: 50px
             h3
               font-size: 35px
               color: $text-black
               margin-left: calc( var(--marginB) + 50px )
-              margin-bottom: 0px;
+              margin-bottom: 0px
         .tabcontainer
           .tab_titles
             .tab
@@ -1235,21 +1300,38 @@
       .image_slider_wrap
         .slick-list
           .slick-slide
-            >div
+            > div
               .avia-image-overlay-wrap
                 height: 350px
 
 
 
- 
+@media screen and ( max-width: 767px )
 
-
-
-
-
-
-
-
+  #top
+    #wrap_all
+      .custome_grid_row_accordin_wrap
+        .tabcontainer
+          .av_tab_section
+            .tab.fullsize-tab
+              padding-top: 22px
+              padding-bottom: 22px
+              font-size: 18px
+              line-height: 25px
+              color: $text-black
+              display: flex
+              align-items: center
+              border: none
+              // overflow: hidden
+              &.active_tab
+                width: 100%
+                background: #191919
+                color: $text-white
+                position: relative
+            .tab_icon
+              margin-right: 15px
+            .tab_content
+              padding: 0px
 
 
 

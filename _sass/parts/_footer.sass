@@ -2,14 +2,31 @@
   background: $accent2
   border: none
   .container
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    align-items: stretch
     .av_one_third
       margin: 0
       &:nth-child(1)
-        width: 15%
+        width: 30%
+        order: 1
+        .footer-logo
+          float: none
+          display: flex
+          justify-content: center
+          width: 100%
+          a 
+            max-width: 150px
+            margin: 0 auto
       &:nth-child(2)
-        width: 60%
+        width: 100%
+        order: 3
       &:nth-child(3)
-        width: 25%
+        width: 70%
+        order: 2
+        margin-bottom: 30px
       #nav_menu-2
         display: flex
         .menu-footer-menu-container
@@ -18,6 +35,7 @@
           display: flex
           justify-content: center
           align-items: center
+          flex-direction: column
           li.menu-item
             padding: 0 22px
             a
@@ -29,18 +47,22 @@
       #custom_html-3
         width: 100%
         height: auto
-        margin: 24px 0
+        margin: 0
+
         .custom-html-widget
           width: 100%
           height: 60px
       .contacts
         padding: 0 5px
-        margin: 30px 0
+        margin: 0 
         ul.contact-list
           width: 100%
           margin: 0
+          display: flex
+          align-items: center
+          flex-direction: column
           li.contact-item
-            padding: 12px 0
+            padding: 10px 15px 
             a
               text-decoration: none
               span
@@ -65,10 +87,7 @@
                   color: $accent
               span
                 color: $accent
-            &:nth-child(1)
-              padding-top: 0
-              
-                  
+
 
 #socket.socket_color
   background: $accent2
@@ -77,13 +96,74 @@
     display: flex
     justify-content: center
   .sub_menu_socket
-    display: none
+    display: none !important
   .copyright
     float: none
     text-align: center
     font-size: 15px
     line-height: 20px
     color: $text-grey
+
+@media screen and ( min-width: 576px )
+
+  #footer.container_wrap
+    .container
+      .av_one_third
+        #nav_menu-2
+          #menu-footer-menu
+            flex-direction: row
+        #custom_html-3
+          margin: 24px 0
+        .contacts
+          padding: 0 5px
+          margin: 30px 0
+
+
+
+@media screen and ( min-width: 768px )
+
+  #footer.container_wrap
+    .container
+      display: block
+      .av_one_third
+        &:nth-child(1)
+          width: 30%
+        &:nth-child(2)
+          width: 100%
+        &:nth-child(3)
+          width: 70%
+        .contacts
+          ul.contact-list
+            width: 100%
+            margin: 0
+            display: flex
+            align-items: center
+            li.contact-item
+              padding: 10px 15px 
+
+
+@media screen and ( min-width: 990px )
+
+  #footer.container_wrap
+    .container
+      display: block
+      .av_one_third
+        &:nth-child(1)
+          width: 15%
+        &:nth-child(2)
+          width: 60%
+        &:nth-child(3)
+          width: 25%
+        .contacts
+          padding: 0 5px
+          margin: 30px 0
+          ul.contact-list
+            width: 100%
+            margin: 0
+            li.contact-item
+              padding: 12px 0
+              &:nth-child(1)
+                padding-top: 0
 
 
 @media screen and ( min-width: 1311px )
