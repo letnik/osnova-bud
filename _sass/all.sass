@@ -134,11 +134,11 @@
           color: $text-black
       .custome_informe_ti
         display: inline-block
-        text-align: start
+        text-align: center
         // width: 20.5%
         // margin: 0 2% 0 0
-        padding: 10px 20px 10px 0
-        width: 49%
+        padding: 10px
+        width: 100%
         .avia-animated-number-title span 
           font-weight: 600
           font-size: 30px
@@ -190,7 +190,7 @@
           h3
             font-size: 35px
             color: $text-black
-            margin-left: 50px
+
             margin-bottom: 0px
       .tabcontainer
         .tab_titles
@@ -236,8 +236,8 @@
           .tab_content 
             padding-left: 0
           .tab_inner_content
-            margin: 35px
-            padding: 50px
+            margin: 10px
+            padding: 20px
             background: rgba(25, 25, 25, 0.9)
             position: static
             h3,p
@@ -304,8 +304,17 @@
   .custome_map_grid
     .flex_cell.av_one_full  
       padding: 30px 0 0
+      padding-left: 0 !important
+      padding-right: 0 !important
+      .av_textblock_section 
+        #gd_map_canvas_directory, #gd_map_canvas_directory_wrapper, #sticky_map_gd_map_canvas_directory
+          max-height: 650px
+          min-height: auto !important
+        .gd-trigger
+          margin-right: 30px !important
+          i 
+            color: $text-black
     .custome_triangle h2 
-      padding-left: 50px
       font-weight: bold
       font-size: 35px
       line-height: 48px
@@ -319,16 +328,16 @@
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15)
       padding: 0
       .treeview.main_list
-        padding: 18px !important
-        width: 400px
+        padding: 10px !important
+        width: 300px
         li
           display: flex
           align-items: center
-          padding: 10px 0
+          padding: 5px 0
           margin: 0
           label
-            font-size: 18px
-            line-height: 25px
+            font-size: 15px
+            line-height: 20px
             color: $text-black
             img
               display: none
@@ -355,7 +364,7 @@
   .custom_form_section
     .container
       .template-page.content
-        padding: 120px 0 140px 0 !important
+        padding: 50px 0 !important
         form
           p 
             font-weight: bold
@@ -363,12 +372,14 @@
             line-height: 48px
             color: $text-white
             text-align: center
-            margin-bottom: 0
-            padding-bottom: 42px
+            margin: 0
+            padding-bottom: 16px
           fieldset
             display: flex
             align-items: center
+            flex-direction: column
             p 
+              width: 100%
               input
                 font-size: 16px
                 line-height: 19px
@@ -394,7 +405,7 @@
       .av_two_fifth
         width: 100% 
         display: flex
-        flex-direction: row-reverse
+        flex-direction: column
         align-items: center
         justify-content: space-between
         // margin-bottom: 30px
@@ -414,7 +425,7 @@
             font-size: 30px
             color: $text-black
           &.slick-prev
-            right: 120px !important
+            right: 65px !important
             &::before
               content: '\e80b'
           &:hover
@@ -422,12 +433,6 @@
             &::before
               color: $accent
               font-weight: bold
-    
-
-        
-      .custom_slider_rev_img img
-        width: 760px 
-        height: 276px
 
     .sl-count
       font-size: 70px
@@ -1062,11 +1067,108 @@
       margin-top: 50px
 
 
-// @media screen and ( min-width: 567px )
+
+@media screen and ( min-width: 430px )
+
+  #top .second_section_home_cust .av_three_fifth .custome_informe_ti 
+    text-align: start
+    padding: 10px 20px 10px 0;
+    width: 49%;
+
+  #top #wrap_all .custome_grid_row_accordin_wrap .tabcontainer .av_tab_section .tab_inner_content 
+    margin: 35px;
+    padding: 50px;
+
+
+
+
+
+
+
+
+
+@media screen and ( min-width: 576px )
+
+  #top
+    .custome_map_grid
+      .flex_cell.av_one_full  
+        padding: 30px 0 0 !important
+        .av_textblock_section 
+          #gd_map_canvas_directory, #gd_map_canvas_directory_wrapper, #sticky_map_gd_map_canvas_directory
+            max-height: 1023px
+            min-height: 1023px
+            height: auto
+          .gd-trigger
+            margin-right: 300px !important
+            i 
+              color: #fff
+            
+        .treeview.main_list 
+          padding: 18px!important;
+          width: 400px;
+          li
+            padding: 10px 0
+            label
+              font-size: 18px
+              line-height: 25px
+
+
+  #top
+    .custom_slider_review_section
+      .entry-content-wrapper
+        .av_two_fifth
+          flex-direction: row-reverse
+
+
+  #top
+    .custom_form_section
+      .container
+        .template-page.content
+          padding: 120px 0 140px 0 !important
+          form
+            p 
+              margin: 0 auto
+              padding-bottom: 42px
+            fieldset
+              display: flex
+              align-items: center
+              flex-direction: row
+              justify-content: space-between
+              p
+                width: 32%
+                margin: 0
+                input.button
+                  border: 1px solid $accent
+                  
+
 
 
 
 @media screen and ( min-width: 768px )
+
+
+  #top
+    #wrap_all
+      .custome_grid_row_accordin_wrap
+        section
+          .avia_textblock  
+            h3
+              margin-left: 50px
+
+  #top
+    .custome_map_grid
+      .custome_triangle
+        h2
+          margin-left: 50px
+
+
+
+    .custom_slider_review_section
+      .entry-content-wrapper
+        .custom_slider_rev_img img
+          width: 760px 
+          height: 276px
+
 
   
   #top
