@@ -26,26 +26,24 @@ jQuery('.custom_slider_section .image_slider_wrap').slick({
     arrows: true,
     nextArrow: '<button class="slick-prev slick-arrow"></button>',
     prevArrow: '<button class="slick-next slick-arrow"></button>',
-//     responsive: [
-//     {
-//       breakpoint: 768,
-//       settings: {
-//         arrows: false,
-//         centerMode: true,
-//         centerPadding: '40px',
-//         slidesToShow: 3
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         arrows: false,
-//         centerMode: true,
-//         centerPadding: '40px',
-//         slidesToShow: 1
-//       }
-//     }
-//   ]
+    responsive: [
+    {
+      breakpoint: 990,
+      settings: {
+        rows: 2,
+        arrows: true,
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        rows: 1,
+        arrows: true,
+        slidesToShow: 1
+      }
+    }
+  ]
 
     });
 });

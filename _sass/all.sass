@@ -38,9 +38,9 @@
       // min-height: 70vw
     .title_wrap
       .av_one_full
-        padding: 30px 50px
+        padding: 30px 
         width: auto
-        max-width: 70%
+        max-width: 90%
         min-width: 65%
         position: relative
         &::before
@@ -73,15 +73,15 @@
         font-family: Montserrat
         font-style: normal
         font-weight: bold
-        font-size: 50px
+        font-size: 30px
         // text-transform: uppercase
         color: #F0F2F4
       .avia_textblock 
         display: flex
-        display: inline-block
+        flex-wrap: wrap
         p
           font-weight: 600
-          font-size: 30px
+          font-size: 20px
           text-transform: uppercase
           color: #F0F2F4
           margin: 0 12px 0 0
@@ -123,9 +123,6 @@
       width: 100% !important
       .avia_textblock
         h2  
-          font-size: 35px
-          font-weight: bold
-          line-height: 48px
           margin-bottom: 28px
           color: $text-black
         p 
@@ -187,10 +184,8 @@
       section
         .avia_textblock  
           margin-bottom: 50px
-          h3
-            font-size: 35px
-            color: $text-black
-
+          h2
+            
             margin-bottom: 0px
       .tabcontainer
         .tab_titles
@@ -266,11 +261,7 @@
       height: auto !important
       padding-left: 50px !important
       padding-right: 50px !important
-      .avia_textblock h2 
-        font-weight: bold
-        font-size: 35px
-        line-height: 48px
-        color: $text-black
+
     .av_three_fifth
       width: 100% !important
       padding: 0 !important
@@ -303,7 +294,7 @@
 #top
   .custome_map_grid
     .flex_cell.av_one_full  
-      padding: 30px 0 0
+      padding: 30px 0 0 0 !important
       padding-left: 0 !important
       padding-right: 0 !important
       .av_textblock_section 
@@ -315,12 +306,8 @@
           i 
             color: $text-black
     .custome_triangle h2 
-      font-weight: bold
-      font-size: 35px
-      line-height: 48px
-      color: $text-black
-      margin-bottom: 60px
-      margin-top: 60px
+      margin-bottom: 15px
+      margin-top: 15px
     .inputbox.geodir-hide
       display: none
     .map_category
@@ -411,21 +398,25 @@
         // margin-bottom: 30px
         margin: 0
       .custom_slider_wrap
-        position: static
+        position: relative
         margin-top: 35px
         .slick-arrow
           position: absolute
-          top: 180px
-          right: 0
+          top: auto
+          bottom: 0
+          right: 35%
+          z-index: 15
+          // transform: translateX(-50%)
           border: none
           background: transparent
           &::before
             content: '\e80c'
             font-family: Fontello
-            font-size: 30px
+            font-size: 20px
             color: $text-black
           &.slick-prev
-            right: 65px !important
+            right: auto
+            left: 35%
             &::before
               content: '\e80b'
           &:hover
@@ -715,11 +706,8 @@
     .av_two_fifth
       width: 100%
       .avia_textblock  
-        h2, h3
-          font-weight: bold
-          font-size: 35px
-          line-height: 48px
-          color: $text-black
+        h2
+
           margin-bottom: 9px
           text-transform: none
         p
@@ -737,8 +725,8 @@
           flex-wrap: wrap
           justify-content: space-between
           li
-            width: 48%
-            padding: 37px 0
+            width: 100%
+            padding: 17px 0
             .iconlist_icon 
               display: none 
             .av_iconlist_title
@@ -1089,8 +1077,36 @@
 
 @media screen and ( min-width: 576px )
 
+
+  #top
+    .title_grid_row
+      .title_wrap
+        .av_one_full
+          padding: 30px 50px
+          // max-width: 70%
+        .av-special-heading-tag
+          font-size: 50px
+        .avia_textblock 
+          p
+            font-weight: 600
+            font-size: 30px
+
+
+  #top .custom_slider_review_section
+      .entry-content-wrapper
+        .custom_slider_wrap
+          .slick-arrow
+            &::before
+              font-size: 30px
+            &.slick-prev
+              right: 65px 
+
+
   #top
     .custome_map_grid
+      .custome_triangle h2
+        margin-bottom: 60px;
+        margin-top: 60px
       .flex_cell.av_one_full  
         padding: 30px 0 0 !important
         .av_textblock_section 
@@ -1099,7 +1115,7 @@
             min-height: 1023px
             height: auto
           .gd-trigger
-            margin-right: 300px !important
+            margin-right: 400px !important
             i 
               color: #fff
             
@@ -1146,20 +1162,39 @@
 
 @media screen and ( min-width: 768px )
 
+  #top
+    .custom_slider_review_section
+      .entry-content-wrapper
+        .custom_slider_wrap
+          position: static
+          .slick-arrow
+            top: 180px
+            bottom: auto
+            right: 65px
+            &.slick-prev
+              left: auto
+              right: 115px
+
+  #top
+    .title_grid_row
+      .title_wrap
+        .av_one_full
+          max-width: 70%
+
 
   #top
     #wrap_all
       .custome_grid_row_accordin_wrap
         section
           .avia_textblock  
-            h3
-              margin-left: 50px
+            h2
+              padding-left: 50px
 
   #top
     .custome_map_grid
       .custome_triangle
         h2
-          margin-left: 50px
+          padding-left: 50px
 
 
 
@@ -1178,6 +1213,17 @@
       .title_wrap
         .avia_textblock 
           display: flex
+
+
+
+  #top
+  .custom_onasp_informsection
+    .av_three_fifth
+      .avia-icon-list-container 
+        ul.avia-icon-list
+          li
+            width: 48%
+            padding: 37px 0
 
 
 

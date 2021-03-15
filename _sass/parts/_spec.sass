@@ -68,15 +68,20 @@ section, footer
 
 
 .custome_triangle
-  > h2, h3, h4, h5,
+  > h2
+    font-weight: 700
+    font-size: 27px
+    line-height: 34px
+    color: $text-black
+
     &::before
       content: '\e807'
       font-family: Fontello
-      font-size: 61px
+      font-size: 42px
       color: $accent
-      margin-right: -30px
+      margin-right: -20px
 
-// , .geodir-wgt-map
+
 
 
 #top
@@ -186,6 +191,34 @@ section, footer
 html.responsive, .responsive body, #wrap_all
   overflow:  visible !important
 
+@media screen and ( min-width: 440px )
+
+  .custome_triangle
+    > h2
+      font-weight: 700
+      font-size: 30px
+      line-height: 38px
+
+
+
+
+@media screen and ( min-width: 576px )
+    
+  .custome_triangle
+    > h2
+      font-weight: 700
+      font-size: 35px
+      line-height: 48px
+      color: $text-black
+
+      &::before
+        content: '\e807'
+        font-family: Fontello
+        font-size: 61px
+        color: $accent
+        margin-right: -30px
+
+
 
 
 @media screen and ( min-width: 1311px )
@@ -210,4 +243,6 @@ html.responsive, .responsive body, #wrap_all
             &::after
               width: calc(var(--marginB) + 51px);
               right: calc(var(--lefterB) - 50px);
+
+
 
