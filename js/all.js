@@ -32,6 +32,7 @@ jQuery('.custom_slider_section .image_slider_wrap').slick({
       settings: {
         rows: 2,
         arrows: true,
+        slidesToScroll: 2,
         slidesToShow: 2
       }
     },
@@ -40,6 +41,7 @@ jQuery('.custom_slider_section .image_slider_wrap').slick({
       settings: {
         rows: 1,
         arrows: true,
+        slidesToScroll: 1,
         slidesToShow: 1
       }
     }

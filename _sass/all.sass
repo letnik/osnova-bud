@@ -147,6 +147,7 @@
       overflow: visible !important
       .avia-image-container-inner
         overflow: hidden
+        width: 100%
       .avia-image-overlay-wrap
         position: relative
         padding: 0 0 20px 20px
@@ -772,32 +773,33 @@
                 width: 100%
                 height: 100%
                 object-fit: cover
-      &::before
-        content: ''
-        display: block
-        background: $accent
-        width: 406px
-        height: 372px
-        left: -12px
-        bottom: -2px
-        position: absolute 
-        z-index: -9
-        visibility: visible !important
-      &::after
-        content: ''
-        display: block
-        background: $accent
-        width: 404px
-        height: 372px
-        right: -12px
-        top: -12px
-        position: absolute 
-        z-index: -9
-        visibility: visible          
+      // &::before
+      //   content: ''
+      //   display: block
+      //   background: $accent
+      //   width: 406px
+      //   height: 372px
+      //   left: -12px
+      //   bottom: -2px
+      //   position: absolute 
+      //   z-index: -9
+      //   visibility: visible !important
+      // &::after
+      //   content: ''
+      //   display: block
+      //   background: $accent
+      //   width: 404px
+      //   height: 372px
+      //   right: -12px
+      //   top: -12px
+      //   position: absolute 
+      //   z-index: -9
+      //   visibility: visible          
     .slick-arrow
       position: absolute
-      top: -82px
-      right: -18px
+      top: auto
+      bottom: -25px
+      right: 5px
       border: none
       background: transparent
       &::before
@@ -806,7 +808,7 @@
         font-size: 30px
         color: $text-black
       &.slick-prev
-        right: 46px
+        right: 58px
         &::before
           content: '\e80b'
       &:hover
@@ -1060,12 +1062,12 @@
 
   #top .second_section_home_cust .av_three_fifth .custome_informe_ti 
     text-align: start
-    padding: 10px 20px 10px 0;
-    width: 49%;
+    padding: 10px 20px 10px 0
+    width: 49%
 
   #top #wrap_all .custome_grid_row_accordin_wrap .tabcontainer .av_tab_section .tab_inner_content 
-    margin: 35px;
-    padding: 50px;
+    margin: 35px
+    padding: 50px
 
 
 
@@ -1105,7 +1107,7 @@
   #top
     .custome_map_grid
       .custome_triangle h2
-        margin-bottom: 60px;
+        margin-bottom: 60px
         margin-top: 60px
       .flex_cell.av_one_full  
         padding: 30px 0 0 !important
@@ -1120,8 +1122,8 @@
               color: #fff
             
         .treeview.main_list 
-          padding: 18px!important;
-          width: 400px;
+          padding: 18px!important
+          width: 400px
           li
             padding: 10px 0
             label
@@ -1161,6 +1163,17 @@
 
 
 @media screen and ( min-width: 768px )
+
+  #top
+    .custom_slider_section
+      .slick-arrow
+        position: absolute
+        top: -82px
+        bottom: auto
+        border: none
+        background: transparent
+
+
 
   #top
     .custom_slider_review_section
@@ -1278,11 +1291,12 @@
 
   #top     
     .second_section_home_cust
+      justify-content: space-between
       .av_two_fifth
-        width: 40% !important
+        width: 41% !important
         
       .av_three_fifth
-        width: 57.599999999999994% !important
+        width: 58% !important
 
 
 @media screen and ( min-width: 1072px )
@@ -1361,6 +1375,15 @@
 
 
 @media screen and ( min-width: 1311px )
+
+
+  #top
+    #wrap_all
+      .custome_grid_row_accordin_wrap
+        section
+          .avia_textblock  
+            h2
+              padding-left: calc( var(--marginB) + 50px )
 
   #top
     .second_section_home_cust

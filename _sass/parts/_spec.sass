@@ -107,11 +107,11 @@ section, footer
       grid-area: 1 / 1 / 3 / 3
       position: relative
       display: block
-      height: calc(100% + 24px);
-      display: flex;
-      align-items: center;
+      height: calc(100% + 24px)
+      display: flex
+      align-items: center
       background: $accent2
-      overflow: visible;
+      overflow: visible
       &:before
         content: ''
         display: block
@@ -124,35 +124,35 @@ section, footer
         overflow-x: hidden
       &::after
         content: ''
-        display: block;
-        position: absolute;
-        height: 100%;
-        width: 19%;
-        right: -18%;
+        display: block
+        position: absolute
+        height: 100%
+        width: 19%
+        right: -18%
         top: 0
         background: $accent2
-        clip-path: polygon(0 0,100% 0,3% 100%,0 100%);
-        // z-index: 9;
+        clip-path: polygon(0 0,100% 0,3% 100%,0 100%)
+        // z-index: 9
 
 
     > .main_menu 
       grid-area: 2 / 3 / 3 / 13
       position: relative
-      z-index: 0;
+      z-index: 0
       ul.av-main-nav:first-child > li a
         height: auto !important
         line-height: 18px !important
       &::before
         content: ''
         display: block
-        background: #fff;
-        width: 30px;
-        height: 24px;
-        position: absolute;
-        bottom: -22px;
-        left: 0;
+        background: #fff
+        width: 30px
+        height: 24px
+        position: absolute
+        bottom: -22px
+        left: 0
         clip-path: polygon(0 0,100% 0,7% 100%,0 100%)
-        // z-index: -9;
+        // z-index: -9
 
 
     > .sup-menu 
@@ -178,15 +178,15 @@ section, footer
 
 // map
 .sticker-map-container
-  display: grid;
+  display: grid
   grid-template-columns: 50% 50%
 
 
 .sticker-map, .sticker-tabs
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  height: 100vh;
+  position: -webkit-sticky
+  position: sticky
+  top: 0
+  height: 100vh
 
 html.responsive, .responsive body, #wrap_all
   overflow:  visible !important
@@ -241,8 +241,8 @@ html.responsive, .responsive body, #wrap_all
         .sup-menu
           .sup-menu-wrap  
             &::after
-              width: calc(var(--marginB) + 51px);
-              right: calc(var(--lefterB) - 50px);
+              width: calc(var(--marginB) + 51px)
+              right: calc(var(--lefterB) - 50px)
 
 
 
