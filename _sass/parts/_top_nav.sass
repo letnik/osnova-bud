@@ -1,8 +1,12 @@
 #top
   #header
     .main_menu
+      
       .avia-menu
-        margin-left: 30px
+        display: flex
+        justify-content: flex-end
+        width: 100%
+        
         > ul.av-main-nav
           > li
             padding: 40px 38px
@@ -17,6 +21,22 @@
                 .avia-menu-text
                   // font-weight: bold
                   transition: all .2s
+            &.av-burger-menu-main
+              right: 0
+              padding-right: 0
+              .av-hamburger
+                .av-hamburger-inner
+                  background: $text-white
+                  &::before, &::after
+                    background: $text-white !important
+
+                &.is-active
+                  .av-hamburger-inner
+                    background: $text-black
+                    &::before, &::after
+                      background: $text-black !important
+
+                  
 
     .sup-menu
       .sup-menu-wrap  
@@ -91,4 +111,34 @@
               .icon-phone
                 &::before
                   content: '\E805'
+
+@media screen and ( min-width: 990px )
+
+  #top
+    #header
+      .main_menu
+        display: block
+        margin-left: 30px
+
+
+
+@media screen and ( min-width: 1311px )
+
+  #header_main 
+    > .container
+      > .inner-container
+        > .logo 
+          &:before
+            width: calc( var(--marginB) + 52px )
+            left: calc( var(--lefterB) - 50px )
+        
+
+
+  #top
+    #header
+      .sup-menu
+        .sup-menu-wrap  
+          &::after
+            width: calc(var(--marginB) + 52px)
+            right: calc(var(--lefterB) - 50px)
 
