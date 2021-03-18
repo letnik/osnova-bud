@@ -130,6 +130,14 @@ add_shortcode('dp_footer_fogo', 'second_logo');
 
 // [dp_footer_fogo]
 
+// //set builder mode to debug
+// add_action('avia_builder_mode', "builder_set_debug");
+// function builder_set_debug()
+// {
+//   return "debug";
+// }
+
+// if(isset($avia_config['use_child_theme_functions_only'])) return;
 
 
 // add_shortcode( 'my_oferta', 'show_oferta' );
@@ -151,7 +159,7 @@ add_shortcode('dp_footer_fogo', 'second_logo');
 //     if ( $query->have_posts() ) {
 //       while ( $query->have_posts() ) {
 //         $query->the_post();
-//         echo '<li class="oferta-item"><a href="' . get_permalink() . '" class="oferta-link"><i class="icon ' . get_the_ID() . '"></i><span class="oferta-title">' . get_the_title() . '</span></a></li>
+//         echo '<li class="oferta-item"><a href="' . get_permalink() . '" class="oferta-link"><i class="icon icon-'. get_the_ID() . '"></i><span class="oferta-title">' . get_the_title() . '</span></a></li>
 //             ';
 //       }
 //     } else {
