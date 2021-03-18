@@ -95,23 +95,18 @@ section, footer
 #header_main > .container
   height: auto !important
   line-height: normal !important
-
   > .inner-container
-    display: grid
-    grid-template-columns: repeat(12, 1fr)
-    grid-template-rows: auto auto
-    grid-column-gap: 0px
-    grid-row-gap: 0px
-
+    display: flex 
     > .logo 
-      grid-area: 1 / 1 / 3 / 3
+      order: 1
       position: relative
-      display: block
-      height: calc(100% + 24px)
+      max-width: 30%
+      height: auto
       display: flex
       align-items: center
       background: $accent2
       overflow: visible
+      padding: 10px
       &:before
         content: ''
         display: block
@@ -136,15 +131,13 @@ section, footer
 
 
     > .main_menu 
-      grid-area: 2 / 3 / 3 / 13
-      position: relative
-      z-index: 0
+      order: 3
       ul.av-main-nav:first-child > li a
         height: auto !important
         line-height: 18px !important
       &::before
         content: ''
-        display: block
+        display: none
         background: #fff
         width: 30px
         height: 24px
@@ -156,22 +149,26 @@ section, footer
 
 
     > .sup-menu 
-      grid-area: 1 / 3 / 2 / 13
+      width: 70%
+      order: 2
+      .faq
+        display: none
 
 
-.sup-menu
-  &-wrap
 
-  .contact
-    &-list
+// .sup-menu
+//   &-wrap
+
+//   .contact
+//     &-list
       
-    &-item
-      font-size: 15px
-      line-height: 22px
-    &-link
-  .faq
-    font-size: 15px
-    line-height: 22px
+//     &-item
+//       font-size: 15px
+//       line-height: 22px
+//     &-link
+//   .faq
+//     font-size: 15px
+//     line-height: 22px
 
 
 
@@ -215,6 +212,80 @@ html.responsive, .responsive body, #wrap_all
         font-size: 61px
         color: $accent
         margin-right: -30px
+
+@media screen and ( min-width: 990px )
+
+  #header_main > .container
+    height: auto !important
+    line-height: normal !important
+
+    > .inner-container
+      display: grid
+      grid-template-columns: repeat(12, 1fr)
+      grid-template-rows: auto auto
+      grid-column-gap: 0px
+      grid-row-gap: 0px
+
+      > .logo 
+        grid-area: 1 / 1 / 3 / 3
+        position: relative
+        display: block
+        max-width: 100%
+        height: calc(100% + 24px)
+        display: flex
+        align-items: center
+        background: $accent2
+        overflow: visible
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          height: 100%
+          width: 52px
+          left: -50px
+          bottom: 0
+          background: $accent2
+          overflow-x: hidden
+        &::after
+          content: ''
+          display: block
+          position: absolute
+          height: 100%
+          width: 19%
+          right: -18%
+          top: 0
+          background: $accent2
+          clip-path: polygon(0 0,100% 0,3% 100%,0 100%)
+          // z-index: 9
+
+
+      > .main_menu 
+        grid-area: 2 / 3 / 3 / 13
+        position: relative
+        z-index: 0
+        ul.av-main-nav:first-child > li a
+          height: auto !important
+          line-height: 18px !important
+        &::before
+          content: ''
+          display: block
+          background: #fff
+          width: 30px
+          height: 24px
+          position: absolute
+          bottom: -22px
+          left: 0
+          clip-path: polygon(0 0,100% 0,7% 100%,0 100%)
+          // z-index: -9
+
+
+      > .sup-menu 
+        grid-area: 1 / 3 / 2 / 13
+        width: auto
+        .faq
+          display: block
+
+
 
 
 

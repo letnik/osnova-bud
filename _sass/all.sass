@@ -260,7 +260,7 @@
               .custome_btn_default
                 display: flex
                 max-width: 300px
-                padding: 18px 40px
+                padding: 18px 
                 border: solid 2px $text-white
                 color: $text-white
                 font-weight: 600
@@ -496,20 +496,21 @@
       .entry-content-wrapper
         display: flex
         align-items: stretch
+        flex-direction: column
       .av_three_fifth
         display: flex
         align-items: flex-end
         flex-direction: column
         justify-content: center
         margin-left: 0
-        width: 50%
+        width: 100%
         
         padding: 0 10px
         .avia-image-container
           margin: 0
           width: 100%
         .custom_btn
-          position: absolute
+          position: relative
           bottom: -35px
           a
             background: transparent
@@ -523,10 +524,10 @@
               color: #022227
               
       .av_two_fifth
-        width: 50%
+        width: 100%
         .avia-icon-list-container, .custome_oferta_lists
           margin: 0
-          padding: 40px
+          padding: 15px
           background: #F0F2F4
           .av-iconlist-small
             .iconlist_icon
@@ -535,8 +536,10 @@
           > ul
               li
                 display: flex
+                flex-wrap: wrap
                 align-items: center
-                padding: 22px 0
+                justify-content: center
+                padding: 20px 0
                 .iconlist_icon
                   margin-right: 18px
                 .article-icon-entry 
@@ -688,8 +691,8 @@
         flex-wrap: wrap
         justify-content: space-between
         li
-          width: 48%
-          padding: 8px 25px
+          width: 100%
+          padding: 8px 
           margin: 15px 0
           background: #FBFCFB
           box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15)
@@ -910,7 +913,7 @@
       display: flex
       flex-direction: column
       .single_toggle
-        max-width: 40%
+        max-width: 100%
         overflow: visible
         position: static
       .toggler
@@ -940,30 +943,30 @@
           color: $text-black
           width: 100% 
           &:last-child
-            position: absolute
-            right: 22px 
-            top: 3%
-            width: 55%
-            height: 93%
+            position: relative
+
+            width: 96%
+            height: 500px
             display: flex
             align-items: center
             justify-content: center
-            margin-top: 0
+            margin-top: 43px
 
             img
               width: 100%
               height: 100%
               object-fit: cover
               position: relative
+              z-index: 1
             &::after
               content: ''
               background: $accent
-              height: 107%
+              height: 109%
               width: 80%
               top: -22px
               right: -22px
               position: absolute
-              z-index: -2
+              z-index: 0
 
 
 #top
@@ -1087,6 +1090,22 @@
 
 @media screen and ( min-width: 430px )
 
+  #top
+    .custom_details_section2
+      .container
+        margin-top: -170px
+        .av_two_fifth
+          .avia-icon-list-container, .custome_oferta_lists
+            margin: 0
+            padding: 40px
+            background: #F0F2F4
+            > ul
+                li
+                  flex-wrap: nowrap
+                  justify-content: start
+                  .iconlist_icon
+                    margin-right: 18px
+
   #top .second_section_home_cust .av_three_fifth .custome_informe_ti 
     text-align: start
     padding: 10px 20px 10px 0
@@ -1192,6 +1211,21 @@
 @media screen and ( min-width: 768px )
 
   #top
+    .custom_details_section2
+      .container
+        .av_three_fifth
+          .custom_btn
+            position: absolute
+
+  #top
+    .zobacz_section
+      .avia-icon-list-container  
+        ul
+          li
+            width: 48%
+            padding: 8px 25px
+
+  #top
     .custom_slider_section
       .slick-arrow
         position: absolute
@@ -1265,10 +1299,84 @@
             width: 48%
             padding: 37px 0
 
+@media screen and ( min-width: 768px ) and ( max-width: 875px )
+
+  #top .custom_wy_us_section .av_one_third .iconbox_content_title
+    font-size: 17px
+
+
+@media screen and ( min-width: 850px )
+
+  #top
+    .custom_details_section2
+      .container
+        margin-top: -170px
+        .entry-content-wrapper
+          display: flex
+          align-items: stretch
+          flex-direction: row
+        .av_three_fifth
+
+          width: 50%
+        .av_two_fifth
+          width: 50%
+
+  #top
+    #wrap_all
+      .custome_grid_row_accordin_wrap
+        section
+          .av_tab_section
+            .tab_inner_content
+              .btn_wrap
+
+                .custome_btn_default
+                  padding: 18px 50px
+
 
 
 
 @media screen and ( min-width: 990px )
+
+  #top
+    .custome_accordin_section
+      padding-bottom: 70px
+      overflow: hidden
+      .togglecontainer
+        .single_toggle
+          max-width: 40%
+        .toggle_content
+          p 
+            font-size: 16px
+            line-height: 22px
+            color: $text-black
+            width: 100% 
+            &:last-child
+              position: absolute
+              right: 22px 
+              top: 3%
+              width: 55%
+              height: 93%
+              display: flex
+              align-items: center
+              justify-content: center
+              margin-top: 0
+
+              img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                position: relative
+              &::after
+                content: ''
+                background: $accent
+                height: 107%
+                width: 80%
+                top: -22px
+                right: -22px
+                position: absolute
+                z-index: -2
+
+
 
   #top
     .custom_slider_review_section
