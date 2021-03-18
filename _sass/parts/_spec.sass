@@ -101,7 +101,8 @@ section, footer
       order: 1
       position: relative
       max-width: 30%
-      height: auto
+      height: auto !important
+      max-height: 100% !important
       display: flex
       align-items: center
       background: $accent2
@@ -132,6 +133,9 @@ section, footer
 
     > .main_menu 
       order: 3
+      display: flex !important
+      align-items: center
+      height: 100%  !important
       ul.av-main-nav:first-child > li a
         height: auto !important
         line-height: 18px !important
@@ -231,7 +235,8 @@ html.responsive, .responsive body, #wrap_all
         position: relative
         display: block
         max-width: 100%
-        height: calc(100% + 24px)
+        height: calc(100% + 24px) !important
+        max-height: none !important
         display: flex
         align-items: center
         background: $accent2

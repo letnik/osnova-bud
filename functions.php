@@ -190,13 +190,14 @@ function show_phone_2() {
 
 add_shortcode( 'ob_adress', 'show_adress' );
 function show_adress() {
-    $mail = get_field('ob_mail', 'options');
+    $adress = get_field('ob_adress', 'options');
+    $output = '<p>'.$adress.'</p>';
     return $output;
 }
 
 add_shortcode( 'ob_email', 'show_mail' );
 function show_mail() {
-    $mail = get_field('ob_mail', 'options');
+    $mail = get_field('ob_email', 'options');
     $output = '<a href="mailto:'.$mail.'">'.$mail.'</a>';
     return $output;
 }

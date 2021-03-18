@@ -27,8 +27,10 @@
                   // font-weight: bold
                   transition: all .2s
             &.av-burger-menu-main
-              right: 0
-              padding-right: 0
+              top: 50%;
+              right: 0;
+              padding: 0;
+              transform-origin: top;
               .av-hamburger
                 .av-hamburger-inner
                   background: $text-black
@@ -50,15 +52,15 @@
         align-items: center
         padding-left: 25px;
         border-top: 10px solid $accent2
-        border-bottom: 1px solid $text-grey;
+
+        height: 100%
         &::after
           border-top: 10px solid $accent2
-          border-bottom: 1px solid $text-grey;
           content: '';
           display: block;
           position: absolute;
-          height: 57px;
-          width: 50px
+          height: auto;
+          width: 52px
           right: -50px
           top: 0;
           overflow-x: hidden
@@ -77,12 +79,14 @@
             display: flex
             margin: 0
           &-item  
-            padding: 18px 36px
+            padding: 10px 
             position: relative;
+            span
+              display: none
             &:nth-child(2)
               &::before
                 content: ''
-                display: block;
+                display: none;
                 background: $text-grey
                 height: 65%;
                 width: 1px;
@@ -104,7 +108,6 @@
                   &::before
                     color: $accent
               i
-                margin-right: 12px
                 &::before
 
                   font-size: 20px
@@ -117,6 +120,20 @@
                 &::before
                   content: '\E805'
 
+
+@media screen and ( min-width: 540px )
+
+  #top #header .sup-menu .sup-menu-wrap .contact-list
+    flex-direction: column
+    .contact-item
+      padding: 10px 26px
+      a 
+        i
+          margin-right: 12px
+        span 
+          display: block
+
+
 @media screen and ( min-width: 990px )
 
   #top
@@ -126,6 +143,26 @@
         .avia-menu
           justify-content: start
           margin-left: 30px
+      .sup-menu
+        .sup-menu-wrap  
+          display: flex
+          justify-content: space-between
+          align-items: center
+          padding-left: 25px;
+          border-bottom: 1px solid $text-grey;
+          &::after
+            border-bottom: 1px solid $text-grey
+            height: 57px;
+          .contact
+            &-list
+              flex-direction: row
+            .contact-item  
+              padding: 18px 36px
+              position: relative;
+              &:nth-child(2)
+                &::before
+                  display: block;
+        
 
 
 
