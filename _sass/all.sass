@@ -119,6 +119,7 @@
     align-items: center
     flex-wrap: wrap
     // flex-direction: column
+    background: #F0F2F4
     .av_three_fifth
       width: 100% !important
       .avia_textblock
@@ -190,14 +191,16 @@
             margin-bottom: 0px
       .tabcontainer
         .tab_titles
-          width: 40%
+          width: 45%
           height: 100%
           min-height: 816px
           max-width: none
-          background: #F0F2F4
+          padding-top: 35px 
+          padding-bottom: 35px
+          // background: #F0F2F4
           .tab
-            padding-left: 57px
-            left: -7px
+            padding-left: 68px
+            left: -18px
             padding-top: 22px
             padding-bottom: 22px
             font-size: 18px
@@ -215,7 +218,7 @@
               &:after 
                 content: '' 
                 position: absolute
-                right: -1%
+                right: -2%
                 top: 0
                 bottom: 0
                 background: #191919
@@ -231,6 +234,7 @@
         .av_tab_section
           .tab_content 
             padding-left: 0
+            width: 55%
           .tab_inner_content
             margin: 10px
             padding: 20px
@@ -259,12 +263,12 @@
                 padding: 18px 40px
                 border: solid 2px $text-white
                 color: $text-white
-                font-weight: 600;
-                font-size: 18px;
-                line-height: 25px;
+                font-weight: 600
+                font-size: 18px
+                line-height: 25px
                 &::after
-                  content: '\e80c';
-                  font-family: Fontello;
+                  content: '\e80c'
+                  font-family: Fontello
                   font-size: 30px
                   color: $text-white
                   margin-left: 15px
@@ -390,6 +394,8 @@
             p 
               width: 100%
               input
+                padding: 20px
+                font-weight: normal
                 font-size: 16px
                 line-height: 19px
                 color: $text-grey
@@ -1295,8 +1301,10 @@
           line-height: 123px
           text-align: right
           .sl-count__current
+            font-weight: normal
             color: $text-black
           .sl-count__total
+            font-weight: 300
             color: #8D8D8D
 
 
@@ -1326,7 +1334,7 @@
   #top
     .custome_btn_default
       a
-        padding: 18px 45px
+        padding: 16px 50px
         
 
 
@@ -1442,7 +1450,7 @@
         .tabcontainer
           .tab_titles
             .tab
-              padding-left: calc(var(--marginB) + 57px )
+              padding-left: calc(var(--marginB) + 68px )
 
           .av_tab_section
             .tab_content 

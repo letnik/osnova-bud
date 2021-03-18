@@ -60,7 +60,7 @@ function show_adress() {
 
 add_shortcode( 'dp_mail', 'show_mail' );
 function show_mail() {
-    $output = '<p>bud@gmail.com</p>';
+    $output = '<a href="mailto:mail-mail@gmail.com" class="contact-link"><span>mail-mail@gmail.com</span></a>';
     return $output;
 }
 
