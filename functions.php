@@ -45,37 +45,23 @@ function sl_tel($tel) {
 // }
 
 
-add_shortcode( 'dp_phone', 'show_phone' );
-function show_phone() {
-    $output = '<a href="tel:+380682181617">+38 (068) 218-16-17</a>';
-    return $output;
-}
-
-add_shortcode( 'dp_adress', 'show_adress' );
-function show_adress() {
-    $output = '<p>Zbyszka Godlewskiego 1C/17
-    65-552 Zielona Góra</p>';
-    return $output;
-}
-
-add_shortcode( 'dp_mail', 'show_mail' );
-function show_mail() {
-    $output = '<a href="mailto:mail-mail@gmail.com" class="contact-link"><span>mail-mail@gmail.com</span></a>';
-    return $output;
-}
 
 
 add_action('ava_after_main_menu', 'show_custom_menu');
 
 function show_custom_menu() {
+
+  $phone_1 = get_field('ob_phone_1', 'options');
+  $mail = get_field('ob_email', 'options');
+  
     echo '<div class="sup-menu">
     <div class="sup-menu-wrap">
   
 
       <div class="contact">
         <ul class="contact-list">
-          <li class="contact-item"><a href="tel:+380682181617" class="contact-link"><i class="icon-phone"></i><span>+38 (068) 218-16-17</span></a></li>
-          <li class="contact-item"><a href="mailto:mail-mail@gmail.com" class="contact-link"><i class="icon-envelope"></i><span>mail-mail@gmail.com</span></a></li>
+          <li class="contact-item"><a href="tel:'.sl_tel($phone_1).'" class="contact-link"><i class="icon-phone"></i><span>'.$phone_1.'</span></a></li>
+          <li class="contact-item"><a href="mailto:'.$mail.'" class="contact-link"><i class="icon-envelope"></i><span>'.$mail.'</span></a></li>
         </ul>
       </div>
   
@@ -90,15 +76,18 @@ function show_custom_menu() {
 add_shortcode( 'footer_sub_menu', 'show_footer_sub_menu' );
 
 function show_footer_sub_menu() {
+
+  $phone_1 = get_field('ob_phone_1', 'options');
+  $mail = get_field('ob_email', 'options');
+
 	echo '
   
       <div class="contacts">
         <ul class="contact-list">
-          <li class="contact-item"><a href="tel:+380682181617" class="contact-link"><i class="icon-phone"></i><span>+38 (068) 218-16-17</span></a></li>
-          <li class="contact-item"><a href="mailto:mail-mail@gmail.com" class="contact-link"><i class="icon-envelope"></i><span>mail-mail@gmail.com</span></a></li>
+          <li class="contact-item"><a href="tel:'.sl_tel($phone_1).'" class="contact-link"><i class="icon-phone"></i><span>'.$phone_1.'</span></a></li>
+          <li class="contact-item"><a href="mailto:'.$mail.'" class="contact-link"><i class="icon-envelope"></i><span>'.$mail.'</span></a></li>
         </ul>
       </div>
-
       ';
 }
 
@@ -165,3 +154,41 @@ add_shortcode('dp_footer_fogo', 'second_logo');
 
 // }
 
+//Adding ACF settings page
+if (function_exists('acf_add_options_page')) {
+  acf_add_options_page(array(
+      'page_title' => 'Site Data',
+      'menu_title' => 'Site Data',
+      'menu_slug' => 'site-data',
+  ));
+}
+
+
+
+
+add_shortcode( 'ob_phone_1', 'show_phone_1' );
+function show_phone_1() {
+  $phone_1 = get_field('ob_phone_1', 'options');
+  $output = '<a href="tel:'.sl_tel($phone_1).'">'.$phone_1.'</a>';
+    return $output;
+}
+
+add_shortcode( 'ob_phone_2', 'show_phone_2' );
+function show_phone_2() {
+    $phone_2 = get_field('ob_phone_2', 'options');
+    $output = '<a href="tel:'.sl_tel($phone_2).'">'.$phone_2.'</a>';
+    return $output;
+}
+
+add_shortcode( 'ob_adress', 'show_adress' );
+function show_adress() {
+    $mail = get_field('ob_mail', 'options');
+    return $output;
+}
+
+add_shortcode( 'ob_email', 'show_mail' );
+function show_mail() {
+    $mail = get_field('ob_mail', 'options');
+    $output = '<a href="mailto:'.$mail.'">'.$mail.'</a>';
+    return $output;
+}
