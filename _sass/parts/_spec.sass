@@ -82,7 +82,16 @@ section, footer
       margin-right: -20px
 
 
+.sticker-map-container
+  display: flex
+  flex-direction: column
 
+
+// .sticker-map, .sticker-tabs
+//   position: -webkit-sticky
+//   position: sticky
+//   top: 0
+//   height: 100vh
 
 #top
   .avia-icon-list 
@@ -178,16 +187,7 @@ section, footer
 
 
 // map
-.sticker-map-container
-  display: grid
-  grid-template-columns: 50% 50%
 
-
-.sticker-map, .sticker-tabs
-  position: -webkit-sticky
-  position: sticky
-  top: 0
-  height: 100vh
 
 html.responsive, .responsive body, #wrap_all
   overflow:  visible !important
@@ -218,6 +218,17 @@ html.responsive, .responsive body, #wrap_all
         margin-right: -30px
 
 @media screen and ( min-width: 990px )
+
+  .sticker-map-container
+    display: grid
+    grid-template-columns: 50% 50%
+
+
+  .sticker-map, .sticker-tabs
+    position: -webkit-sticky
+    position: sticky
+    top: 0
+    height: 100vh
 
   #header_main > .container
     height: auto !important

@@ -1,14 +1,64 @@
 
-  
+#gd_map_canvas_directory_cat
+  > br, input, p
+    display: none !important
 
+
+.geodir-map-wrap .map-category-listing 
+  right: 0;
+  bottom: 0;
+
+#top.gd_place-template-default
+  .custome_map_grid
+    .custome_triangle
+      max-width: 1310px
+      width: 100%
+      margin: 0
+      
+  .map_category
+    bottom: -26px
   
 @media only screen and (max-width: 767px)
-  .custome_map_grid, .custome_map-iconlist_grid
-    .geodir-map-wrap 
-      margin-left: -8vw
-      margin-right: -8vw
+  #wrap_all
+    .custome_map_grid, .custome_map-iconlist_grid
+      .geodir-map-wrap 
+        margin-left: -8vw
+        margin-right: -8vw
+  
+  
+  #top.gd_place-template-default
+    .custome_map_grid
+      .custome_triangle
+        width: 85%;
+        max-width: 85%;
+        margin: 0 auto;
 
-  .responsive #top #wrap_all .container
+
+
+
+  html.responsive #top .container 
+    width: 85%;
+    max-width: 85%;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    float: none;
+
+
+  .responsive #top #wrap_all #header .container
     width: 100% !important
     padding: 0 50px !important
     max-width: none !important
+
+@media only screen and (max-width: 767px)
+  .responsive .tabcontainer
+    border: none !important
+
+@media only screen and (max-width: 800px)
+
+  body ul.geodir-category-list-view
+    >li
+      width: 100% !important
+      margin: 0 !important
+      &:nth-child(2n+0)
+        margin: 0 !important

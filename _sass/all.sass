@@ -69,7 +69,7 @@
           clip-path: polygon(100% 0, 63% 100%, 100% 100%)
           visibility: visible
           z-index: 3
-      .av-special-heading-tag
+      .av-special-heading-tag, .geodir-field-post_title
         font-family: Montserrat
         font-style: normal
         font-weight: bold
@@ -327,6 +327,8 @@
         #gd_map_canvas_directory, #gd_map_canvas_directory_wrapper, #sticky_map_gd_map_canvas_directory
           max-height: 650px
           min-height: auto !important
+          p
+            display: none
         .gd-trigger
           margin-right: 30px !important
           i 
@@ -516,7 +518,7 @@
             background: transparent
             right: 0
             border: 2px solid #022227
-            padding: 18px 50px
+            padding: 18px
             .avia_iconbox_title
               font-weight: 600
               font-size: 18px
@@ -594,7 +596,7 @@
         flex-wrap: wrap
         justify-content: space-between
         li
-          width: 48%
+          width: 100%
           padding: 37px 0
           .iconlist_icon 
             display: none 
@@ -630,7 +632,7 @@
         line-height: 48px
         color: $text-black
     .geodir-image-wrapper
-      padding: 35px
+
       ul.geodir-gallery
         position: relative
         .slick-list
@@ -644,34 +646,34 @@
                 margin: 0 !important
         .slick-arrow
           position: absolute
-          top: -72px
+          // top: -72px
           &.slick-prev
             right: 60px
 
           &.slick-next
             right: -22px
-        &::before
-          content: ''
-          display: block
-          background: $accent
-          width: 391px
-          height: 380px
-          left: -22px
-          bottom: -22px
-          position: absolute 
-          z-index: -9
-          visibility: visible !important
-        &::after
-          content: ''
-          display: block
-          background: $accent
-          width: 391px
-          height: 380px
-          right: -22px
-          top: -22px
-          position: absolute 
-          z-index: -9
-          visibility: visible
+        // &::before
+        //   content: ''
+        //   display: block
+        //   background: $accent
+        //   width: 391px
+        //   height: 380px
+        //   left: -22px
+        //   bottom: -22px
+        //   position: absolute 
+        //   z-index: -9
+        //   visibility: visible !important
+        // &::after
+        //   content: ''
+        //   display: block
+        //   background: $accent
+        //   width: 391px
+        //   height: 380px
+        //   right: -22px
+        //   top: -22px
+        //   position: absolute 
+        //   z-index: -9
+        //   visibility: visible
             
 
 
@@ -971,6 +973,7 @@
 
 #top
   .custome_grid_realiz_section
+    padding: 0
     .custome_accord_tit 
       padding-top: 108px
       font-weight: bold
@@ -980,12 +983,16 @@
       // margin-left: calc(var(--marginB) + 50px)
       padding-left: 25px
     .list.custom-tabs-form
+      padding: 0 10%
       .tabcontainer 
+        .fullsize-tab
+          display: none
         .tab_titles
-          padding: 25px 25px 25px 0
+          // padding: 25px
           display: flex
           flex-wrap: wrap
           justify-content: space-between
+
           .tab
             border: none
             font-size: 18px
@@ -993,10 +1000,10 @@
             color: $text-black
             background: #F0F2F4 
             box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25)
-            padding: 18px 38px
+            padding: 18px 
             // margin-right: 15px
             margin-bottom: 10px
-            width: 49%
+            width: 100%
             text-align: center
             &.active_tab
               font-weight: 600
@@ -1008,12 +1015,19 @@
           &.active_tab_content
             background: inherit
             border: none
-          .gd_place
-            .arhive_item_wrap
+          ul.geodir-category-list-view
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            li.gd_place
+              width: 100%
+              .arhive_item_wrap
               display: flex
+              flex-direction: column
               justify-content: space-between
+              // padding-right: 22px 
               .media_box
-                width: 45%
+                width: 100%
                 .geodir-viewport
                   margin-bottom: 0
                 ul.geodir-slides
@@ -1027,8 +1041,7 @@
                   width: 0
                   height: 0
               .content_box
-                width: 53%
-                padding-right: 22px
+                width: 100%
                 display: flex
                 flex-direction: column
                 .title_box
@@ -1085,6 +1098,7 @@
   .custom-tabs-form
     .custome_triangle
       margin-top: 50px
+      // margin-left: var(--marginB)
 
 
 
@@ -1124,6 +1138,19 @@
 
 
 @media screen and ( min-width: 576px )
+
+  #top
+    .custome_grid_realiz_section 
+      padding: 0 
+      .list.custom-tabs-form
+        .tabcontainer 
+          .tab_content
+            ul.geodir-category-list-view
+              display: flex
+              flex-wrap: wrap
+              justify-content: space-between
+              li.gd_place
+                width: 48% !important
 
 
   #top
@@ -1210,17 +1237,21 @@
 
 @media screen and ( min-width: 768px )
 
+
+
   #top
     .custom_details_section2
       .container
         .av_three_fifth
           .custom_btn
             position: absolute
+            a
+              padding: 18px 50px
 
   #top
-    .zobacz_section
+    .zobacz_section, .custom_third_section
       .avia-icon-list-container  
-        ul
+        ul.avia-icon-list
           li
             width: 48%
             padding: 8px 25px
@@ -1233,6 +1264,8 @@
         bottom: auto
         border: none
         background: transparent
+      .geodir-image-wrapper
+        padding: 35px
 
 
 
@@ -1277,6 +1310,8 @@
         .custom_slider_rev_img img
           width: 760px 
           height: 276px
+
+
 
 
   
@@ -1336,6 +1371,7 @@
 
 
 @media screen and ( min-width: 990px )
+
 
   #top
     .custome_accordin_section
@@ -1424,7 +1460,7 @@
         padding-right: 30px
       .av_three_fifth
         width: 50% !important
-        padding: 0 !important
+        padding: 0 0 0 20px !important
 
   #top     
     .second_section_home_cust
@@ -1434,6 +1470,20 @@
         
       .av_three_fifth
         width: 58% !important
+
+  #top
+    .custome_grid_realiz_section 
+      padding: 0 0 0 50px
+      .list.custom-tabs-form
+        padding: 0 50px 0 0
+        .tabcontainer 
+          .tab_content
+            ul.geodir-category-list-view
+              display: flex
+              flex-wrap: wrap
+              justify-content: space-between
+              li.gd_place
+                width: 100% !important
 
 
 @media screen and ( min-width: 1072px )
@@ -1462,7 +1512,25 @@
 
 @media screen and ( min-width: 1199px )
 
-
+  #top
+    .custome_grid_realiz_section
+      .list.custom-tabs-form
+        .tabcontainer
+          .tab_titles .tab
+            width: 49%
+            padding: 18px 
+          .tab_content
+            ul.geodir-category-list-view
+              li.gd_place
+                .arhive_item_wrap
+                  display: flex
+                  justify-content: space-between
+                  flex-direction: row
+                  .media_box
+                    width: 45%
+                  .content_box
+                    width: 53% 
+                  
 
 
   #top
@@ -1512,6 +1580,13 @@
 
 
 @media screen and ( min-width: 1311px )
+
+  #top
+    .custome_grid_realiz_section
+      .list.custom-tabs-form
+        .tabcontainer
+          .tab_titles .tab
+            padding: 18px 38px
 
 
   #top
@@ -1640,6 +1715,7 @@
               margin-right: 15px
             .tab_content
               padding: 0px
+              width: 100%
 
 
 

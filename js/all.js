@@ -14,7 +14,27 @@ jQuery(document).ready(function(){
         rows: 2,
         arrows: true,
         nextArrow: '<button class="slick-prev slick-arrow"></button>',
-        prevArrow: '<button class="slick-next slick-arrow"></button>'
+        prevArrow: '<button class="slick-next slick-arrow"></button>',
+        responsive: [
+          {
+            breakpoint: 990,
+            settings: {
+              rows: 2,
+              arrows: true,
+              slidesToScroll: 2,
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              rows: 1,
+              arrows: true,
+              slidesToScroll: 1,
+              slidesToShow: 1
+            }
+          }
+        ]
       });
   });
 
