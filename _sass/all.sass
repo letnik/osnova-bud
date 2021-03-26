@@ -369,8 +369,7 @@
               justify-content: center
               width: 20px
               height: 20px
-          &.unchecked
-            label
+            &.unchecked
               &::before
                 content: ''
                 background: transparent
@@ -1024,6 +1023,9 @@
             justify-content: space-between
             li.gd_place
               width: 100%
+              section
+                padding-bottom: 15px
+                border-bottom: 1px solid $text-grey
               .arhive_item_wrap
               display: flex
               flex-direction: column
@@ -1031,7 +1033,7 @@
               // padding-right: 22px 
               .media_box
                 width: 100%
-                .geodir-viewport
+                .geodir-viewport, .geodir-image-container
                   margin-bottom: 0
                 ul.geodir-slides
                   > li
@@ -1039,6 +1041,8 @@
                     height: 265px 
                     // img
                     //   width: 100%
+                    .image-overlay-inside
+                      color: $accent
                 .geodir-direction-nav
                   // display: none
                   width: 0
@@ -1097,47 +1101,45 @@
 
 // #top.gd_place-template-default
 //   .custom_title_wrap_grid
-//     .av_textblock_section 
-//       &:nth-child(1)
-        
-//         padding: 30px 
-//         width: auto
-//         max-width: 90%
-//         min-width: 65%
-//         position: relative
-//         .geodir-field-post_title
-//           font-family: Montserrat
-//           font-style: normal
-//           font-weight: bold
-//           font-size: 30px
-//           color: $text-white
-//         &::before
-//           content: ''
-//           width: 100%
-//           height: 100%
-//           z-index: -2
-//           background: rgba(25, 25, 25, 0.7)
-//           -webkit-clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%)
-//           clip-path: polygon(0 0, 100% 0%, 94% 100%, 0% 100%)
-//           position: absolute
-//           left: 0 
-//           bottom: 0
-//           visibility: visible
-//           overflow: visible
-//         &::after
-//           content: ''
-//           background: red
-//           display: block
-//           width: 11%
-//           height: 73%
-//           position: absolute
-//           right: 0
-//           bottom: 0
-//           background: rgba(25, 25, 25, 0.7)
-//           -webkit-clip-path: polygon(100% 0, 38% 100%, 100% 100%)
-//           clip-path: polygon(100% 0, 63% 100%, 100% 100%)
-//           visibility: visible
-//           z-index: 3
+//     .geodir-post-content-container
+//       padding: 30px 
+//       width: auto
+//       max-width: 90%
+//       min-width: 65%
+//       position: relative
+//       .geodir-field-post_title
+//         font-family: Montserrat
+//         font-style: normal
+//         font-weight: bold
+//         font-size: 30px
+//         color: $text-white
+//       &::before
+//         content: ''
+//         width: 100%
+//         height: 100%
+//         z-index: -2
+//         background: rgba(25, 25, 25, 0.7)
+//         -webkit-clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%)
+//         clip-path: polygon(0 0, 100% 0%, 94% 100%, 0% 100%)
+//         position: absolute
+//         left: 0 
+//         bottom: 0
+//         visibility: visible
+//         overflow: visible
+//       &::after
+//         content: ''
+//         background: red
+//         display: block
+//         width: 11%
+//         height: 73%
+//         position: absolute
+//         right: 0
+//         bottom: 0
+//         background: rgba(25, 25, 25, 0.7)
+//         -webkit-clip-path: polygon(100% 0, 38% 100%, 100% 100%)
+//         clip-path: polygon(100% 0, 63% 100%, 100% 100%)
+//         visibility: visible
+//         z-index: 3
       
 
 
@@ -1198,7 +1200,7 @@
               flex-wrap: wrap
               justify-content: space-between
               li.gd_place
-                width: 48% !important
+                // width: 48% !important
 
 
   #top
@@ -1207,7 +1209,7 @@
         .av_one_full
           padding: 30px 50px
           // max-width: 70%
-        .av-special-heading-tag
+        .av-special-heading-tag, .geodir-field-post_title
           font-size: 50px
         .avia_textblock 
           p
@@ -1374,13 +1376,26 @@
 
 
   #top
-  .custom_onasp_informsection
-    .av_three_fifth
-      .avia-icon-list-container 
-        ul.avia-icon-list
-          li
-            width: 48%
-            padding: 37px 0
+    .custom_onasp_informsection
+      .av_three_fifth
+        .avia-icon-list-container 
+          ul.avia-icon-list
+            li
+              width: 48%
+              padding: 37px 0
+
+  #top
+    .custome_grid_realiz_section 
+      .list.custom-tabs-form
+        .tabcontainer 
+          .tab_content
+            ul.geodir-category-list-view
+              li.gd_place
+                width: 48% !important
+                section
+                  border-bottom:  none
+                  padding-bottom: 0
+  
 
 @media screen and ( min-width: 768px ) and ( max-width: 875px )
 
@@ -1709,22 +1724,22 @@
       .inputbox.geodir-hide
         display: none
       .map_category
-        // .treeview.main_list
-        //   padding: 32px !important
-        //   width: 460px
-        //   li
-        //     padding: 25px 0
-        //     label
-        //       img
-            //     display: none
-            // &::before
-            //   width: 30px
-            //   height: 30px
-            // &.unchecked
-            //   &::before
-            //     content: ''
-            //     background: transparent
-            //     border: solid 1px $text-black
+        .treeview.main_list
+          padding: 32px !important
+          width: 460px
+          li
+            padding: 25px 0
+            label
+              img
+                display: none
+            &::before
+              width: 30px
+              height: 30px
+            &.unchecked
+              &::before
+                content: ''
+                background: transparent
+                border: solid 1px $text-black
       
   #top
     .custom_slider_section
@@ -1812,8 +1827,6 @@
 
 
 
-// .custome_map_grid #gd_map_canvas_directory_cat li input[type="checkbox"]
-//   display: none
 
            
           
