@@ -38,34 +38,34 @@ jQuery(document).ready(function(){
       });
   });
 
-jQuery(document).ready(function(){
-jQuery('.custom_slider_section .image_slider_wrap').slick({
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    rows: 2,
-    arrows: true,
-    nextArrow: '<button class="slick-prev slick-arrow"></button>',
-    prevArrow: '<button class="slick-next slick-arrow"></button>',
-    responsive: [
-    {
-      breakpoint: 990,
-      settings: {
+  jQuery(document).ready(function(){
+    jQuery('.custom_slider_section .image_slider_wrap').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
         rows: 2,
         arrows: true,
-        slidesToScroll: 2,
-        slidesToShow: 2
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        rows: 1,
-        arrows: true,
-        slidesToScroll: 1,
-        slidesToShow: 1
-      }
-    }
-  ]
+        nextArrow: '<button class="slick-prev slick-arrow"></button>',
+        prevArrow: '<button class="slick-next slick-arrow"></button>',
+        responsive: [
+        {
+          breakpoint: 990,
+          settings: {
+            rows: 2,
+            arrows: true,
+            slidesToScroll: 2,
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            rows: 1,
+            arrows: true,
+            slidesToScroll: 1,
+            slidesToShow: 1
+          }
+        }
+      ]
 
     });
 });
@@ -102,9 +102,9 @@ jQuery(document).ready(function(){
 
 
 
-    // customPaging: function (slider, i) {
-    //     return slider.slickCurrentSlide + '/' + (i + 1);
-    // }
+//     customPaging: function (slider, i) {
+//         return slider.slickCurrentSlide + '/' + (i + 1);
+//     }
 
 // $('..custom_slider_review_section .custom_slider_wrap').slick({
 //     dots: true,
@@ -119,3 +119,21 @@ jQuery(document).ready(function(){
     
 
           
+jQuery(document).ready(function () {
+
+	// jQuery('.custome_map_grid #gd_map_canvas_directory_cat li input[type=checkbox]').each(function () {
+	// 	if (jQuery(this).prop('checked')) {
+	// 		jQuery(this).parent().addClass( "checked" );
+
+	// 	} else {
+	// 		jQuery(this).parent().removeClass( "checked" );
+
+	// 	}
+	// });
+
+	jQuery(".custome_map_grid #gd_map_canvas_directory_cat li input[type=checkbox]").change(function () {
+		jQuery(this).parent().toggleClass('unchecked');
+
+	});
+	
+});

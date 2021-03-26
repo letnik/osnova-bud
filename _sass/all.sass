@@ -357,23 +357,24 @@
             color: $text-black
             img
               display: none
-          &::before
-            content: '✓'
-            font-size: 10px
-            font-weight: bold
-            margin-right: 15px
-            background: $accent
-            border-radius: 50px
-            display: flex
-            align-items: center
-            justify-content: center
-            width: 20px
-            height: 20px
-          &.unchecked
             &::before
-              content: ''
-              background: transparent
-              border: solid 1px $text-black
+              content: '✓'
+              font-size: 10px
+              font-weight: bold
+              margin-right: 15px
+              background: $accent
+              border-radius: 50px
+              display: flex
+              align-items: center
+              justify-content: center
+              width: 20px
+              height: 20px
+          &.unchecked
+            label
+              &::before
+                content: ''
+                background: transparent
+                border: solid 1px $text-black
 
 
 #top
@@ -1663,22 +1664,22 @@
       .inputbox.geodir-hide
         display: none
       .map_category
-        .treeview.main_list
-          padding: 32px !important
-          width: 460px
-          li
-            padding: 25px 0
-            label
-              img
-                display: none
-            &::before
-              width: 30px
-              height: 30px
-            &.unchecked
-              &::before
-                content: ''
-                background: transparent
-                border: solid 1px $text-black
+        // .treeview.main_list
+        //   padding: 32px !important
+        //   width: 460px
+        //   li
+        //     padding: 25px 0
+        //     label
+        //       img
+            //     display: none
+            // &::before
+            //   width: 30px
+            //   height: 30px
+            // &.unchecked
+            //   &::before
+            //     content: ''
+            //     background: transparent
+            //     border: solid 1px $text-black
       
   #top
     .custom_slider_section
@@ -1766,6 +1767,8 @@
 
 
 
+// .custome_map_grid #gd_map_canvas_directory_cat li input[type="checkbox"]
+//   display: none
 
            
           
