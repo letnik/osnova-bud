@@ -171,13 +171,19 @@
   .custome_btn_default
     margin-top: 10px
     a
-      border: 2px solid #0B1B34
+      border: 2px solid $text-black
+      color: $text-black
       font-weight: 600
       font-size: 18px
       line-height: 25px
       padding: 18px
       margin: 0
-          
+      &:hover
+        border: 2px solid darken($accent, 10%)
+        transition: $transition
+        > span
+          color: darken($accent, 10%)
+          transition: $transition
           
           
 
@@ -314,6 +320,11 @@
             font-size: 18px
             line-height: 25px
             color: $text-black
+          a
+            transition: $transition
+            &:hover
+              color: $accent  
+              
     
       
 
@@ -357,23 +368,23 @@
             color: $text-black
             img
               display: none
+          &::before
+            content: '✓'
+            font-size: 10px
+            font-weight: bold
+            margin-right: 15px
+            background: $accent
+            border-radius: 50px
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 20px
+            height: 20px
+          &.unchecked
             &::before
-              content: '✓'
-              font-size: 10px
-              font-weight: bold
-              margin-right: 15px
-              background: $accent
-              border-radius: 50px
-              display: flex
-              align-items: center
-              justify-content: center
-              width: 20px
-              height: 20px
-            &.unchecked
-              &::before
-                content: ''
-                background: transparent
-                border: solid 1px $text-black
+              content: ''
+              background: transparent
+              border: solid 1px $text-black
 
 
 #top
@@ -406,6 +417,9 @@
                 &.button
                   background: $accent
                   color: $text-white
+                  &:hover
+                    transition: $transition
+                    background: darken($accent, 10%)
 
 #top
   .custom_slider_review_section
@@ -431,6 +445,7 @@
       .custom_slider_wrap
         position: relative
         margin-top: 35px
+        z-index: 9
         .slick-arrow
           position: absolute
           top: auto
@@ -451,10 +466,13 @@
             &::before
               content: '\e80b'
           &:hover
+            transition: $transition
             transform: scale(1.2)
             &::before
               color: $accent
               font-weight: bold
+
+
 
     .sl-count
       font-size: 70px
@@ -525,6 +543,12 @@
               font-size: 18px
               line-height: 25px
               color: #022227
+            &:hover
+              border: 2px solid darken($accent, 10%)
+              transition: $transition
+              > span
+                color: darken($accent, 10%)
+                transition: $transition
               
       .av_two_fifth
         width: 100%
@@ -702,6 +726,7 @@
           box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15)
           display: flex
           align-items: center
+          transition: $transition
           .iconlist_icon 
             background: transparent !important
             font-size: 35px
@@ -714,7 +739,11 @@
               line-height: 25px
               color: $text-black
               margin-top: 0
-  
+          &:hover
+            background: lighten(#FBFCFB, 10%)
+            transform: scale(1.03)
+            .iconlist_title, .iconlist_icon
+              color: lighten($text-black, 10%)
           
 // #top
 //   .custom_onasp_1section
