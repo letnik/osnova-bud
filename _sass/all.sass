@@ -171,13 +171,19 @@
   .custome_btn_default
     margin-top: 10px
     a
-      border: 2px solid #0B1B34
+      border: 2px solid $text-black
+      color: $text-black
       font-weight: 600
       font-size: 18px
       line-height: 25px
       padding: 18px
       margin: 0
-          
+      &:hover
+        border: 2px solid darken($accent, 10%)
+        transition: $transition
+        > span
+          color: darken($accent, 10%)
+          transition: $transition
           
           
 
@@ -260,6 +266,7 @@
               margin-top: 60px
               .custome_btn_default
                 display: flex
+                justify-content: center
                 max-width: 300px
                 padding: 18px 
                 border: solid 2px $text-white
@@ -314,6 +321,11 @@
             font-size: 18px
             line-height: 25px
             color: $text-black
+          a
+            transition: $transition
+            &:hover
+              color: $accent  
+              
     
       
 
@@ -357,23 +369,24 @@
             color: $text-black
             img
               display: none
+          &::before
+            content: '✓'
+            font-size: 10px
+            font-weight: bold
+            margin-right: 15px
+            background: $accent
+            border: solid 1px $accent
+            border-radius: 50px
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 20px
+            height: 20px
+          &.unchecked
             &::before
-              content: '✓'
-              font-size: 10px
-              font-weight: bold
-              margin-right: 15px
-              background: $accent
-              border-radius: 50px
-              display: flex
-              align-items: center
-              justify-content: center
-              width: 20px
-              height: 20px
-            &.unchecked
-              &::before
-                content: ''
-                background: transparent
-                border: solid 1px $text-black
+              content: ''
+              background: transparent
+              border: solid 1px $text-black
 
 
 #top
@@ -406,6 +419,9 @@
                 &.button
                   background: $accent
                   color: $text-white
+                  &:hover
+                    transition: $transition
+                    background: darken($accent, 10%)
 
 #top
   .custom_slider_review_section
@@ -431,6 +447,7 @@
       .custom_slider_wrap
         position: relative
         margin-top: 35px
+        z-index: 9
         .slick-arrow
           position: absolute
           top: auto
@@ -451,10 +468,13 @@
             &::before
               content: '\e80b'
           &:hover
+            transition: $transition
             transform: scale(1.2)
             &::before
               color: $accent
               font-weight: bold
+
+
 
     .sl-count
       font-size: 70px
@@ -525,6 +545,12 @@
               font-size: 18px
               line-height: 25px
               color: #022227
+            &:hover
+              border: 2px solid darken($accent, 10%)
+              transition: $transition
+              > span
+                color: darken($accent, 10%)
+                transition: $transition
               
       .av_two_fifth
         width: 100%
@@ -628,7 +654,7 @@
 #top
   .custom_slider_section
     .av_textblock_section 
-      h3
+      h2
         font-weight: bold
         font-size: 35px
         line-height: 48px
@@ -683,7 +709,7 @@
   .zobacz_section
     background: #FDFDFD
     .avia_textblock
-      h3
+      h2
         font-weight: bold
         font-size: 35px
         line-height: 48px
@@ -702,6 +728,7 @@
           box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15)
           display: flex
           align-items: center
+          transition: $transition
           .iconlist_icon 
             background: transparent !important
             font-size: 35px
@@ -714,7 +741,11 @@
               line-height: 25px
               color: $text-black
               margin-top: 0
-  
+          &:hover
+            background: lighten(#FBFCFB, 10%)
+            transform: scale(1.03)
+            .iconlist_title, .iconlist_icon
+              color: lighten($text-black, 10%)
           
 // #top
 //   .custom_onasp_1section
@@ -860,7 +891,7 @@
     padding: 50px  0
     background: #F0F2F4
     .avia_textblock  
-      h3
+      h2
         font-weight: bold
         font-size: 35px
         line-height: 48px
@@ -906,7 +937,7 @@
     padding-bottom: 70px
     overflow: hidden
     .avia_textblock
-      h3
+      h2
         font-weight: bold
         font-size: 35px
         line-height: 48px
@@ -1172,8 +1203,9 @@
 
   #top .second_section_home_cust .av_three_fifth .custome_informe_ti 
     text-align: start
-    padding: 10px 20px 10px 0
-    width: 49%
+    padding: 10px 2% 10px 0
+    width: 48%
+
 
   #top #wrap_all .custome_grid_row_accordin_wrap .tabcontainer .av_tab_section .tab_inner_content 
     margin: 35px
@@ -1638,6 +1670,11 @@
 
 // @media screen and ( min-width: 1210px )
 
+@media screen and ( min-width: 1200px )
+  #top .second_section_home_cust .av_three_fifth .custome_informe_ti
+    text-align: start;
+    padding: 10px 1% 10px 0;
+    width: 24%;
 
       
 
@@ -1660,11 +1697,11 @@
             h2
               padding-left: calc( var(--marginB) + 50px )
 
-  #top
-    .second_section_home_cust
-      .av_three_fifth
-        .custome_informe_ti
-          padding: 35px 10px 55px 0
+  // #top
+  //   .second_section_home_cust
+  //     .av_three_fifth
+  //       .custome_informe_ti
+  //         padding: 35px 10px 55px 0
 
 
 

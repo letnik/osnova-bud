@@ -73,10 +73,12 @@ function show_custom_menu() {
   </div>
   
   <div class="btn-wrap">
-    <button class="btn btn-solid spu-open-419">WYCENA</p></button>
+    <div class="btn_wrap_inner">
+      <button class="btn btn-solid spu-open-419">WYCENA</p></button>
+    </div>
+
   </div>';
 }
-
 
 add_shortcode( 'footer_sub_menu', 'show_footer_sub_menu' );
 
