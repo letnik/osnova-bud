@@ -958,17 +958,22 @@
         padding: 28px 31px
         display: flex
         justify-content: space-between
+        align-items: center;
         &.activeTitle
           background: #000
           color: $text-white
           &::after
-            content: '-'
+            display: block
+            height: 1px
+            width: 30px
+            content: ''
             font-size: 30px
-            color: $text-white
+            background: $text-white
         .toggle_icon
           display: none
         &::after
-          content: '+'
+          content: '\e806'
+          font-family: fontello
           font-size: 30px
           color: $text-black
       .toggle_content
