@@ -116,7 +116,7 @@
   .second_section_home_cust
     display: flex
     // justify-content: flex-end
-    align-items: center
+    // align-items: center
     flex-wrap: wrap
     // flex-direction: column
     background: #F0F2F4
@@ -168,8 +168,10 @@
           width: 100%
           height: auto
           object-fit: cover
-  .custome_btn_default
+  .custome_btn_default, .custom-tabs a
     margin-top: 10px
+    align-items: flex-end
+    display: flex
     a
       border: 2px solid $text-black
       color: $text-black
@@ -185,7 +187,7 @@
           color: darken($accent, 10%)
           transition: $transition
           
-          
+    .custom-tabs     
 
 #top
   #wrap_all
@@ -247,6 +249,11 @@
             padding: 20px
             background: rgba(25, 25, 25, 0.9)
             position: static
+            h3
+              font-size: 20px
+              margin-bottom: 40px
+
+
             h3,p
               color: $text-white
             p img
@@ -261,27 +268,28 @@
               &::nth-child(2), &::nth-child(3), &::nth-child(4), &::nth-child(2), &::nth-child(5)
                 display: none !important
 
-            .btn_wrap
-              display: block
-              margin-top: 60px
-              .custome_btn_default
-                display: flex
-                justify-content: center
-                max-width: 300px
-                padding: 18px 
-                border: solid 2px $text-white
-                color: $text-white
-                font-weight: 600
-                font-size: 18px
-                line-height: 25px
-                &::after
-                  content: '\e80c'
-                  font-family: Fontello
-                  font-size: 30px
-                  color: $text-white
-                  margin-left: 15px
+  .btn_wrap
+    display: block
+    margin-top: 60px
+  .custome_btn_default, .custom-tabs a
+    display: flex
+    justify-content: center
+    max-width: 300px
+    padding: 18px 
+    border: solid 2px $text-white
+    color: $text-white
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+    &::after
+      content: '\e80c'
+      font-family: Fontello
+      font-size: 30px
+      color: $text-white
+      margin-left: 15px
 
-                
+
+      
 
 
       
@@ -1210,6 +1218,10 @@
     text-align: start
     padding: 10px 2% 10px 0
     width: 48%
+    display: flex
+    justify-content: center;
+    flex-direction: column
+
 
 
   #top #wrap_all .custome_grid_row_accordin_wrap .tabcontainer .av_tab_section .tab_inner_content 
@@ -1394,9 +1406,15 @@
 
     .custom_slider_review_section
       .entry-content-wrapper
-        .custom_slider_rev_img img
-          width: 760px 
-          height: 276px
+        .custom_slider_rev_img 
+          overflow: hidden
+          border-top: 1px solid #F2F2F2
+          border-bottom: 1px solid #F2F2F2
+          img
+            width: 760px 
+            height: auto
+            margin-top: -1px
+            margin-bottom: -1px
 
 
 
@@ -1519,7 +1537,8 @@
       .entry-content-wrapper
         display: flex
         flex-wrap: wrap
-        align-items: stretch
+        align-items: flex-start
+        justify-content: flex-end
         .av_three_fifth
           width: 57.599999999999994%
 
@@ -1544,6 +1563,7 @@
           font-size: 90px
           line-height: 123px
           text-align: right
+          margin-top: 75px
           .sl-count__current
             font-weight: normal
             color: $text-black
@@ -1960,3 +1980,7 @@
             // --marginA: calc(100vw - 1310px)
             // --marginB: calc(var(--marginA) / 2)
             margin-left: var(--marginB)
+            height: 100%
+            align-items: stretch
+            flex-wrap: wrap;
+            display: flex

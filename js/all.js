@@ -75,6 +75,7 @@ jQuery(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
+        adaptiveHeight: true,
         nextArrow: '<button class="slick-prev slick-arrow"></button>',
         prevArrow: '<button class="slick-next slick-arrow"></button>'
     });
