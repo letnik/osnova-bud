@@ -1861,7 +1861,17 @@
         
 
 
-
+  #top
+    #wrap_all
+      .custom-left-wrap
+        > .flex_cell_inner
+            // --marginA: calc(100vw - 1310px)
+            // --marginB: calc(var(--marginA) / 2)
+            margin-left: var(--marginB)
+            height: 100%
+            align-items: stretch
+            flex-wrap: wrap;
+            display: flex
 
 
 
@@ -1972,15 +1982,15 @@
 
 
   
-@media screen and ( min-width:  1310px)
-  #top
-    #wrap_all
-      .custom-left-wrap
-        > .flex_cell_inner
-            // --marginA: calc(100vw - 1310px)
-            // --marginB: calc(var(--marginA) / 2)
-            margin-left: var(--marginB)
-            height: 100%
-            align-items: stretch
-            flex-wrap: wrap;
-            display: flex
+// @media screen and ( min-width:  1310px)
+//   #top
+//     #wrap_all
+//       .custom-left-wrap
+//         > .flex_cell_inner
+//             // --marginA: calc(100vw - 1310px)
+//             // --marginB: calc(var(--marginA) / 2)
+//             margin-left: var(--marginB)
+//             height: 100%
+//             align-items: stretch
+//             flex-wrap: wrap;
+//             display: flex
