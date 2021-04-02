@@ -13,16 +13,14 @@ body
   font-size: 15px
   margin: 0
   padding: 0
-  font-family: $ff-montserrat
 
 h1, h2, h3, h4, p
-  font-family: $ff-montserrat
   margin: 0
   padding: 0
   font-weight: normal
 
 h1
-  font-size: 50px
+  font-size: 46px
 
 h2
   font-size: 35px
@@ -41,7 +39,6 @@ a, a:hover, a:focus, a:active
 
 p 
   margin: 15px 0
-  font-family: $ff-montserrat
   font-style: normal
   font-weight: normal
   font-size: 18px
@@ -57,10 +54,14 @@ input
   border-radius: 0 
 
 
-section, footer
-  padding: 20px 0
+// section, footer
+//   padding: 20px 0
 
+.tt-uppercase
+  text-transform: uppercase
 
+.mr-10
+  margin-right: 10px
 
 
 .avia_transform .avia-icon-list.av-iconlist-big.avia-iconlist-animate .avia_start_animation .iconlist-timeline
@@ -73,13 +74,24 @@ section, footer
     font-size: 27px
     line-height: 34px
     color: $text-black
+    position: relative
+    padding-left: 25px
+    z-index: 1
 
     &::before
       content: '\e807'
       font-family: Fontello
       font-size: 42px
+      position: absolute
       color: $accent
-      margin-right: -20px
+      position: absolute
+      left: 0
+      z-index: -1
+  // &.custome_lefter
+  //   h2
+  //     &::before
+  //       left: 25px
+
 
 
 .sticker-map-container
@@ -220,7 +232,21 @@ section, footer
         font-size: 61px
         color: $accent
         margin-right: -30px
-
+  #top
+    .custome_map_grid
+    .flex_cell.av_one_full  
+      padding: 0
+      .custome_triangle 
+        h2 
+          padding-left: 75px
+          &::before
+            padding-left: 50px
+        &.padding-off
+          h2 
+            padding-left: 25px
+          h2 
+            &::before
+              padding-left: 0   
 @media screen and ( min-width: 990px )
 
   .sticker-map-container
@@ -319,13 +345,15 @@ section, footer
             border: none
             padding: 12px 48px
             background: $accent
-            font-weight: normal;
+            font-weight: 600;
             font-size: 17px;
             line-height: 23px;
             color: $text-black
+            transition: $transition
+            font-family: 'open sans', 'HelveticaNeue', 'Helvetica Neue', 'Helvetica-Neue', Helvetica, Arial, sans-serif;
             &:hover
-              background: darken($accent, 10%)
-              transition: $transition
+              background: lighten($accent, 10%)
+              box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
 
 
 
@@ -333,8 +361,10 @@ section, footer
 
 
 
-// @media screen and ( min-width: 1311px )
-
+@media screen and ( max-width: 989px )
+  .padding-off-990 
+    padding-top: 0 !important
+    padding-bottom: 0 !important
 
 body
   --marginA: calc(100vw - 1310px)
@@ -343,7 +373,12 @@ body
   --lefterA: calc(-100vw + 1310px)
   --lefterB: calc(var(--lefterA) / 2)
 
+#top .tabcontainer
+  margin-top: 0 !important
+  margin-bottom: 50px
+  &.margin-off
+    margin: 0
 
-
-
-
+.slick-slider.image_slider_wrap .slick-list
+  margin-left: -20px
+  margin-right: -20px

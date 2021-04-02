@@ -88,7 +88,23 @@
           line-height: 1
           &:nth-child(2)
             color: $accent
-
+  .title_wrap .av-subheading 
+    p
+      font-weight: 600
+      font-size: 31px
+      text-transform: uppercase
+      color: #ffffff
+      margin: 3px 12px 0 0
+      line-height: 1
+      span
+        color: $accent
+  .avia-button:active, .avia-button:focus
+    border-top-width: 2px !important;
+  .custom_details_section2
+    > .container
+      > .content 
+        > .post-entry
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
 #top
   .first_section_oferta-cild_custome
     .av_textblock_section 
@@ -98,7 +114,7 @@
       max-width: 70%
     .avia_textblock h1 
       font-weight: bold
-      font-size: 50px
+      font-size: 46px
       line-height: 68px
       color: $text-white
       margin-bottom: 0
@@ -142,7 +158,7 @@
           font-weight: 600
           font-size: 30px
         .avia-animated-number-content p 
-          font-size: 22px
+          font-size: 18px
 
     .av_two_fifth
       width: 100% !important
@@ -168,26 +184,31 @@
           width: 100%
           height: auto
           object-fit: cover
+
+
   .custome_btn_default, .custom-tabs a
-    margin-top: 10px
-    align-items: flex-end
-    display: flex
+    margin-top: 20px
+
     a
       border: 2px solid $text-black
       color: $text-black
       font-weight: 600
       font-size: 18px
       line-height: 25px
-      padding: 18px
+      padding: 18px 30px
       margin: 0
       &:hover
         border: 2px solid darken($accent, 10%)
         transition: $transition
         > span
-          color: darken($accent, 10%)
+          color: #fff
           transition: $transition
-          
-    .custom-tabs     
+  .custome_btn_default.trans_custom .avia-button   
+    background: none
+    .avia_button_icon
+      &::before
+        font-size: 30px;
+        line-height: 30px
 
 #top
   #wrap_all
@@ -202,7 +223,7 @@
         .tab_titles
           width: 45%
           height: 100%
-          min-height: 816px
+          min-height: 775px
           max-width: none
           padding-top: 35px 
           padding-bottom: 35px
@@ -218,12 +239,15 @@
             display: flex
             align-items: center
             border: none
+            position: relative
+            background: #fff
+            z-index: 100
             // overflow: hidden
-            &.active_tab
+
+            &.active_tab, &:hover
               width: 100%
               background: #191919
               color: $text-white
-              position: relative
               &:after 
                 content: '' 
                 position: absolute
@@ -235,6 +259,22 @@
                 width: 40px
                 height: 100%
                 z-index: -2
+
+            &:hover
+              background: #F0F2F4
+              color: $text-black
+              &:after 
+                background: #F0F2F4 
+    
+            &.active_tab:hover
+              background: #191919
+              color: $text-white
+              &:after 
+                background: #191919
+
+
+
+              
             .tab_icon
               font-size: 40px
               margin-right: 26px
@@ -272,22 +312,52 @@
     display: block
     margin-top: 60px
   .custome_btn_default, .custom-tabs a
-    display: flex
-    justify-content: center
-    max-width: 300px
-    padding: 18px 
-    border: solid 2px $text-white
+    // display: flex
+    // justify-content: center
+    text-align: center
     color: $text-white
     font-weight: 600
     font-size: 18px
     line-height: 25px
+    .avia_button_icon 
+      font-size: 30px
+      width: 30px
+      height: 30px
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+  .custome_btn_default a, .custom-tabs a
+    display: flex
+    align-items: center
+    justify-content: center
+  .custome_btn_default a, .custom-tabs a
+    transition: $transition
+    &::before
+      position: absolute
+      left: 0
+      top: 0
+      transition: $transition
+    &:hover
+      background: $accent !important
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2) !important
+      border-color: $accent !important
+      > span
+        color: #fff !important
+        
+  .custom-tabs a
+    border: solid 2px $text-white
+    padding: 18px 30px
     &::after
       content: '\e80c'
       font-family: Fontello
       font-size: 30px
       color: $text-white
       margin-left: 15px
-
+    &:hover
+      box-shadow: 1px 1px 10px rgba(255, 255, 255, .5) !important
+  .slick-initialized .slick-slide
+    padding: 0 10px
 
       
 
@@ -341,8 +411,6 @@
 #top
   .custome_map_grid
     .flex_cell.av_one_full  
-      padding: 30px 0 0 0 !important
-      padding-left: 0 !important
       padding-right: 0 !important
       .av_textblock_section 
         #gd_map_canvas_directory, #gd_map_canvas_directory_wrapper, #sticky_map_gd_map_canvas_directory
@@ -357,6 +425,8 @@
     .custome_triangle h2 
       margin-bottom: 15px
       margin-top: 15px
+      &::before
+        
     .inputbox.geodir-hide
       display: none
     .map_category
@@ -410,7 +480,7 @@
             color: $text-white
             text-align: center
             margin: 0
-            padding-bottom: 16px
+            padding-bottom: 30px
           fieldset
             display: flex
             align-items: center
@@ -424,12 +494,41 @@
                 line-height: 19px
                 color: $text-grey
                 background: transparent
+                &:hover, &:focus, &:active
+                  border-color: #fff
+                  color: #fff
+                  box-shadow: 1px 1px 10px rgba(255, 255, 255, .2) !important
+                
                 &.button
                   background: $accent
                   color: $text-white
                   &:hover
                     transition: $transition
-                    background: darken($accent, 10%)
+                    background: lighten($accent, 10%)
+input                   
+  &::placeholder
+    color: #EBEBEB !important
+    opacity: 1 !important
+
+
+  &:-ms-input-placeholder
+    color: #EBEBEB !important
+
+
+  &::-ms-input-placeholder
+    color: #EBEBEB !important
+  &:focus, &:fover, &:actice
+    &::placeholder
+      color: #FFF !important
+      opacity: 1 !important
+
+
+    &:-ms-input-placeholder
+      color: #FFF !important
+
+
+    &::-ms-input-placeholder
+      color: #FFF !important
 
 #top
   .custom_slider_review_section
@@ -488,8 +587,12 @@
       font-size: 70px
       line-height: 90px
       text-align: start
+      display: flex
+      align-items: center
+      justify-content: flex-end
       .sl-count__current
         color: $text-black
+        font-weight: 500
       .sl-count__total
         color: #8D8D8D
 
@@ -523,7 +626,6 @@
 #top
   .custom_details_section2
     .container
-      margin-top: -170px
       .entry-content-wrapper
         display: flex
         align-items: stretch
@@ -543,14 +645,16 @@
         .custom_btn
           position: relative
           bottom: -35px
+          background: #fff
+          margin-right: -10px
           a
             background: transparent
-            right: 0
+            right: -1px !important
             border: 2px solid #022227
             padding: 18px
             .avia_iconbox_title
               font-weight: 600
-              font-size: 18px
+              font-size: 17px
               line-height: 25px
               color: #022227
             &:hover
@@ -603,9 +707,9 @@
 
                     .geodir_post_meta
                       font-weight: 600
-                      font-size: 32px
-                      line-height: 44px
-                      color: $text-black
+                      font-size: 20px
+                      line-height: 28px
+                      color: $text-black  
           &::before
             content: ''
             display: block
@@ -616,7 +720,10 @@
             left: 0
             bottom: 0
             z-index: 3
-
+.custom-reviews 
+  .avia-image-overlay-wrap
+    padding: 15px 0
+  
 #top
   .custom_third_section
     .av_textblock_section 
@@ -716,6 +823,11 @@
 #top
   .zobacz_section
     background: #FDFDFD
+    // > .container
+    //   > .template-page.content
+    //     // padding-top: 135px !important
+
+
     .avia_textblock
       h2
         font-weight: bold
@@ -737,6 +849,7 @@
           display: flex
           align-items: center
           transition: $transition
+          cursor: pointer
           .iconlist_icon 
             background: transparent !important
             font-size: 35px
@@ -772,7 +885,6 @@
 
 #top
   .custom_onasp_informsection
-    padding-top: 100px
     .entry-content-wrapper
       display: flex
       align-items: center
@@ -782,7 +894,7 @@
       .avia_textblock  
         h2
 
-          margin-bottom: 9px
+          margin-bottom: 20px
           text-transform: none
         p
           font-size: 16px
@@ -820,13 +932,21 @@
             .iconlist_content_wrap
               display: flex
               align-items: start
-          
+  .av-special-heading h2   
+    margin-bottom: 20px
+    text-transform: none
+    font-weight: 700
+    font-family: Open Sans;
+    font-size: 35px;
+    line-height: 48px;
+    padding-left: 25px
 #top
   .custom_slider_section
     padding-top: 30px
     padding-bottom: 30px
     .image_slider_wrap
       position: relative
+      margin-top: 25px
       // background: red
       // z-index: 999
       .slick-list
@@ -872,9 +992,10 @@
       position: absolute
       top: auto
       bottom: -25px
-      right: 5px
+      right: 0
       border: none
       background: transparent
+      font-size: 17px
       &::before
         content: '\e80c'
         font-family: Fontello
@@ -896,7 +1017,7 @@
 
 #top
   .custom_wy_us_section
-    padding: 50px  0
+    padding: 70px  0
     background: #F0F2F4
     .avia_textblock  
       h2
@@ -906,7 +1027,7 @@
         color: $text-black
         margin-bottom: 10px
     .av_one_third
-      margin-top: 40px
+      margin-top: 25px
       margin-left: 0
       margin-right: 2%
       width: 32%
@@ -942,7 +1063,6 @@
 
 #top
   .custome_accordin_section
-    padding-bottom: 70px
     overflow: hidden
     .avia_textblock
       h2
@@ -951,7 +1071,7 @@
         line-height: 48px
         color: $text-black
     .togglecontainer
-      margin-top: 47px
+      margin-top: 50px
       position: relative
       display: flex
       flex-direction: column
@@ -967,7 +1087,12 @@
         display: flex
         justify-content: space-between
         align-items: center;
-        &.activeTitle
+        margin-top: 30px
+        background: #F4F2F0
+        border-color: #F4F2F0
+        transition: $transition
+
+        &.activeTitle, &:hover
           background: #000
           color: $text-white
           &::after
@@ -989,7 +1114,7 @@
           font-size: 16px
           line-height: 22px
           color: $text-black
-          width: 100% 
+          width: 100%  
           &:last-child
             position: relative
 
@@ -1015,6 +1140,15 @@
               right: -22px
               position: absolute
               z-index: 0
+    .av_toggle_section
+      &:first-child
+        .toggler
+          margin-top: 0
+      .toggle_content
+        border: none;
+        background: none;
+        padding-bottom: 0
+        margin-bottom: 0
 
 
 #top
@@ -1101,6 +1235,7 @@
                     font-size: 20px
                     line-height: 27px
                     color: $text-black
+                    margin-top: 25px
                 .adress_box
                   .geodir-field-address 
                     display: flex
@@ -1192,6 +1327,7 @@
   .custom-tabs-form
     .custome_triangle
       margin-top: 50px
+
       // margin-left: var(--marginB)
 
 
@@ -1201,7 +1337,6 @@
   #top
     .custom_details_section2
       .container
-        margin-top: -170px
         .av_two_fifth
           .avia-icon-list-container, .custome_oferta_lists
             margin: 0
@@ -1217,27 +1352,30 @@
   #top .second_section_home_cust .av_three_fifth .custome_informe_ti 
     text-align: start
     padding: 10px 2% 10px 0
-    width: 48%
+    width: 50%
     display: flex
-    justify-content: center;
+    justify-content: flex-start
     flex-direction: column
+    margin: 0
+    .avia-animated-number-content
+      overflow: visible
+
 
 
 
   #top #wrap_all .custome_grid_row_accordin_wrap .tabcontainer .av_tab_section .tab_inner_content 
     margin: 35px
     padding: 50px
-
-
-
-
-
-
-
-
+  #top
+    #wrap_all
+      .custom-left-wrap
+        > .flex_cell_inner
+          height: 100%
+          align-items: stretch
+          flex-wrap: wrap;
+          display: flex
 
 @media screen and ( min-width: 576px )
-
   #top
     .custome_grid_realiz_section 
       padding: 0 
@@ -1251,6 +1389,10 @@
               li.gd_place
                 // width: 48% !important
 
+  #top .custom_details_section2 .container .av_two_fifth .avia-icon-list-container>ul li .article-icon-entry .iconlist_content_wrap .geodir_post_meta, #top .custom_details_section2 .container .av_two_fifth .custome_oferta_lists>ul li .article-icon-entry .iconlist_content_wrap .geodir_post_meta 
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
 
   #top
     .title_grid_row
@@ -1259,7 +1401,7 @@
           padding: 30px 50px
           // max-width: 70%
         .av-special-heading-tag, .geodir-field-post_title
-          font-size: 50px
+          font-size: 46px
         .avia_textblock 
           p
             font-weight: 600
@@ -1280,9 +1422,7 @@
     .custome_map_grid
       .custome_triangle h2
         margin-bottom: 60px
-        margin-top: 60px
       .flex_cell.av_one_full  
-        padding: 30px 0 0 !important
         .av_textblock_section 
           #gd_map_canvas_directory, #gd_map_canvas_directory_wrapper, #sticky_map_gd_map_canvas_directory
             max-height: 1023px
@@ -1314,11 +1454,13 @@
     .custom_form_section
       .container
         .template-page.content
-          padding: 120px 0 140px 0 !important
+          padding: 100px 0 100px 0 !important
           form
             p 
               margin: 0 auto
-              padding-bottom: 42px
+              padding-bottom: 40px
+              &.form_element
+                padding-bottom: 0
             fieldset
               display: flex
               align-items: center
@@ -1335,9 +1477,6 @@
 
 
 @media screen and ( min-width: 768px )
-
-
-
   #top
     .custom_details_section2
       .container
@@ -1345,7 +1484,7 @@
           .custom_btn
             position: absolute
             a
-              padding: 18px 50px
+              padding: 15px 50px
 
   #top
     .zobacz_section, .custom_third_section
@@ -1359,7 +1498,7 @@
     .custom_slider_section
       .slick-arrow
         position: absolute
-        top: -82px
+        top: -90px
         bottom: auto
         border: none
         background: transparent
@@ -1437,7 +1576,7 @@
           ul.avia-icon-list
             li
               width: 48%
-              padding: 37px 0
+              padding: 25px 0
 
   #top
     .custome_grid_realiz_section 
@@ -1463,7 +1602,7 @@
   #top
     .custom_details_section2
       .container
-        margin-top: -170px
+        margin-top: -100px
         .entry-content-wrapper
           display: flex
           align-items: stretch
@@ -1483,7 +1622,12 @@
               .btn_wrap
 
                 .custome_btn_default
-                  padding: 18px 50px
+                  padding: 12px 50px
+    .custome_oferta_lists
+      height: 100%
+      display: flex
+      align-items: center
+
 
 
 
@@ -1493,7 +1637,6 @@
 
   #top
     .custome_accordin_section
-      padding-bottom: 70px
       overflow: hidden
       .togglecontainer
         .single_toggle
@@ -1507,9 +1650,9 @@
             &:last-child
               position: absolute
               right: 22px 
-              top: 3%
+              top: 0
               width: 55%
-              height: 93%
+              height: 100%
               display: flex
               align-items: center
               justify-content: center
@@ -1555,7 +1698,7 @@
           margin-top: 35px
           .slick-arrow
             position: absolute
-            top: 210px
+            top: 150px
             right: 0
             &.slick-prev
               right: 120px !important
@@ -1564,6 +1707,7 @@
           line-height: 123px
           text-align: right
           margin-top: 75px
+          margin-bottom: 22px;
           .sl-count__current
             font-weight: normal
             color: $text-black
@@ -1612,7 +1756,7 @@
   #top
     .custome_btn_default
       a
-        padding: 16px 50px
+        padding: 13px 50px
         
 
 
@@ -1623,14 +1767,19 @@
         .av_two_fifth
           width: 36.4%
         .av_three_fifth
-          width: 57.599999999999994%
+          width: 63.6%;
           padding: 0 10px 0 74px
+      > .container
+        > .content 
+          > .post-entry
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
 
 
 
 
 
-@media screen and ( min-width: 1199px )
+
+@media screen and ( min-width: 1200px )
 
   #top
     .custome_grid_realiz_section
@@ -1646,6 +1795,8 @@
                   display: flex
                   justify-content: space-between
                   flex-direction: row
+                  .geodir-field-post_title
+                    margin-top: 5px
                   .media_box
                     width: 45%
                   .content_box
@@ -1697,7 +1848,7 @@
 
 @media screen and ( min-width: 1200px )
   #top .second_section_home_cust .av_three_fifth .custome_informe_ti
-    text-align: start;
+    text-align: center;
     padding: 10px 1% 10px 0;
     width: 24%;
 
@@ -1712,7 +1863,11 @@
         .tabcontainer
           .tab_titles .tab
             padding: 18px 38px
-
+  #top
+    #wrap_all
+      .custom-left-wrap
+        > .flex_cell_inner
+          margin-left: var(--marginB)
 
   #top
     #wrap_all
@@ -1734,7 +1889,7 @@
     .title_grid_row
       .title_wrap
         .av_one_full
-          padding: 55px 55px 55px calc( var(--marginB) + 50px )
+          padding: 55px 100px 55px calc( var(--marginB) + 50px )
 
   #top
     .custome_map-iconlist_grid
@@ -1772,10 +1927,20 @@
 
   #top
     .custome_map_grid
-      .flex_cell.av_one_full  
-        padding: 30px 0 0
-      .custome_triangle h2 
-        padding-left: calc(var(--marginB) + 50px )
+    .flex_cell.av_one_full  
+      padding: 0
+      .custome_triangle 
+        h2 
+          padding-left: calc(var(--marginB) + 75px )
+          &::before
+            padding-left: calc(var(--marginB) + 50px);
+        &.padding-off
+          h2 
+            padding-left: 25px
+          h2 
+            &::before
+              padding-left: 0 
+      
 
 
 
@@ -1849,6 +2014,8 @@
                 position: relative
             .tab_icon
               margin-right: 15px
+              font-size: 30px
+              line-height: 30px
             .tab_content
               padding: 0px
               width: 100%
@@ -1861,17 +2028,7 @@
         
 
 
-  #top
-    #wrap_all
-      .custom-left-wrap
-        > .flex_cell_inner
-            // --marginA: calc(100vw - 1310px)
-            // --marginB: calc(var(--marginA) / 2)
-            margin-left: var(--marginB)
-            height: 100%
-            align-items: stretch
-            flex-wrap: wrap;
-            display: flex
+
 
 
 
