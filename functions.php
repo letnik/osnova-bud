@@ -17,13 +17,15 @@ function sl_add_scripts()
 
     wp_enqueue_script('slick', get_stylesheet_directory_uri() . '/js/slick.js', array('jquery'), null, true );
 
+    wp_enqueue_script('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js', array('jquery'), null, true );
+
     wp_enqueue_script('all', get_stylesheet_directory_uri() . '/js/all.js', array('jquery'), null, true );
 
     wp_enqueue_style('slick', get_stylesheet_directory_uri() . '/css/slick.css', [], null);
 
     wp_enqueue_style('all', get_stylesheet_directory_uri() . '/css/all.css', [], null);
 
-
+    wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css', [], null);
     //Run custom JS
     wp_enqueue_script('all');
 
@@ -207,4 +209,17 @@ function show_mail() {
     $mail = get_field('ob_email', 'options');
     $output = '<a href="mailto:'.$mail.'">'.$mail.'</a>';
     return $output;
+}
+
+
+// add new size
+add_image_size( 'awesome-size', 680, 300, true );
+
+// make the new size available in the media library (and image element etc.)
+add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+
+function my_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'awesome-size' => __( 'Awesome Size' ),
+    ) );
 }

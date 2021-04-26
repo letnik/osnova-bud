@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import 'parts/_variables'
 @import 'parts/_display'
 @import 'parts/_layout'
@@ -70,7 +71,7 @@
           visibility: visible
           z-index: 3
       .av-special-heading-tag, .geodir-field-post_title
-        font-family: Montserrat
+        font-family: 'Montserrat', sans-serif;
         font-style: normal
         font-weight: bold
         font-size: 30px
@@ -311,14 +312,15 @@
   .btn_wrap
     display: block
     margin-top: 60px
-  .custome_btn_default, .custom-tabs a
+  .custome_btn_default, .custom-tabs .avia-button-wrap a
     // display: flex
     // justify-content: center
     text-align: center
     color: $text-white
-    font-weight: 600
+    font-weight: 400
     font-size: 18px
     line-height: 25px
+    border-radius: 0
     .avia_button_icon 
       font-size: 30px
       width: 30px
@@ -327,11 +329,12 @@
       display: flex
       align-items: center
       justify-content: center
-  .custome_btn_default a, .custom-tabs a
+  .custome_btn_default a, .custom-tabs .avia-button-wrap a
     display: flex
     align-items: center
     justify-content: center
-  .custome_btn_default a, .custom-tabs a
+    border-radius: 0
+  .custome_btn_default a, .custom-tabs .avia-button-wrap a
     transition: $transition
     &::before
       position: absolute
@@ -345,17 +348,27 @@
       > span
         color: #fff !important
         
-  .custom-tabs a
-    border: solid 2px $text-white
-    padding: 18px 30px
-    &::after
-      content: '\e80c'
-      font-family: Fontello
-      font-size: 30px
-      color: $text-white
-      margin-left: 15px
-    &:hover
-      box-shadow: 1px 1px 10px rgba(255, 255, 255, .5) !important
+  .custom-tabs .avia-button-wrap 
+    display: flex
+    justify-content: start
+    a
+      border: solid 2px $text-white
+      background: none
+      padding: 18px 30px
+      margin-top: 40px
+      min-width: 100%
+      .avia_iconbox_title
+        display: flex
+        align-items: center
+        &::after
+          content: '\e80c'
+          font-family: Fontello
+          font-size: 30px
+          color: $text-white
+          margin-left: 15px
+          font-weight: 400;
+      &:hover
+        box-shadow: 1px 1px 10px rgba(255, 255, 255, .5) !important
   .slick-initialized .slick-slide
     padding: 0 10px
 
@@ -494,6 +507,7 @@
                 line-height: 19px
                 color: $text-grey
                 background: transparent
+                border-radius: 0
                 &:hover, &:focus, &:active
                   border-color: #fff
                   color: #fff
@@ -632,7 +646,7 @@ input
         flex-direction: column
       .av_three_fifth
         display: flex
-        align-items: flex-end
+        align-items: center
         flex-direction: column
         justify-content: center
         margin-left: 0
@@ -646,7 +660,7 @@ input
           position: relative
           bottom: -35px
           background: #fff
-          margin-right: -10px
+
           a
             background: transparent
             right: -1px !important
@@ -670,10 +684,12 @@ input
           margin: 0
           padding: 15px
           background: #F0F2F4
+          > ul
+            width: 100%
           .av-iconlist-small
             .iconlist_icon
               color: $accent !important
-              font-size: 30px !important
+              font-size: 38px !important
           > ul
               li
                 display: flex
@@ -710,6 +726,7 @@ input
                       font-size: 20px
                       line-height: 28px
                       color: $text-black  
+
           &::before
             content: ''
             display: block
@@ -720,10 +737,39 @@ input
             left: 0
             bottom: 0
             z-index: 3
+
 .custom-reviews 
   .avia-image-overlay-wrap
-    padding: 15px 0
-  
+    position: relative
+    // &::before
+    //   content: ''
+    //   display: block
+    //   position: absolute
+    //   right: -20px;
+    //   top: 40px;
+    //   width: 130px
+    //   height: 40px
+    //   background: url('../img/oferteo-color.svg') no-repeat center center / contain
+    //   background-size: 80%
+    //   z-index: 1
+    //   transform: rotate(30deg)
+
+    img
+      border-top: 1px solid #E3E3E3
+      border-bottom: 1px solid #E3E3E3
+      padding: 10px 0
+
+.custom_slider_wrap .slick-slide .avia-image-overlay-wrap a, .custom-reviews .avia-image-overlay-wrap a
+  display: block !important
+
+.custome_map_grid
+  .leaflet-marker-icon, .leaflet-marker-shadow
+      object-fit: contain;
+  .geodir-bubble-meta-side, .geodir-bubble-meta-top
+    padding: 10px
+  .geodir-entry-title
+    color: #fff
+
 #top
   .custom_third_section
     .av_textblock_section 
@@ -765,6 +811,9 @@ input
             display: flex
             justify-content: center
             align-items: start
+  .custome_map_grid
+    .leaflet-pane.leaflet-marker-pane
+      
 
 #top
   .custom_slider_section
@@ -861,7 +910,7 @@ input
               font-size: 18px
               line-height: 25px
               color: $text-black
-              margin-top: 0
+              margin-top: -2px
           &:hover
             background: lighten(#FBFCFB, 10%)
             transform: scale(1.03)
@@ -882,6 +931,14 @@ input
 //           color: $text-white
 //           margin-left: calc( var(--marginB) + 50px )
 
+@media screen and ( max-width: 767px )
+  #top
+    #wrap_all .flex_column.counter-wrap-ob
+      margin-top: 30px !important
+  .custom_slider_review_section .entry-content-wrapper .custom_slider_wrap .slick-arrow
+    bottom: -46px !important
+  .custom-tabs
+    margin-bottom: 40px !important
 
 #top
   .custom_onasp_informsection
@@ -938,7 +995,7 @@ input
     font-weight: 700
     font-family: Open Sans;
     font-size: 35px;
-    line-height: 48px;
+    line-height: 40px;
     padding-left: 25px
 #top
   .custom_slider_section
@@ -1119,7 +1176,7 @@ input
             position: relative
 
             width: 96%
-            height: 500px
+            height: 250px
             display: flex
             align-items: center
             justify-content: center
@@ -1331,6 +1388,18 @@ input
       // margin-left: var(--marginB)
 
 
+@media screen and ( max-width: 429px )
+  #top 
+    .second_section_home_cust 
+      .custome_btn_default
+        display: flex
+        justify-content: center
+    
+
+@media screen and ( max-width: 465px )
+    #wrap_all .custome_grid_row_accordin_wrap .tabcontainer .av_tab_section .tab_inner_content
+      margin: 30px 10px;
+      padding: 20px;
 
 @media screen and ( min-width: 430px )
 
@@ -1450,7 +1519,21 @@ input
           flex-direction: row-reverse
 
 
+
+                  
+
+
+
+
+@media screen and ( min-width: 768px )
   #top
+    .custom_details_section2
+      .container
+        .av_three_fifth
+          .custom_btn
+            position: absolute
+            a
+              padding: 15px 50px
     .custom_form_section
       .container
         .template-page.content
@@ -1471,20 +1554,6 @@ input
                 margin: 0
                 input.button
                   border: 1px solid $accent
-                  
-
-
-
-
-@media screen and ( min-width: 768px )
-  #top
-    .custom_details_section2
-      .container
-        .av_three_fifth
-          .custom_btn
-            position: absolute
-            a
-              padding: 15px 50px
 
   #top
     .zobacz_section, .custom_third_section
@@ -1607,12 +1676,30 @@ input
           display: flex
           align-items: stretch
           flex-direction: row
-        .av_three_fifth
+        // .av_three_fifth
 
-          width: 50%
+        //   width: 50%
+        // .av_two_fifth
+        //   width: 50%
+
+    .custom_details_section2
+      .container
         .av_two_fifth
-          width: 50%
+          width: 36.4%
+        .av_three_fifth
+          width: 63.6%;
+          padding: 0 50px 0 50px
+          align-items: flex-end
+          .custom_btn
 
+            margin-right: -50px
+      > .container
+        > .content 
+          > .post-entry
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+
+    .custom-reviews .avia-image-overlay-wrap img
+      margin: 50px auto;
   #top
     #wrap_all
       .custome_grid_row_accordin_wrap
@@ -1673,7 +1760,9 @@ input
                 position: absolute
                 z-index: -2
 
-
+    .custom-tabs .avia-button-wrap 
+      a
+        min-width: 300px
 
   #top
     .custom_slider_review_section
@@ -1761,19 +1850,6 @@ input
 
 
   
-  #top
-    .custom_details_section2
-      .container
-        .av_two_fifth
-          width: 36.4%
-        .av_three_fifth
-          width: 63.6%;
-          padding: 0 10px 0 74px
-      > .container
-        > .content 
-          > .post-entry
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
-
 
 
 
@@ -1849,7 +1925,7 @@ input
 @media screen and ( min-width: 1200px )
   #top .second_section_home_cust .av_three_fifth .custome_informe_ti
     text-align: center;
-    padding: 10px 1% 10px 0;
+    padding: 30px 1% 30px 0
     width: 24%;
 
       
@@ -1931,9 +2007,9 @@ input
       padding: 0
       .custome_triangle 
         h2 
-          padding-left: calc(var(--marginB) + 75px )
+          padding-left: calc(var(--marginB) + 75px ) !important
           &::before
-            padding-left: calc(var(--marginB) + 50px);
+            padding-left: calc(var(--marginB) + 50px) !important
         &.padding-off
           h2 
             padding-left: 25px
@@ -2151,3 +2227,18 @@ input
 //             align-items: stretch
 //             flex-wrap: wrap;
 //             display: flex
+
+
+#scroll-top-link 
+  background-color: $accent
+  border: none !important
+  border-radius: 0
+  &:hover
+    background-color: $accent
+    opacity: 1 !important
+    border: none !important
+  &::before
+    content: '\e87e'
+    font-family: entypo-fontello
+    font-size: 22px
+    color: white

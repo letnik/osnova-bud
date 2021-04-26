@@ -52,6 +52,7 @@ img
 input 
   -webkit-appearance: none
   border-radius: 0 
+  font-family: 'open sans', 'HelveticaNeue', 'Helvetica Neue', 'Helvetica-Neue', Helvetica, Arial, sans-serif !important
 
 
 // section, footer
@@ -122,8 +123,8 @@ input
       order: 1
       position: relative
       max-width: 30%
-      height: auto !important
-      max-height: 100% !important
+      height: 100% !important;
+      max-height: 90px !important
       display: flex
       align-items: center
       background: $accent2
@@ -181,6 +182,19 @@ input
 
     > .btn-wrap
       display: none
+      .btn_wrap_inner button
+        border: none;
+        padding: 12px 48px;
+        background: #9FD629;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 23px;
+        color: #022227;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
+        transition: all .2s;
+        font-family: 'open sans',HelveticaNeue,'Helvetica Neue',Helvetica-Neue,Helvetica,Arial,sans-serif;
+
 
 
 // .sup-menu
@@ -197,8 +211,10 @@ input
 //     font-size: 15px
 //     line-height: 22px
 
-
-
+#top .av-layout-grid-container .flex_cell.av_one_full .custome_triangle h2.av-special-heading-tag 
+    padding-left: 50px;
+#top .av-layout-grid-container .flex_cell.av_one_full .custome_triangle h2.av-special-heading-tag::before
+    padding-left: 25px
 
 // map
 
@@ -232,27 +248,17 @@ input
         font-size: 61px
         color: $accent
         margin-right: -30px
-  #top
-    .custome_map_grid
-    .flex_cell.av_one_full  
-      padding: 0
-      .custome_triangle 
-        h2 
-          padding-left: 75px
-          &::before
-            padding-left: 50px
-        &.padding-off
-          h2 
-            padding-left: 25px
-          h2 
-            &::before
-              padding-left: 0   
+  
 @media screen and ( min-width: 990px )
 
   .sticker-map-container
     display: grid
     grid-template-columns: 50% 50%
-
+  #header_main > .container
+    > .inner-container
+      > .logo 
+        height: 65px !important;
+        max-height: 100% !important
 
   .sticker-map, .sticker-tabs
     position: -webkit-sticky
@@ -345,7 +351,7 @@ input
             border: none
             padding: 12px 48px
             background: $accent
-            font-weight: 600;
+            font-weight: 400;
             font-size: 17px;
             line-height: 23px;
             color: $text-black
@@ -365,6 +371,10 @@ input
   .padding-off-990 
     padding-top: 0 !important
     padding-bottom: 0 !important
+
+  // #header_main
+  //   .av-logo-container
+  //     overflow: hidden !important
 
 body
   --marginA: calc(100vw - 1310px)

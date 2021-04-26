@@ -1,11 +1,10 @@
 jQuery(document).ready(function() {
-    let inner_product =  jQuery('.inner_product');
-        inner_product_a = jQuery('.inner_product .product-attributes-wrap').height();
-        inner_product_h = inner_product_a + 20;
-        inner_product.find('.product-box-shasow').css( "height", "calc(100% + " + inner_product_h +  "px)");  
-        return;
+  let inner_product =  jQuery('.inner_product');
+      inner_product_a = jQuery('.inner_product .product-attributes-wrap').height();
+      inner_product_h = inner_product_a + 20;
+      inner_product.find('.product-box-shasow').css( "height", "calc(100% + " + inner_product_h +  "px)");  
+      return;
 });
-
 
 jQuery(document).ready(function(){
     jQuery('.slick_galery .geodir-gallery').slick({
@@ -132,9 +131,27 @@ jQuery(document).ready(function () {
 	// 	}
 	// });
 
-	jQuery(".custome_map_grid #gd_map_canvas_directory_cat li input[type=checkbox]").change(function () {
-		jQuery(this).parent().toggleClass('unchecked');
-
+  jQuery(".custome_map_grid #gd_map_canvas_directory_cat li input[type=checkbox]").change(function () {
+    jQuery(this).parent().toggleClass('unchecked');
 	});
 	
+});
+
+
+jQuery(document).ready(function(){
+
+  var fancyboxWrap 	 = jQuery('.custom_slider_wrap .slick-slide .avia-image-overlay-wrap');
+      fancyboxSrc    = jQuery(this).find('img').attr('src');
+      fancyboxReviews = jQuery('.custom-reviews .avia-image-overlay-wrap');
+
+
+      jQuery(fancyboxWrap).find('img').wrap('<a href="" data-fancybox="gallery" data-caption="My caption"></a>');	
+      jQuery(fancyboxReviews).find('img').wrap('<a href="" data-fancybox="gallery" data-caption="My caption"></a>');	
+
+  // jQuery(fancyboxWrap).find('img').attr('src').parent()
+  jQuery('[data-fancybox="gallery"]').fancybox({
+    // Options will go here
+  });
+
+
 });

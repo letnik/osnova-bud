@@ -15,7 +15,7 @@
         
         > ul.av-main-nav
           > li
-            padding: 40px 20px
+            padding: 25px 20px
             > a
               padding: 0
               .avia-menu-text
@@ -31,7 +31,8 @@
               top: 50%;
               right: 0;
               padding: 0;
-              transform-origin: top;
+              transform: translate(0,-50% ) 
+              margin-top: 0
               .av-hamburger
                 .av-hamburger-inner
                   background: $text-black
@@ -51,20 +52,10 @@
         display: flex
         justify-content: space-between
         align-items: center
-        padding-left: 25px;
-        border-top: 10px solid $accent2
+        padding-left: 50px;
+
         position: relative
         height: 100%
-        &::after
-          border-top: 10px solid $accent2
-          content: '';
-          display: block;
-          position: absolute;
-          height: 100%
-          width: 52px
-          right: -50px
-          top: -10px
-          overflow-x: hidden
         .faq
           a
             color: $text-black
@@ -121,8 +112,15 @@
                 &::before
                   content: '\E805'
 
+.responsive #header_main .container 
+    height: auto !important;
 
-@media screen and ( min-width: 540px )
+
+@media screen and ( max-width: 989px )
+  #top #header .sup-menu .sup-menu-wrap .contact-list .contact-item:first-child
+    padding-bottom: 0px !important
+
+@media screen and ( min-width: 650px )
 
   #top #header .sup-menu .sup-menu-wrap .contact-list
     flex-direction: column
@@ -144,12 +142,24 @@
           justify-content: start
           margin-left: 60px
       .sup-menu
-
+        .sup-menu-wrap  
+          border-top: 10px solid $accent2
+          &::after
+            border-top: 10px solid $accent2
+          &::after
+            content: '';
+            display: block;
+            position: absolute;
+            height: 100%
+            width: 52px
+            right: -50px
+            top: -10px
+            overflow-x: hidden
         .sup-menu-wrap  
           display: flex
           justify-content: space-between
           align-items: center
-          padding-left: 25px;
+          padding-left: 30px;
           border-bottom: 1px solid $text-grey;
           &::after
             border-bottom: 1px solid $text-grey
@@ -164,7 +174,7 @@
                 &::before
                   display: block;
 
-@media screen and ( min-width: 1200px )
+// @media screen and ( min-width: 1200px )
 
   #top
     #header
