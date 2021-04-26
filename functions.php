@@ -74,7 +74,7 @@ function show_custom_menu() {
   
   <div class="btn-wrap">
     <div class="btn_wrap_inner">
-      <button class="btn btn-solid spu-open-419">WYCENA</p></button>
+      <button class="btn btn-solid spu-open-419"><span class="tt-uppercase mr-10">Wycena</span><span class="avia_button_icon avia_button_icon_right" aria-hidden="true" data-av_icon="" data-av_iconfont="fontello"></span></button>
     </div>
 
   </div>';
