@@ -12,8 +12,8 @@ jQuery(document).ready(function(){
         slidesToScroll: 1,
         rows: 2,
         arrows: true,
-        nextArrow: '<button class="slick-prev slick-arrow"></button>',
-        prevArrow: '<button class="slick-next slick-arrow"></button>',
+        nextArrow: '<button class="slick-next slick-arrow"></button>',
+        prevArrow: '<button class="slick-prev slick-arrow"></button>',
         responsive: [
           {
             breakpoint: 990,
@@ -43,8 +43,8 @@ jQuery(document).ready(function(){
         slidesToScroll: 3,
         rows: 2,
         arrows: true,
-        nextArrow: '<button class="slick-prev slick-arrow"></button>',
-        prevArrow: '<button class="slick-next slick-arrow"></button>',
+        nextArrow: '<button class="slick-next slick-arrow"></button>',
+        prevArrow: '<button class="slick-prev slick-arrow"></button>',
         responsive: [
         {
           breakpoint: 990,
@@ -75,8 +75,8 @@ jQuery(document).ready(function(){
         slidesToScroll: 1,
         arrows: true,
         adaptiveHeight: true,
-        nextArrow: '<button class="slick-prev slick-arrow"></button>',
-        prevArrow: '<button class="slick-next slick-arrow"></button>'
+        nextArrow: '<button class="slick-next slick-arrow"></button>',
+        prevArrow: '<button class="slick-prev slick-arrow"></button>'
     });
     // $(".custom_slider_review_section .custom_slider_wrap").on('afterChange', function(event, slick, currentSlide){
     //     $("#counter").text(currentSlide + 1);

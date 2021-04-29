@@ -322,7 +322,6 @@
     line-height: 25px
     border-radius: 0
 
-
   // .custom-tabs a
 
     .avia_button_icon 
@@ -442,6 +441,7 @@
 
 #top
   .custome_map_grid
+    background-color: #f0f2f4
     .flex_cell.av_one_full  
       padding-right: 0 !important
       .av_textblock_section 
@@ -709,6 +709,7 @@ input
             .iconlist_icon
               color: $accent !important
               font-size: 38px !important
+              margin-bottom: 20px
           > ul
               li
                 display: flex
@@ -723,7 +724,8 @@ input
                   .iconlist_content_wrap
                     display: flex
                     align-items: center
-                    justify-content: space-between
+                    // justify-content: space-between
+                    justify-content: center
                     flex-wrap: wrap
                     .entry-content-header
                       min-width: 40%
@@ -1019,6 +1021,8 @@ input
     padding-left: 25px
 #top
   .custom_slider_section
+ 
+ 
     padding-top: 30px
     padding-bottom: 30px
     .image_slider_wrap
@@ -1437,6 +1441,7 @@ input
                   justify-content: start
                   .iconlist_icon
                     margin-right: 18px
+                    margin-bottom: 0px
 
   #top .second_section_home_cust .av_three_fifth .custome_informe_ti 
     text-align: start
@@ -1518,18 +1523,19 @@ input
             min-height: 1023px
             height: auto
           .gd-trigger
-            margin-right: 400px !important
+            // margin-right: 400px !important
             i 
-              color: #fff
+              color: $accent2
             
         .treeview.main_list 
-          padding: 18px!important
+          padding: 14px!important
           width: 400px
           li
             padding: 10px 0
             label
-              font-size: 18px
-              line-height: 25px
+              font-size: 16px
+              line-height: 22px
+              font-weight: 400
 
 
   #top
@@ -1846,7 +1852,7 @@ input
 
   #top
     .custome_grid_realiz_section 
-      padding: 0 0 0 50px
+      padding: 25px 0 0 50px
       .list.custom-tabs-form
         padding: 0 50px 0 0
         .tabcontainer 
@@ -2051,13 +2057,13 @@ input
           padding: 32px !important
           width: 460px
           li
-            padding: 25px 0
+            padding: 20px 0
             label
               img
                 display: none
             &::before
-              width: 30px
-              height: 30px
+              width: 25px
+              height: 25px
             &.unchecked
               label
                 &::before
