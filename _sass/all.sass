@@ -440,10 +440,13 @@
 
 
 #top
-  .custome_map_grid
-    background-color: #f0f2f4
+  &.single-gd_place
+    .custome_map_grid
+      background-color: #f0f2f4
+  .custome_map_grid 
     .flex_cell.av_one_full  
       padding-right: 0 !important
+      padding-left: 0 !important
       .av_textblock_section 
         #gd_map_canvas_directory, #gd_map_canvas_directory_wrapper, #sticky_map_gd_map_canvas_directory
           max-height: 650px
@@ -1441,7 +1444,7 @@ input
                   justify-content: start
                   .iconlist_icon
                     margin-right: 18px
-                    margin-bottom: 0px
+                    margin-bottom: 0px !important
 
   #top .second_section_home_cust .av_three_fifth .custome_informe_ti 
     text-align: start
