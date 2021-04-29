@@ -155,3 +155,30 @@ jQuery(document).ready(function(){
 
 
 });
+
+
+jQuery(document).ready(function(){
+
+  jQuery(window).scroll(function() {
+    winPos = jQuery(window).scrollTop();
+    if (winPos >= 400) {
+      jQuery('#header').addClass('nav-scroll');
+    }
+    else {
+      jQuery('#header').removeClass('nav-scroll');
+    }
+  });
+
+});
+
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header").style.top = "0";
+  } else {
+    document.getElementById("header").style.top = "-200px";
+  }
+  prevScrollpos = currentScrollPos;
+}
