@@ -71,29 +71,28 @@ input
 
 .custome_triangle
   > h2
-    font-weight: bold
+    font-weight: bold !important
     font-size: 27px
     line-height: 34px
     color: $text-black
-    position: relative
-    padding-left: 25px
-    z-index: 1
-
+    letter-spacing: normal
+    margin-left: 0
     &::before
       content: '\e807'
       font-family: Fontello
       font-size: 42px
-      position: absolute
       color: $accent
-      position: absolute
-      left: 0
-      z-index: -1
-  // &.custome_lefter
-  //   h2
-  //     &::before
-  //       left: 25px
+      margin-right: -25px
+.av-layout-grid-container
+  .custome_triangle
+    > h2
+      margin-left: 0px
 
-
+body .custome_grid_realiz_section 
+  .custome_triangle
+    > h2
+      margin-left: 10%
+      margin-top: 15px
 
 .sticker-map-container
   display: flex
@@ -115,30 +114,6 @@ input
 
 
 
-// .sup-menu
-//   &-wrap
-
-//   .contact
-//     &-list
-      
-//     &-item
-//       font-size: 15px
-//       line-height: 22px
-//     &-link
-//   .faq
-//     font-size: 15px
-//     line-height: 22px
-
-#top .av-layout-grid-container .flex_cell.av_one_full .custome_triangle h2.av-special-heading-tag 
-    // padding-left: 50px;
-#top .av-layout-grid-container .flex_cell.av_one_full .custome_triangle h2.av-special-heading-tag::before
-    // padding-left: 25px
-
-// map
-
-
-// html.responsive, .responsive body, #wrap_all
-//   overflow:  visible !important
 #top .custome_btn_default.btn_padding_top
   padding-top: 50px !important
 
@@ -159,20 +134,41 @@ input
       font-size: 35px
       line-height: 48px
       color: $text-black
-
       &::before
         content: '\e807'
         font-family: Fontello
         font-size: 61px
         color: $accent
-        margin-right: -30px
+
+@media screen and ( min-width: 768px )
+  .av-layout-grid-container
+    .custome_triangle
+      > h2
+        margin-left: 50px
   
 @media screen and ( min-width: 990px )
+
+  body .custome_grid_realiz_section 
+    .custome_triangle
+      > h2
+        margin-left: 0
+        
 
   .sticker-map-container
     display: grid
     grid-template-columns: 50% 50%
+
+@media screen and ( min-width: 1310px )
+
+  .av-layout-grid-container
+    .custome_triangle
+      > h2
+        margin-left: calc( var(--marginB) + 50px )
   
+  .custome_map-iconlist_grid, .second_section_home_cust
+    .custome_triangle
+      > h2
+        margin-left: 0
 
 
 @media screen and ( max-width: 989px )

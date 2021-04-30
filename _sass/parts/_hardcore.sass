@@ -17,9 +17,15 @@
               left: 0
               display: flex
               align-items: center
-              justify-content: center
+              justify-content: start
               z-index: 1
 
+.custome_map_grid 
+  .geodir-wgt-map 
+    p
+      display: none
+      margin: 0
+      padding: 0
 
 
 #gd_map_canvas_directory_cat
@@ -72,12 +78,7 @@
   right: 0
   bottom: 0
 
-#top.gd_place-template-default
-  .flex_cell.av_one_full
-    .custome_triangle
-      max-width: 1310px
-      width: 100%
-      margin: 0 0 0 50px
+
       
   .map_category
     // bottom: -26px
@@ -103,30 +104,24 @@
             font-family: 'entypo-fontello'
 
 
-@media only screen and (min-width: 1310px)
+// @media only screen and (min-width: 1310px)
 
-  #top.gd_place-template-default
-    .flex_cell.av_one_full
-      .custome_triangle
-        margin: 0 
-  
 
 
 
 @media only screen and (max-width: 767px)
-  // #wrap_all
-  //   .custome_map_grid, .custome_map-iconlist_grid
-  //     .geodir-map-wrap 
-  //       margin-left: -8vw
-  //       margin-right: -8vw
-  
-  
-  #top.gd_place-template-default
+  #wrap_all
+    .custome_map_grid, .custome_map-iconlist_grid
+      .geodir-map-wrap 
+        margin-left: -8vw
+        margin-right: -8vw
+
+  #top
     .custome_map_grid
       .custome_triangle
         width: 85%
-        max-width: 85%
         margin: 0 auto
+  
 
 
 

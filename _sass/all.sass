@@ -143,6 +143,7 @@
         h2  
           margin-bottom: 28px
           color: $text-black
+          // margin-left: 0
         p 
           font-size: 18px
           line-height: 25px
@@ -713,11 +714,11 @@ input
             .iconlist_icon
               color: $accent !important
               font-size: 38px !important
-              margin-bottom: 20px
+              // margin-bottom: 20px
           > ul
               li
                 display: flex
-                flex-wrap: wrap
+                // flex-wrap: wrap
                 align-items: center
                 justify-content: center
                 padding: 20px 0
@@ -925,6 +926,7 @@ input
           align-items: center
           transition: $transition
           cursor: pointer
+          position: relative
           .iconlist_icon 
             background: transparent !important
             font-size: 35px
@@ -932,6 +934,7 @@ input
           .iconlist_content_wrap, .article-icon-entry
             min-height: auto
             padding: 0
+            position: static
             .iconlist_title
               font-size: 18px
               line-height: 25px
@@ -1015,14 +1018,13 @@ input
             .iconlist_content_wrap
               display: flex
               align-items: start
-  .av-special-heading h2   
-    margin-bottom: 20px
-    text-transform: none
-    font-weight: 700
-    font-family: Open Sans;
-    font-size: 35px;
-    line-height: 40px;
-    padding-left: 25px
+  // .av-special-heading h2   
+  //   margin-bottom: 20px
+  //   text-transform: none
+  //   font-weight: 700
+  //   font-family: Open Sans;
+  //   font-size: 35px;
+  //   line-height: 40px;
 #top
   .custom_slider_section
  
@@ -1626,20 +1628,14 @@ input
           max-width: 70%
 
 
-  #top
-    #wrap_all
-      .custome_grid_row_accordin_wrap
-        section
-          .avia_textblock  
-            h2
-              padding-left: 50px
+  // #top
+  //   #wrap_all
+  //     .custome_grid_row_accordin_wrap
+  //       section
+  //         .avia_textblock  
+  //           h2
+  //             padding-left: 50px
 
-  #top
-    .custome_map_grid
-      .custome_triangle
-        h2
-          padding-left: 25px
-          margin-left: 50px
 
 
 
@@ -1979,13 +1975,13 @@ input
         > .flex_cell_inner
           margin-left: var(--marginB)
 
-  #top
-    #wrap_all
-      .custome_grid_row_accordin_wrap
-        section
-          .avia_textblock  
-            h2
-              padding-left: calc( var(--marginB) + 50px )
+  // #top
+  //   #wrap_all
+  //     .custome_grid_row_accordin_wrap
+  //       section
+  //         .avia_textblock  
+  //           h2
+  //             padding-left: calc( var(--marginB) + 50px )
 
   // #top
   //   .second_section_home_cust
@@ -2035,21 +2031,6 @@ input
                 width: calc( 100% + var(--marginB) )
 
 
-  #top
-    .custome_map_grid
-    .flex_cell.av_one_full  
-      padding: 0
-      .custome_triangle 
-        h2 
-          padding-left: calc(var(--marginB) + 75px ) !important
-          &::before
-            padding-left: calc(var(--marginB) + 50px) !important
-        &.padding-off
-          h2 
-            padding-left: 25px
-          h2 
-            &::before
-              padding-left: 0 
       
 
 
