@@ -157,28 +157,45 @@ jQuery(document).ready(function(){
 });
 
 
-jQuery(document).ready(function(){
+// jQuery(document).ready(function(){
 
-  jQuery(window).scroll(function() {
-    winPos = jQuery(window).scrollTop();
-    if (winPos >= 400) {
-      jQuery('#header').addClass('nav-scroll');
-    }
-    else {
-      jQuery('#header').removeClass('nav-scroll');
-    }
-  });
+//   jQuery(window).scroll(function() {
+//     winPos = jQuery(window).scrollTop();
+//     if (winPos >= 400) {
+//       jQuery('#header').addClass('nav-scroll');
+//     }
+//     else {
+//       jQuery('#header').removeClass('nav-scroll');
+//     }
+//   });
 
-});
+// });
 
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("header").style.top = "0";
-  } else {
-    document.getElementById("header").style.top = "-200px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+
+
+// jQuery(document).ready(function( $ ) {
+//   if(document.documentElement.clientWidth >= 989) {
+//     var prevScrollpos = window.pageYOffset;
+//     window.onscroll = function() {
+//       var currentScrollPos = window.pageYOffset;
+//       if (prevScrollpos > currentScrollPos) {
+//         document.getElementById("header").style.top = "0";
+//       } else {
+//         document.getElementById("header").style.top = "-200px";
+//       }
+//       prevScrollpos = currentScrollPos;
+//     }
+//   }
+// });
+
+// jQuery(document).ready(function( $ ) {
+//   if(document.documentElement.clientWidth <= 989) {
+
+//     jQuery( "#header_main .av-burger-menu-main" ).click(function(){
+//       jQuery( "#header_main .btn-wrap" ).toggleClass('active');
+//       jQuery( "#header_main .btn-wrap" ).fadeToggle();
+//     });
+
+//   }
+// });
