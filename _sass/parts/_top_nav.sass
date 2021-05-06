@@ -39,11 +39,12 @@
                   color: $accent
                   transition: $transition
             &.av-burger-menu-main
-              top: 50%
-              right: 0
-              padding: 0
-              transform: translate(0,-50% ) 
-              margin-top: 0
+              // top: 50%
+              // right: 0
+              // padding: 0
+              // transform: translate(0,-50% ) 
+              // margin-top: 0
+              // height: 100%
               .av-hamburger
                 .av-hamburger-inner
                   background: $text-black
@@ -123,7 +124,8 @@
               .icon-phone
                 &::before
                   content: '\E805'
-#top #header .main_menu .avia-menu>ul.av-main-nav>li.current-menu-parent>a .avia-menu-text 
+#top #header li.current-menu-parent>a .avia-menu-text,
+#top #header li.current-menu-item>a .avia-menu-text,
   font-weight: bold
 
 
@@ -310,12 +312,12 @@
 .responsive #header_main .container 
     height: auto !important
 
-#header 
-    background-color: #333 
-    position: fixed 
-    top: 0 
-    width: 100% 
-    transition: top 0.3s 
+// #header 
+//     background-color: #333 
+//     position: fixed 
+//     top: 0 
+//     width: 100% 
+//     transition: top 0.3s 
 
 
 #top
@@ -460,11 +462,26 @@
     // display: block;
     position: fixed;
     right: 0;
-    bottom: 0;
+    bottom: -100px
     width: 350px;
+    transition: $transition
+    &.active
+      bottom: 0
   #header_main>.container>.inner-container>.btn-wrap .btn_wrap_inner button,
   #header_main>.container>.inner-container>.btn-wrap .btn_wrap_inner
     width: 100%
+  #top #header .av-burger-menu-main
+    a
+      position: relative
+      display: inline-block
+      width: 35px
+      height: 35px !important
+      .av-hamburger
+        position: absolute
+        right: 0
+        top: 13px
+        // transform: translateY(-30%)
+
 
 @media screen and ( min-width: 650px )
 
@@ -477,6 +494,7 @@
           margin-right: 12px
         span 
           display: block
+
 
 @media screen and ( min-width: 576px )
 
@@ -760,7 +778,7 @@
     margin-left: 0
   
 
-  .html_av-overlay-side #top #wrap_all .av-burger-overlay #av-burger-menu-ul li a 
+  .html_av-overlay-side #top #wrap_all .av-burger-overlay #av-burger-menu-ul>li>a 
     color: #000000;
     font-size: 22px;
     text-align: center;
@@ -807,8 +825,12 @@
     font-size: 24px;
     color: #666;
   
-  
+  #top #header .av-burger-menu-main a .av-hamburger
+    top: 0px;
+  #top #header .main_menu .avia-menu>ul.av-main-nav>li
+      padding: 20px 20px;
 
+  
   
 
 @media screen and ( max-width: 575px )  
@@ -829,3 +851,6 @@
      display: none !important
   
 
+@media screen and ( max-width: 400px )  
+  #header_main>.container>.inner-container>.logo
+    max-width: 150px !important

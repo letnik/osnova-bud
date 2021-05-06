@@ -189,13 +189,27 @@ jQuery(document).ready(function(){
 //   }
 // });
 
-// jQuery(document).ready(function( $ ) {
-//   if(document.documentElement.clientWidth <= 989) {
+jQuery(document).ready(function( $ ) {
+  if(document.documentElement.clientWidth <= 989) {
 
-//     jQuery( "#header_main .av-burger-menu-main" ).click(function(){
-//       jQuery( "#header_main .btn-wrap" ).toggleClass('active');
-//       jQuery( "#header_main .btn-wrap" ).fadeToggle();
-//     });
+    jQuery( "#header_main .av-burger-menu-main" ).click(function(){
+      jQuery( "#header_main .btn-wrap" ).toggleClass('active');
+      jQuery( "#header_main .btn-wrap" ).fadeToggle();
+    });
 
-//   }
-// });
+  }
+});
+
+jQuery(document).ready(function(){
+
+  jQuery(window).scroll(function() {
+    winPos = jQuery(window).scrollTop();
+    if (winPos >= 400) {
+      jQuery('#scroll-top-link').fadeIn();
+    }
+    else {
+      jQuery('#scroll-top-link').fadeOut();
+    }
+  });
+
+});

@@ -116,7 +116,7 @@ function show_footer_sub_menu() {
 function second_logo() {
   $my_url = get_home_url(); 
   $logo = '<div class="logo footer-logo second-logo"><a href="' . $my_url . '">' ;
-  $logo .= '<img src="' . $my_url . '/wp-content/themes/enfold/images/layout/logo.png"/>';
+  $logo .= '<img src="' . $my_url . '/wp-content/uploads/2021/04/logo_ob-2.png"/>';
   $logo .= '</a></div>';
   return $logo;
   }
@@ -223,3 +223,10 @@ function my_custom_sizes( $sizes ) {
         'awesome-size' => __( 'Awesome Size' ),
     ) );
 }
+
+// add_filter( 'avf_output_google_webfonts_script', 'avf_output_google_webfonts_script', 10, 1 );
+
+// function avf_output_google_webfonts_script( $activate )
+// {
+// 	return false;
+// }
