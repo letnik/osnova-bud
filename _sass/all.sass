@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import 'parts/_variables'
+// @import 'parts/fonts.css'
 @import 'parts/_display'
 @import 'parts/_layout'
 @import 'parts/_hardcore'
@@ -8,7 +7,6 @@
 @import 'parts/_top_nav'
 @import 'parts/_footer'
 @import 'parts/_header'
-// @import 'fonts'
  
 
 // #top
@@ -2121,15 +2119,18 @@ input
               width: 100%
 
 
-
 @media screen and ( max-width: 1310px )       
 
   #top .custome_map_grid .custome_triangle h2
 
-      padding-left: 25px !important
+      // padding-left: 25px !important
       margin-left: 50px !important
 
 
+
+@media screen and ( max-width: 766px )
+  #top .custome_map_grid .custome_triangle.custome_lefter.lefter-sm h2
+    margin-left: 0 !important
 
 
 

@@ -23,6 +23,8 @@ function sl_add_scripts()
 
     wp_enqueue_style('slick', get_stylesheet_directory_uri() . '/css/slick.css', [], null);
 
+    wp_enqueue_style('custom-fonts', get_stylesheet_directory_uri() . '/css/fonts.css', [], null);
+
     wp_enqueue_style('all', get_stylesheet_directory_uri() . '/css/all.css', [], null);
 
     wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css', [], null);
@@ -224,9 +226,9 @@ function my_custom_sizes( $sizes ) {
     ) );
 }
 
-// add_filter( 'avf_output_google_webfonts_script', 'avf_output_google_webfonts_script', 10, 1 );
+add_filter( 'avf_output_google_webfonts_script', 'avf_output_google_webfonts_script', 10, 1 );
 
-// function avf_output_google_webfonts_script( $activate )
-// {
-// 	return false;
-// }
+function avf_output_google_webfonts_script( $activate )
+{
+	return false;
+}
