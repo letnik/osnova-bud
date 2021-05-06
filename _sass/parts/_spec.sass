@@ -67,6 +67,10 @@ input
 .mr-10
   margin-right: 10px
 
+#top
+  > p
+    display: none
+    margin: 0
 
 .avia_transform .avia-icon-list.av-iconlist-big.avia-iconlist-animate .avia_start_animation .iconlist-timeline
   display: none !important
@@ -101,12 +105,17 @@ body .custome_grid_realiz_section
   display: flex
   flex-direction: column
 
-
+.sticker-tabs
+  height: 100vh
 .sticker-map, .sticker-tabs
   position: -webkit-sticky
   position: sticky
   top: 0
-  height: 100vh
+
+  p,br
+    display: none
+    margin: 0
+
 
 #top
   .avia-icon-list 
