@@ -224,9 +224,9 @@ function my_custom_sizes( $sizes ) {
     ) );
 }
 
-add_filter( 'avf_output_google_webfonts_script', 'avf_output_google_webfonts_script', 10, 1 );
+// add_filter( 'avf_output_google_webfonts_script', 'avf_output_google_webfonts_script', 10, 1 );
 
-function avf_output_google_webfonts_script( $activate )
-{
-	return false;
-}
+// function avf_output_google_webfonts_script( $activate )
+// {
+// 	return false;
+// }
