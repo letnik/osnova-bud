@@ -199,3 +199,17 @@ jQuery(document).ready(function( $ ) {
 
   }
 });
+
+jQuery(document).ready(function(){
+
+  jQuery(window).scroll(function() {
+    winPos = jQuery(window).scrollTop();
+    if (winPos >= 400) {
+      jQuery('#scroll-top-link').fadeIn();
+    }
+    else {
+      jQuery('#scroll-top-link').fadeOut();
+    }
+  });
+
+});
